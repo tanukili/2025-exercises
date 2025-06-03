@@ -1,75 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
   --color-primary: #0027D5;
   --color-secondary: #4B4B4B;
+
+  --text-28: 1.75rem;
+  --text-52: 3.25rem;
 }
 
-/* :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  html {
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    font-weight: 500;
   }
-  a:hover {
-    color: #747bff;
+}
+
+@layer components {
+  .btn-outline {
+    padding: var(--spacing-2) var(--spacing-4);
+    border: 1px solid var(--color-black);
   }
-  button {
-    background-color: #f9f9f9;
+
+  .btn-outlind-primary {
+    border: 1px solid var(--color-primary);
   }
-} */
+
+  .icon::before {
+    content: '';
+    display: block;
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .icon-lg::before {
+    width: calc(var(--spacing) * 11);
+    height: calc(var(--spacing) * 11);
+  }
+}
+
+
+.icon-yt:before {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/onlyIcon.png?raw=true");
+}
+.icon-podcast:before {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/onlyIcon-1.png?raw=true");
+}
+.icon-fb:before {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/onlyIcon-2.png?raw=true");
+}
+.icon-linkedin:before {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/icons8-linkedin%201.png?raw=true");
+}
+.icon-ig:before {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/onlyIcon-3.png?raw=true");
+}
+.icon-ig:before {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/onlyIcon-3.png?raw=true");
+}
