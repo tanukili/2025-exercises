@@ -1,17 +1,11 @@
 export default function Footer() {
   return (
     <footer className="border-t border-secondary">
-      <section className="hidden justify-between py-20 lg:flex lg:max-w-1296 lg:mx-auto">
+      <section className="hidden justify-between py-20 lg:flex lg:mx-auto lg:max-w-4xl xl:max-w-6xl 2xl:max-w-1296">
         <h2 className="hidden">與我聯繫</h2>
-        <nav>
-          <ul>
-            <li>
-              <a className="text-[32px]" href="mailto:alysewang@hexschool.com">
-                alysewang@hexschool.com
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <a className="text-32 hover:text-primary" href="mailto:alysewang@hexschool.com">
+          alysewang@hexschool.com
+        </a>
         <nav>
           <ul className="flex gap-x-1">
             <li>
@@ -42,7 +36,9 @@ export default function Footer() {
           </ul>
         </nav>
       </section>
-      <p className="py-6 text-center">© 2025 Alyse Wang. All rights reserved.</p>
+      <p className="py-6 text-center">
+        © 2025 Alyse Wang. All rights reserved.
+      </p>
     </footer>
   );
 }
