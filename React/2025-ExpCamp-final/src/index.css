@@ -2,24 +2,32 @@
 @import "tailwindcss";
 
 @theme {
+  --color-body: #FBFBFB;
   --color-primary: #0027D5;
-  --color-secondary: #4B4B4B;
+  --color-secondary: #6C757D;
+  --color-slate-750: #4B4B4B;
 
   --text-28: 1.75rem;
   --text-52: 3.25rem;
+  --text-120: 7.5rem;
+
+  --spacing-648: 40.5rem;
+  --spacing-1296: 81rem;
 }
 
 @layer base {
   html {
     font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
     font-weight: 500;
+    background-color: var(--color-body);
   }
 }
 
 @layer components {
   .btn-outline {
-    padding: var(--spacing-2) var(--spacing-4);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
     border: 1px solid var(--color-black);
+    border-radius: calc(infinity * 1px);
   }
 
   .btn-outlind-primary {
@@ -59,4 +67,13 @@
 }
 .icon-ig:before {
   background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/onlyIcon-3.png?raw=true");
+}
+.icon-search:before {
+  background-image: url("./src/assets/mobile/blog/sreach.png");
+}
+.icon-page-left:before {
+  background-image: url("./src/assets/mobile/blog/page-left.png");
+}
+.icon-page-right:before {
+  background-image: url("./src/assets/mobile/blog/page-right.png");
 }

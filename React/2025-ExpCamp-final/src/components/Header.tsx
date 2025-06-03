@@ -20,20 +20,22 @@ export default function Header() {
 
   return (
     <header>
-      <picture>
+      <div className="lg:flex lg:h-[834px]">
+      <picture className="lg:w-1/2">
         <source
-          media="(min-width: 768px)"
+          media="(min-width: 992px)"
           srcSet={imgLgHero}
         />
         <img
-          className="h-[375px] w-full object-cover object-center"
+          className="h-[375px] w-full object-cover object-center lg:h-full"
           src={imgMdHero}
           alt="個人照片banner"
         />
       </picture>
-      <div className={`bg-[url(@/assets/mobile/index/Hero%20Section2.png)] bg-cover bg-center p-6 font-black text-primary lg:bg-[url(@/assets/desktop/index/Hero%20Section2.png)] ${isIndex ? 'pb-40' : ''}`}>
-        <h1 className="mb-3 text-52 font-black">{title}</h1>
-        <h2 className="text-28 font-blod">前端工程師 & 職涯諮詢師</h2>
+      <div className={`bg-[url(@/assets/mobile/index/Hero%20Section2.png)] bg-cover bg-center p-6 text-primary lg:bg-[url(@/assets/desktop/index/Hero%20Section2.png)] lg:w-1/2 lg:grid lg:pl-20 ${isIndex ? 'pb-40' : ''}`}>
+        <h1 className="mb-3 text-52 font-black lg:text-120 lg:mt-auto">{title}</h1>
+        <h2 className="text-28 font-bold lg:mb-auto">前端工程師 & 職涯諮詢師</h2>
+      </div>
       </div>
       <div className={`${isIndex ? 'mx-3 mt-[-120px] px-6 py-10 bg-white text-2xl font-medium' : 'hidden'}`}>
         <p className="mb-2">
