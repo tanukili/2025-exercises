@@ -5,48 +5,66 @@ export default function Blog() {
   return (
     <>
       <FeaturedArticle />
-      <form>
-        <input
-          type="search"
-          placeholder="搜尋你感興趣的文章"
-          className=""
-        />
-      </form>
-      <section>
-        <Card />
-      </section>
-      <nav>
-        <ul>
-          <li>
+      <div className="mt-16 lg:max-w-1296 lg:mx-auto lg:mt-20">
+        <div className="lg:-mx-3">
+          <form className="px-3 lg:w-1/3">
+            <div className="icon icon-search relative before:absolute before:top-1/2 before:-translate-y-1/2 before:left-4">
+              <input
+                type="search"
+                placeholder="搜尋你感興趣的文章"
+                className="w-full p-4 pl-[50px] border rounded-full text-slate-750"
+              />
+            </div>
+          </form>
+          <section className="my-10 lg:flex lg:flex-wrap lg:my-0">
+            <Card />
+          </section>
+        </div>
+      </div>
+      <nav className="flex justify-center mb-16 lg:mb-20">
+        <ul className="flex items-center py-2 rounded-full text-center text-slate-750 bg-white">
+          <li className="pl-5">
             <a href="#">
-              <i className="icon icon-sm icon"></i>
+              <i className="icon icon-page-left"></i>
             </a>
           </li>
           <li>
-            <a href="#">1</a>
+            <a className="block w-10 py-2 hover:text-primary" href="#">
+              1
+            </a>
           </li>
           <li>
-            <a href="#">2</a>
+            <a className="block w-10 py-2 hover:text-primary " href="#">
+              2
+            </a>
           </li>
           <li>
-            <a href="#">3</a>
+            <a className="block w-10 py-2 hover:text-primary" href="#">
+              3
+            </a>
           </li>
           <li>
-            <a href="#">4</a>
+            <a className="block w-10 py-2 hover:text-primary" href="#">
+              4
+            </a>
           </li>
           <li>
-            <a href="#">5</a>
+            <a className="block w-10 py-2 hover:text-primary" href="#">
+              5
+            </a>
           </li>
           <li>
-            <a href="#">...</a>
+            <a className="block w-10 py-2 hover:text-primary" href="#">
+              ...
+            </a>
           </li>
-          <li>
+          <li className="pr-5">
             <a href="#">
-              <i></i>
+              <i className="icon icon-page-right"></i>
             </a>
           </li>
         </ul>
       </nav>
     </>
-  )
+  );
 }
