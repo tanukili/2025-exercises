@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import coverUrl from "@/assets/mobile/blog/About Section.png";
-import coverUrlLg from "@/assets/desktop/blog/About Section.png";
+import coverUrl from "/mobile/blog/About Section.png";
+import coverUrlLg from "/desktop/blog/About Section.png";
 
 export default function FeaturedArticle() {
   // 模擬遠端資料
