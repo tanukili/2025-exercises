@@ -3,7 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "target": "ES2021",  // 支援 ES12
+    "lib": ["DOM", "ES2021"]  // 在 lib 中加入對 ES12 語法的支援
   },
   "files": [],
   "references": [

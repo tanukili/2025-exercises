@@ -52,26 +52,26 @@
 
 
 .icon-yt:before {
-  background-image: url("./src/assets/mobile/index/onlyIcon.png");
+  background-image: url("@/assets/mobile/index/onlyIcon.png");
 }
 .icon-podcast:before {
-  background-image: url("./src/assets/mobile/index/onlyicon-1.png");
+  background-image: url("@/assets/mobile/index/onlyicon-1.png");
 }
 .icon-fb:before {
-  background-image: url("./src/assets/mobile/index/onlyicon-2.png");
+  background-image: url("@/assets/mobile/index/onlyicon-2.png");
 }
 .icon-linkedin:before {
-  background-image: url("./src/assets/mobile/index/icons8-linkedin 1.png");
+  background-image: url("@/assets/mobile/index/icons8-linkedin 1.png");
 }
 .icon-ig:before {
-  background-image: url("./src/assets/mobile/index/onlyicon-3.png");
+  background-image: url("@/assets/mobile/index/onlyicon-3.png");
 }
 .icon-search:before {
-  background-image: url("./src/assets/mobile/blog/sreach.png");
+  background-image: url("@/assets/mobile/blog/sreach.png");
 }
 .icon-page-left:before {
-  background-image: url("./src/assets/mobile/blog/page-left.png");
+  background-image: url("@/assets/mobile/blog/page-left.png");
 }
 .icon-page-right:before {
-  background-image: url("./src/assets/mobile/blog/page-right.png");
+  background-image: url("@/assets/mobile/blog/page-right.png");
 }

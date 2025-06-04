@@ -3,7 +3,10 @@ export default function Footer() {
     <footer className="border-t border-secondary">
       <section className="hidden justify-between py-20 lg:flex lg:mx-auto lg:max-w-4xl xl:max-w-6xl 2xl:max-w-1296">
         <h2 className="hidden">與我聯繫</h2>
-        <a className="text-32 hover:text-primary" href="mailto:alysewang@hexschool.com">
+        <a
+          className="text-32 hover:text-primary"
+          href="mailto:alysewang@hexschool.com"
+        >
           alysewang@hexschool.com
         </a>
         <nav>
@@ -13,10 +16,6 @@ export default function Footer() {
                 <i className="icon icon-lg icon-yt"></i>
               </a>
             </li>
-          </ul>
-        </nav>
-                <nav>
-          <ul className="flex">
             <li>
               <a href="https://podcasters.apple.com/zh-tw" target="_blank">
                 <i className="icon icon-lg icon-podcast"></i>

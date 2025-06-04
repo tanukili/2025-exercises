@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+import coverUrl from "@/assets/mobile/blog/About Section.png";
+import coverUrlLg from "@/assets/desktop/blog/About Section.png";
+
 export default function FeaturedArticle() {
   // 模擬遠端資料
   const featuredArticle = {
-    id: "",
-    coverUrl: "./src/assets/mobile/blog/About%20Section.png",
-    coverUrlLg: "./src/assets/desktop/blog/About%20Section.png",
+    id: "mw4kt3dy",
+    coverUrl,
+    coverUrlLg,
     timestamp: 1729440000000,
     tags: ["轉職工程師", "學習心法"],
     isPopular: false,
@@ -47,12 +51,13 @@ export default function FeaturedArticle() {
           </div>
           <h2 className="mb-2 text-28 font-bold">{featuredArticle.title}</h2>
           <p className="mb-4 line-clamp-2">{featuredArticle.description}</p>
-          <button
-            className="btn-outline text-slate-750 lg:mr-auto"
+          <Link
+            to={`/blog/${featuredArticle.id}`}
+            className="btn-outline inline-block text-slate-750 lg:mr-auto"
             type="button"
           >
             閱讀內文
-          </button>
+          </Link>
         </div>
       </div>
     </section>

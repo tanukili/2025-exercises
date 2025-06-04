@@ -6,16 +6,19 @@ import imgLgHero from "@/assets/desktop/index/Hero Section.png";
 
 export default function Header() {
   const [title, setTitle] = useState('Alyse Wang');
-  const [ isIndex, setIsIndex ] = useState(true);
+  const [ isIndex, setIsIndex ] = useState(false);
   const { pathname:nowPath } = useLocation();
-  console.log(nowPath);
 
+  // 要記得加上依賴陣列
   useEffect(() => {
-    if ( title !== '/' ) {
+    if ( nowPath !== '/' ) {
       setTitle('BLOG');
       setIsIndex(false);
+    } else {
+      setTitle('Alyse Wang');
+      setIsIndex(true);
     }
-  })
+  }, [nowPath])
 
 
   return (
