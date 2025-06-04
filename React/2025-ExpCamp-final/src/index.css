@@ -8,6 +8,7 @@
   --color-slate-750: #4B4B4B;
 
   --text-28: 1.75rem;
+  --text-32: 2rem;
   --text-52: 3.25rem;
   --text-120: 7.5rem;
 
@@ -51,22 +52,19 @@
 
 
 .icon-yt:before {
-  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/onlyIcon.png?raw=true");
+  background-image: url("./src/assets/mobile/index/onlyIcon.png");
 }
 .icon-podcast:before {
-  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/onlyIcon-1.png?raw=true");
+  background-image: url("./src/assets/mobile/index/onlyicon-1.png");
 }
 .icon-fb:before {
-  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/onlyIcon-2.png?raw=true");
+  background-image: url("./src/assets/mobile/index/onlyicon-2.png");
 }
 .icon-linkedin:before {
-  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/icons8-linkedin%201.png?raw=true");
+  background-image: url("./src/assets/mobile/index/icons8-linkedin 1.png");
 }
 .icon-ig:before {
-  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/onlyIcon-3.png?raw=true");
-}
-.icon-ig:before {
-  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/index/onlyIcon-3.png?raw=true");
+  background-image: url("./src/assets/mobile/index/onlyicon-3.png");
 }
 .icon-search:before {
   background-image: url("./src/assets/mobile/blog/sreach.png");

@@ -2,8 +2,8 @@ export default function FeaturedArticle() {
   // 模擬遠端資料
   const featuredArticle = {
     id: "",
-    coverUrl: "./src/assets/mobile/blog/About Section.png",
-    coverUrlLg: "./src/assets/desktop/blog/About Section.png",
+    coverUrl: "./src/assets/mobile/blog/About%20Section.png",
+    coverUrlLg: "./src/assets/desktop/blog/About%20Section.png",
     timestamp: 1729440000000,
     tags: ["轉職工程師", "學習心法"],
     isPopular: false,
@@ -20,8 +20,8 @@ export default function FeaturedArticle() {
   };
 
   return (
-    <section className="lg:flex lg:h-[640px]">
-      <picture className="block lg:w-1/2 lg:mr-6">
+    <section className="sm:flex lg:h-[640px]">
+      <picture className="block sm:w-1/2 md:pr-3 md:-mr-3">
         <source
           media="(min-width: 992px)"
           srcSet={featuredArticle.coverUrlLg}
@@ -32,8 +32,8 @@ export default function FeaturedArticle() {
           alt={featuredArticle.title}
         />
       </picture>
-      <div className="border-b-2 border-secondary lg:grow lg:-ml-6 lg:grid">
-        <div className="px-3 py-12 lg:place-self-center  lg:max-w-648 lg:mr-auto lg:pl-6">
+      <div className="border-b-2 border-secondary md:grow md:grid">
+        <div className="px-3 py-12 md:place-self-center sm:max-w-sm lg:ml-3 lg:pr-0 lg:max-w-md xl:max-w-648 sm:mr-auto">
           <time className="block text-black mb-1">
             {formatDate(featuredArticle.timestamp)}
           </time>

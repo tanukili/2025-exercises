@@ -138,15 +138,15 @@ export default function Card() {
     ));
 
     return (
-      <div className="mb-8 md:w-1/2 lg:w-1/3 lg:px-3 lg:my-10">
-        <picture className="block mb-4" style={{ "max-height": "200px" }}>
+      <div className="flex flex-col items-start px-3 mb-8 md:w-1/2 xl:w-1/3 lg:my-10">
+        <picture className="block w-full mb-4">
           <source media="(min-width: 992px)" srcSet={article.coverUrlLg} />
-          <img src={article.coverUrl} alt={article.title} />
+          <img className="max-h-[200px] w-full object-cover object-center" src={article.coverUrl} alt={article.title} />
         </picture>
         <time className="block text-black mb-1">
           {formatDate(article.timestamp)}
         </time>
-        <div>
+        <div className="flex items-center">
           {tagsItems}
           {article.isPopular && (
             <span className="inline-block px-3 py-1.5 rounded-full bg-primary text-white ">
@@ -154,7 +154,7 @@ export default function Card() {
             </span>
           )}
         </div>
-        <h3 className="text-28 font-bold mb-2">{article.title}</h3>
+        <h3 className="grow text-28 font-bold mb-2">{article.title}</h3>
         <p className="text-slate-750 mb-4 line-clamp-2">
           {article.description}
         </p>
