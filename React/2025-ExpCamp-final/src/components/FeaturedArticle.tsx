@@ -1,8 +1,20 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import coverUrl from "/mobile/blog/About Section.png";
 import coverUrlLg from "/desktop/blog/About Section.png";
 
 export default function FeaturedArticle() {
+  const { pathname: nowPath } = useLocation();
+  const [isBlog, setIsBlog] = useState(false);
+
+  useEffect(() => {
+    if (nowPath === "/blog") {
+      setIsBlog(true);
+    } else {
+      setIsBlog(false);
+    }
+  }, [nowPath]);
+
   // 模擬遠端資料
   const featuredArticle = {
     id: "mw4kt3dy",
@@ -45,19 +57,25 @@ export default function FeaturedArticle() {
             <h3 className="text-2xl text-primary">
               {featuredArticle.subtitle}
             </h3>
-            <span className="inline-block px-3 py-1.5 rounded-full ml-2 bg-primary text-white ">
+            <span className="inline-block px-3 py-1.5 rounded-full ml-2 font-bold bg-primary text-white">
               最新文章
             </span>
           </div>
-          <h2 className="mb-2 text-28 font-bold">{featuredArticle.title}</h2>
-          <p className="mb-4 line-clamp-2">{featuredArticle.description}</p>
-          <Link
-            to={`/blog/${featuredArticle.id}`}
-            className="btn-outline inline-block text-slate-750 lg:mr-auto"
-            type="button"
-          >
-            閱讀內文
-          </Link>
+          <h2 className="text-28 font-bold">{featuredArticle.title}</h2>
+          {isBlog && (
+            <>
+              <p className="mt-2 mb-4 line-clamp-2">
+                {featuredArticle.description}
+              </p>
+              <Link
+                to={`/blog/${featuredArticle.id}`}
+                className="btn-outline inline-block text-slate-750 lg:mr-auto"
+                type="button"
+              >
+                閱讀內文
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </section>

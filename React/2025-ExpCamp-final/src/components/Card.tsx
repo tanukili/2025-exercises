@@ -151,7 +151,7 @@ export default function Card() {
         <div className="flex items-center">
           {tagsItems}
           {article.isPopular && (
-            <span className="inline-block px-3 py-1.5 rounded-full bg-primary text-white ">
+            <span className="inline-block px-3 py-1.5 rounded-full font-bold bg-primary text-white ">
               人氣文章
             </span>
           )}
