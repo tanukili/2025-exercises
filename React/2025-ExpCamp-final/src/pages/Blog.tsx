@@ -12,7 +12,7 @@ export default function Blog() {
               <input
                 type="search"
                 placeholder="搜尋你感興趣的文章"
-                className="w-full p-4 pl-[50px] border rounded-full text-slate-750"
+                className="w-full p-4 pl-[50px] border rounded-full text-gray-650"
               />
             </div>
           </form>
@@ -22,7 +22,7 @@ export default function Blog() {
         </div>
       </div>
       <nav className="flex justify-center mb-16 lg:mb-20">
-        <ul className="flex items-center py-2 rounded-full text-center text-slate-750 bg-white">
+        <ul className="flex items-center py-2 rounded-full text-center text-gray-650 bg-white">
           <li className="pl-5">
             <a href="#">
               <i className="icon icon-page-left"></i>

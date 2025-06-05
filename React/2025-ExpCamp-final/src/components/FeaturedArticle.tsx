@@ -35,6 +35,10 @@ export default function FeaturedArticle() {
     return date.replaceAll("-", "/");
   };
 
+  // 動態 heading tag
+  const FirstHeading = isBlog ? 'h2' : 'h1';
+  const SecondHeading = isBlog ? 'h3' : 'h2'
+
   return (
     <section className="sm:flex lg:h-[640px]">
       <picture className="block sm:w-1/2 md:pr-3 md:-mr-3">
@@ -54,14 +58,14 @@ export default function FeaturedArticle() {
             {formatDate(featuredArticle.timestamp)}
           </time>
           <div className="flex items-center mb-2">
-            <h3 className="text-2xl text-primary">
+            <SecondHeading className="text-2xl text-primary">
               {featuredArticle.subtitle}
-            </h3>
+            </SecondHeading>
             <span className="inline-block px-3 py-1.5 rounded-full ml-2 font-bold bg-primary text-white">
               最新文章
             </span>
           </div>
-          <h2 className="text-28 font-bold">{featuredArticle.title}</h2>
+          <FirstHeading className="text-28 font-bold">{featuredArticle.title}</FirstHeading>
           {isBlog && (
             <>
               <p className="mt-2 mb-4 line-clamp-2">
@@ -69,7 +73,7 @@ export default function FeaturedArticle() {
               </p>
               <Link
                 to={`/blog/${featuredArticle.id}`}
-                className="btn-outline inline-block text-slate-750 lg:mr-auto"
+                className="btn-outline inline-block text-gray-650 lg:mr-auto"
                 type="button"
               >
                 閱讀內文

@@ -157,10 +157,10 @@ export default function Card() {
           )}
         </div>
         <h3 className="grow text-28 font-bold mb-2">{article.title}</h3>
-        <p className="text-slate-750 mb-4 line-clamp-2">
+        <p className="text-gray-650 mb-4 line-clamp-2">
           {article.description}
         </p>
-        <Link to={`/blog/${article.id}`} className="btn-outline text-slate-750" type="button">
+        <Link to={`/blog/${article.id}`} className="btn-outline text-gray-650" type="button">
           閱讀內文
         </Link>
       </div>
