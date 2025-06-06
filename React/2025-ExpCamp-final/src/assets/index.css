@@ -32,8 +32,9 @@
     border-radius: calc(infinity * 1px);
   }
 
-  .btn-outlind-primary {
+  .btn-outline-primary {
     border: 1px solid var(--color-primary);
+    color: var(--color-primary);
   }
 
   .icon::before {
@@ -124,4 +125,10 @@
 }
 .icon-page-right:before {
   background-image: url("/mobile/blog/page-right.png");
+}
+.icon-arrow-right::before {
+  background-image: url("/mobile/index/arrow-right.png");
+}
+.icon-swiper-arrow::before {
+  background-image: url("/mobile/index/swiper-arrow.png");
 }
