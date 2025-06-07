@@ -53,7 +53,7 @@ export default function FeaturedArticle() {
         />
       </picture>
       <div className="border-b-2 border-secondary md:grow md:grid">
-        <div className="px-3 py-12 md:place-self-center sm:max-w-sm lg:ml-3 lg:pr-0 lg:max-w-md xl:max-w-648 sm:mr-auto">
+        <div className="px-3 py-12 md:place-self-center sm:max-w-sm lg:ml-3 lg:pr-0 lg:max-w-md xl:max-w-162 sm:mr-auto">
           <time className="block text-black mb-1">
             {formatDate(featuredArticle.timestamp)}
           </time>

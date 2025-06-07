@@ -5,7 +5,7 @@ export default function BlogDetail() {
   return (
     <>
       <FeaturedArticle />
-      <article className="px-3 mt-16 sm:max-w-md sm:mx-auto lg:px-1.5 lg:mt-20 lg:max-w-648">
+      <article className="px-3 mt-16 sm:max-w-md sm:mx-auto lg:px-1.5 lg:mt-20 lg:max-w-162">
         <section className="mb-12">
           <h2 className="article-title mb-6">前言</h2>
           <p>
@@ -243,7 +243,7 @@ export default function BlogDetail() {
           </ul>
         </section>
       </article>
-      <div className="flex justify-between px-3 mb-16 sm:max-w-md sm:mx-auto lg:px-1.5 lg:mb-20 lg:max-w-648">
+      <div className="flex justify-between px-3 mb-16 sm:max-w-md sm:mx-auto lg:px-1.5 lg:mb-20 lg:max-w-162">
         <Link to="/" className="btn-outline flex">
           <i className="icon icon-page-left mr-1"></i>上一篇
         </Link>

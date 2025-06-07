@@ -60,7 +60,7 @@ export default function Footer() {
             <span className="mr-2">{sns.name}</span>{sns.subtitle}
           </span>
         </a>
-        <i className="icon icon-arrow-right mt-2"></i>
+        <i className={ isIndex ? "icon icon-arrow-right mt-2" : "hidden"}></i>
       </li>
     );
   });
