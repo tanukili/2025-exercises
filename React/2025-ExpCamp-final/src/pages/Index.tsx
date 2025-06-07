@@ -140,9 +140,9 @@ export default function Index() {
           <picture className="block w-full p-6 bg-gray-150">
             <source
               media="(min-width: 768px)"
-              srcSet="/desktop/index/photo8.png"
+              srcSet={`${import.meta.env.BASE_URL}/desktop/index/photo8.png`}
             />
-            <img src="/mobile/index/photo8.png" alt="職業諮詢情境" />
+            <img src={`${import.meta.env.BASE_URL}/mobile/index/photo8.png`} alt="職業諮詢情境" />
           </picture>
           <div>
             <div className="px-6 py-10">
@@ -172,9 +172,9 @@ export default function Index() {
         <picture>
           <source
             media="(min-width: 992px)"
-            srcSet="/desktop/index/photo9.png"
+            srcSet={`${import.meta.env.BASE_URL}/desktop/index/photo9.png`}
           />
-          <img src="/mobile/index/photo9.png" alt="笑容滿面的個人畫像" />
+          <img src={`${import.meta.env.BASE_URL}/mobile/index/photo9.png`} alt="笑容滿面的個人畫像" />
         </picture>
         <div className="p-3 bg-[url(/mobile/index/Hero%20Section2.png)] bg-cover bg-center">
           <div className="px-6 py-10 bg-white">

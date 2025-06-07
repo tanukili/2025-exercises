@@ -18,11 +18,11 @@ export default function BlogDetail() {
           <picture className="block w-full mb-6">
             <source
               media="(min-width: 992px)"
-              srcSet="/desktop/blog-content/content1.png"
+              srcSet={`${import.meta.env.BASE_URL}/desktop/blog-content/content1.png`}
             />
             <img
               className="max-h-[320px] w-full object-cover object-center"
-              src="/mobile/blog-content/content1.png"
+              src={`${import.meta.env.BASE_URL}/mobile/blog-content/content1.png`}
               alt="VScode畫面"
             />
           </picture>
@@ -95,11 +95,11 @@ export default function BlogDetail() {
           <picture className="block w-full mb-6">
             <source
               media="(min-width: 992px)"
-              srcSet="/desktop/blog-content/content2.png"
+              srcSet={`${import.meta.env.BASE_URL}/desktop/blog-content/content2.png`}
             />
             <img
               className="max-h-[320px] w-full object-cover object-center"
-              src="/mobile/blog-content/content2.png"
+              src={`${import.meta.env.BASE_URL}/mobile/blog-content/content2.png`}
               alt="coding示意圖"
             />
           </picture>
@@ -149,11 +149,11 @@ export default function BlogDetail() {
           <picture className="block w-full mb-6">
             <source
               media="(min-width: 992px)"
-              srcSet="/desktop/blog-content/content3.png"
+              srcSet={`${import.meta.env.BASE_URL}/desktop/blog-content/content3.png`}
             />
             <img
               className="max-h-[320px] w-full object-cover object-center"
-              src="/mobile/blog-content/content3.png"
+              src={`${import.meta.env.BASE_URL}/mobile/blog-content/content3.png`}
               alt="團隊討論"
             />
           </picture>
@@ -203,11 +203,11 @@ export default function BlogDetail() {
           <picture className="block w-full mb-6">
             <source
               media="(min-width: 992px)"
-              srcSet="/desktop/blog-content/content4.png"
+              srcSet={`${import.meta.env.BASE_URL}/desktop/blog-content/content4.png`}
             />
             <img
               className="max-h-[320px] w-full object-cover object-center"
-              src="/mobile/blog-content/content4.png"
+              src={`${import.meta.env.BASE_URL}/mobile/blog-content/content4.png`}
               alt="舉白旗"
             />
           </picture>
