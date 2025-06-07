@@ -5,6 +5,8 @@
   --color-body: #FBFBFB;
   --color-primary: #0027D5;
   --color-secondary: #6C757D;
+  --color-gray-50: #F5F5F5;
+  --color-gray-75: #F1F1F1;
   --color-gray-150: #EDEDED;
   --color-gray-650: #4B4B4B;
 
@@ -12,6 +14,8 @@
   --text-32: 2rem;
   --text-52: 3.25rem;
   --text-120: 7.5rem;
+
+  --tw-leading: 1.5
 
   --spacing-648: 40.5rem;
   --spacing-1296: 81rem;
@@ -49,6 +53,10 @@
   .icon-lg::before {
     width: calc(var(--spacing) * 11);
     height: calc(var(--spacing) * 11);
+  }
+  .icon-sm::before {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
   }
 
   /* article-style */
@@ -131,4 +139,13 @@
 }
 .icon-swiper-arrow::before {
   background-image: url("/mobile/index/swiper-arrow.png");
+}
+button:disabled .icon-swiper-arrow::before {
+  background-image: url("/mobile/index/swiper-arrow-disable.png");
+}
+.icon-dash::before {
+  background-image: url("/mobile/index/dash.png");
+}
+.icon-checked::before {
+  background-image: url("/mobile/index/checked.png");
 }

@@ -140,7 +140,7 @@ export default function Card() {
     ));
 
     return (
-      <div className="flex flex-col items-start px-3 mb-8 md:w-1/2 xl:w-1/3 lg:my-10" key={article.id}>
+      <li className="flex flex-col items-start px-3 mb-8 md:w-1/2 xl:w-1/3 lg:my-10" key={article.id}>
         <picture className="block w-full mb-4">
           <source media="(min-width: 992px)" srcSet={article.coverUrlLg} />
           <img className="max-h-[200px] w-full object-cover object-center" src={article.coverUrl} alt={article.title} />
@@ -163,7 +163,7 @@ export default function Card() {
         <Link to={`/blog/${article.id}`} className="btn-outline text-gray-650" type="button">
           閱讀內文
         </Link>
-      </div>
+      </li>
     );
   });
 

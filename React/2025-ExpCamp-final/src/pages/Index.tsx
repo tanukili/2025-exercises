@@ -58,14 +58,15 @@ const consultations = [
 export default function Index() {
   const servesCard = serves.map((serve) => {
     return (
-      <li>
+      <li className="mb-8">
         <picture>
           <source media="(min-width: 992px)" srcSet={serve.imgUrlLg} />
           <img src={serve.imgUrl} alt={serve.title} />
         </picture>
-        <div>
-          <h3>{serve.title}</h3>
-          <p>{serve.describe}</p>
+        <div className="p-6 bg-white">
+          <i className="icon icon-lg icon-dash"></i>
+          <h3 className="mb-2 text-28 font-bold">{serve.title}</h3>
+          <p className="text-gray-650">{serve.describe}</p>
         </div>
       </li>
     );
@@ -74,18 +75,26 @@ export default function Index() {
   const consultationsCard = consultations.map((consultation) => {
     const { completions } = consultation;
     const completionList = completions.map((completion) => (
-      <li>{completion}</li>
+      <li className="flex items-center mb-2">
+        <i className="icon icon-sm icon-checked mr-2"></i>
+        {completion}
+      </li>
     ));
 
     return (
-      <li>
+      <li className="p-3">
         <img
           src={consultation.avatarUrl}
           alt={`個案頭像：${consultation.title}`}
         />
-        <h3>{consultation.title}</h3>
-        <ul>{completionList}</ul>
-        <a className="btn-outline" href="https://podcasters.apple.com/zh-tw/">
+        <h3 className="mt-4 mb-2 text-2xl">{consultation.title}</h3>
+        <ul className="pb-2 mb-4 border-b border-gray-650 font-medium">
+          {completionList}
+        </ul>
+        <a
+          className="btn-outline inline-block font-medium text-gray-650"
+          href="https://podcasters.apple.com/zh-tw/"
+        >
           前往聆聽 podcast
         </a>
       </li>
@@ -94,21 +103,26 @@ export default function Index() {
 
   return (
     <>
-      <section>
-        <h2>專業服務與方案</h2>
+      <section className="px-3 pb-16 mt-16 border-b-2 border-secondary">
+        <h2 className="mb-8 text-5xl font-bold">專業服務與方案</h2>
         <ul>{servesCard}</ul>
-        <a href="mailto: alysewang@hexschool.com">
+        <a
+          className="flex flex-col items-end text-28 font-bold"
+          href="mailto: alysewang@hexschool.com"
+        >
           聯繫我，取得更多資訊！
-          <i className="icon icon-arrow-right"></i>
+          <i className="icon icon-arrow-right  btn-outline p-2 mt-2"></i>
         </a>
       </section>
-      <section>
-        <h2>部落格精選</h2>
-        <div>
-          <ul>
-            <Card />
-          </ul>
-          <button type="button">
+      <section className="px-3 pb-16 mt-16 border-b-2 border-secondary">
+        <h2 className="mb-6 text-5xl font-bold">部落格精選</h2>
+        <div className="grid grid-cols-[44px_1fr_44px] grid-rows-[1fr_44px]">
+          <div className="col-span-3 w-full  overflow-hidden">
+            <ul className="w-[4125px] grid grid-cols-11 -mx-3">
+              <Card />
+            </ul>
+          </div>
+          <button className="col-start-2 ml-auto mr-6" type="button" disabled>
             <i className="icon icon-lg icon-swiper-arrow"></i>
           </button>
           <button type="button">
@@ -116,10 +130,14 @@ export default function Index() {
           </button>
         </div>
       </section>
-      <section>
-        <h2>職涯諮詢成功案例</h2>
-        <div>
-          <picture>
+      <section className="px-3 my-16 font-bold">
+        <h2 className="mb-8 text-5xl">
+          職涯諮詢
+          <br />
+          成功案例
+        </h2>
+        <div className="mb-10">
+          <picture className="block w-full p-6 bg-gray-150">
             <source
               media="(min-width: 768px)"
               srcSet="/desktop/index/photo8.png"
@@ -127,36 +145,52 @@ export default function Index() {
             <img src="/mobile/index/photo8.png" alt="職業諮詢情境" />
           </picture>
           <div>
-            <div>
-              <p>
+            <div className="px-6 py-10">
+              <i className="icon icon-lg icon-dash"></i>
+              <p className="mt-6">
                 在職涯發展的關鍵轉折點上，適時的協助與正確的方向至關重要。藉由職涯諮詢，我可以幫助你加速釐清目標、建立更全面的技術與軟實力，並有效
-                <span>突破原有的舒適圈</span>。
+                <span className="text-primary">突破原有的舒適圈</span>。
               </p>
             </div>
-            <div>
-              <p>期待在下一個新機會中，我能與你一起攜手邁向更高峰！</p>
-              <button className="btn-outline btn-outline-primary" type="button">
+            <div className="px-6 py-10 bg-gray-50">
+              <i className="icon icon-lg icon-dash"></i>
+              <p className="my-6">
+                期待在下一個新機會中，我能與你一起攜手邁向更高峰！
+              </p>
+              <button
+                className="btn-outline btn-outline-primary bg-white"
+                type="button"
+              >
                 立即預約諮詢
               </button>
             </div>
           </div>
         </div>
-        <ul>{consultationsCard}</ul>
+        <ul className="p-3 bg-gray-50">{consultationsCard}</ul>
       </section>
       <section>
         <picture>
-          <source media="(min-width: 992px)" srcSet="/desktop/index/photo9.png" />
+          <source
+            media="(min-width: 992px)"
+            srcSet="/desktop/index/photo9.png"
+          />
           <img src="/mobile/index/photo9.png" alt="笑容滿面的個人畫像" />
         </picture>
-        <h2>訂閱電子報</h2>
-        <p>
-          立即訂閱，搶先掌握<span>前端 x 職涯</span>的獨家資訊！
-        </p>
-        <form action="#">
-          <input type="text" placeholder="請輸入您的大名" />
-          <input type="text" placeholder="請輸入您的電子信箱" />
-          <button className="btn-outline btn-outline-primary" type="submit">啟動訂閱</button>
-        </form>
+        <div className="p-3 bg-[url(/mobile/index/Hero%20Section2.png)] bg-cover bg-center">
+          <div className="px-6 py-10 bg-white">
+            <h2 className="mb-4 text-5xl font-bold">訂閱電子報</h2>
+            <p className="mb-6 text-xl">
+              立即訂閱，搶先掌握<span className="text-primary">前端 x 職涯</span>的獨家資訊！
+            </p>
+            <form action="#">
+              <input className="w-full mb-2 px-4 py-2 text-gray-650 bg-gray-75" type="text" placeholder="請輸入您的大名" />
+              <input className="w-full mb-6 px-4 py-2 text-gray-650 bg-gray-75" type="text" placeholder="請輸入您的電子信箱" />
+              <button className="btn-outline btn-outline-primary" type="submit">
+                啟動訂閱
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
     </>
   );

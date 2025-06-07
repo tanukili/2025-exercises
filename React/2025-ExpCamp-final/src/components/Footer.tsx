@@ -13,10 +13,68 @@ export default function Footer() {
     }
   }, [nowPath]);
 
+  // 社群平台資料抽離
+  const snsList = [
+    {
+      name: "Youtube",
+      subtitle: "職涯諮詢室",
+      iconClass: "icon-yt",
+      link: "https://www.youtube.com",
+    },
+    {
+      name: "podcast",
+      subtitle: "職涯諮詢室",
+      iconClass: "icon-podcast",
+      link: "https://podcasters.apple.com/zh-tw",
+    },
+    {
+      name: "Facebook",
+      subtitle: "前端社群",
+      iconClass: "icon-fb",
+      link: "https://www.facebook.com/",
+    },
+    {
+      name: "linkedin",
+      subtitle: "職涯交流",
+      iconClass: "icon-linkedin",
+      link: "https://www.linkedin.com/",
+    },
+    {
+      name: "Instagram",
+      subtitle: "日常分享",
+      iconClass: "icon-ig",
+      link: "https://www.instagram.com/",
+    },
+  ];
+
+  const snsListItems = snsList.map((sns) => {
+    return (
+      <li className={isIndex ? "border-b pb-5" : ""}>
+        <a
+          className="flex items-center mb-2"
+          href={sns.link}
+          target="_blank"
+        >
+          <i className={`icon icon-lg ${sns.iconClass}`}></i>
+          <span className={isIndex ? "ml-2" : "hidden"}>
+            <span className="mr-2">{sns.name}</span>{sns.subtitle}
+          </span>
+        </a>
+        <i className="icon icon-arrow-right mt-2"></i>
+      </li>
+    );
+  });
+
   return (
     <footer className="border-t border-secondary">
-      <section className="hidden justify-between py-20 lg:flex lg:mx-auto lg:max-w-4xl xl:max-w-6xl 2xl:max-w-1296">
-        <h2 className={isIndex ? "" : "hidden"}>與我聯繫</h2>
+      <section
+        className={`justify-between py-16 lg:py-20 lg:flex lg:mx-auto lg:max-w-4xl xl:max-w-6xl 2xl:max-w-1296 ${
+          isIndex ? "px-3 border-b border-secondary" : "hidden"
+        }`}
+      >
+        <h2 className={isIndex ? "mb-6 text-5xl font-bold" : "hidden"}>
+          與我聯繫
+        </h2>
         <a
           className={`text-32 hover:text-primary ${isIndex ? "hidden" : ""}`}
           href="mailto:alysewang@hexschool.com"
@@ -24,62 +82,22 @@ export default function Footer() {
           alysewang@hexschool.com
         </a>
         <nav>
-          <ul className="flex gap-x-1">
-            <li className={isIndex ? "" : "hidden"}>
+          <ul
+            className={`flex gap-x-1  ${
+              isIndex ? "flex-col text-2xl gap-y-6" : ""
+            }`}
+          >
+            <li className={isIndex ? "border-b pb-4 mb-1" : "hidden"}>
               <a
-                className="text-32 hover:text-primary"
+                className={`hover:text-primary ${isIndex ? "underline" : ""}`}
                 href="mailto:alysewang@hexschool.com"
               >
                 alysewang@hexschool.com
               </a>
-              合作洽談
+              <span className="block my-2">合作洽談</span>
               <i className="icon icon-arrow-right"></i>
             </li>
-            <li>
-              <a href="https://www.youtube.com" target="_blank">
-                <i className="icon icon-lg icon-yt"></i>
-                <span className={isIndex ? "" : "hidden"}>
-                  Youtube職涯諮詢室
-                  <i className="icon icon-arrow-right"></i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="https://podcasters.apple.com/zh-tw" target="_blank">
-                <i className="icon icon-lg icon-podcast"></i>
-                <span className={isIndex ? "" : "hidden"}>
-                  podcast職涯諮詢室
-                  <i className="icon icon-arrow-right"></i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/" target="_blank">
-                <i className="icon icon-lg icon-fb"></i>
-                <span className={isIndex ? "" : "hidden"}>
-                  Facebook前端社群
-                  <i className="icon icon-arrow-right"></i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/" target="_blank">
-                <i className="icon icon-lg icon-linkedin"></i>
-                <span className={isIndex ? "" : "hidden"}>
-                  linkedin職涯交流
-                  <i className="icon icon-arrow-right"></i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/" target="_blank">
-                <i className="icon icon-lg icon-ig"></i>
-                <span className={isIndex ? "" : "hidden"}>
-                  Instagram日常分享
-                  <i className="icon icon-arrow-right"></i>
-                </span>
-              </a>
-            </li>
+            {snsListItems}
           </ul>
         </nav>
       </section>
