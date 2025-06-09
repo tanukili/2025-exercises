@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 // 模擬遠端資料
 const articles = [
@@ -132,6 +133,18 @@ const formatDate = (timestamp: number) => {
 };
 
 export default function Card() {
+  const [isIndex, setIsIndex] = useState(false);
+  const { pathname: nowPath } = useLocation();
+
+  // 要記得加上依賴陣列
+  useEffect(() => {
+    if (nowPath !== "/") {
+      setIsIndex(false);
+    } else {
+      setIsIndex(true);
+    }
+  }, [nowPath]);
+
   const cardItems = articles.map((article) => {
     const tagsItems = article.tags.map((tag, index) => (
       <a className="text-2xl text-primary mr-2" href="#" key={index}>
@@ -140,10 +153,17 @@ export default function Card() {
     ));
 
     return (
-      <li className="flex flex-col items-start px-3 mb-8 md:w-1/2 xl:w-1/3 lg:my-10" key={article.id}>
+      <li
+        className={`"flex flex-col items-start px-3 mb-8 ${ isIndex ? 'sm:mb-0' : 'md:w-1/2 xl:w-1/3 lg:my-10'}`}
+        key={article.id}
+      >
         <picture className="block w-full mb-4">
           <source media="(min-width: 992px)" srcSet={article.coverUrlLg} />
-          <img className="max-h-[200px] w-full object-cover object-center" src={article.coverUrl} alt={article.title} />
+          <img
+            className="h-[200px] w-full object-cover object-center"
+            src={article.coverUrl}
+            alt={article.title}
+          />
         </picture>
         <time className="block text-black mb-1">
           {formatDate(article.timestamp)}
@@ -157,10 +177,12 @@ export default function Card() {
           )}
         </div>
         <h3 className="grow text-28 font-bold mb-2">{article.title}</h3>
-        <p className="text-gray-650 mb-4 line-clamp-2">
-          {article.description}
-        </p>
-        <Link to={`/blog/${article.id}`} className="btn-outline text-gray-650" type="button">
+        <p className="text-gray-650 mb-4 line-clamp-2">{article.description}</p>
+        <Link
+          to={`/blog/${article.id}`}
+          className="btn-outline inline-block text-gray-650"
+          type="button"
+        >
           閱讀內文
         </Link>
       </li>

@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <header>
-      <div className="sm:flex lg:h-[834px]">
+      <div className={`lg:h-[834px] ${isIndex ? "md:flex" : "sm:flex"}`}>
         <picture className="sm:w-1/2">
           <source media="(min-width: 992px)" srcSet={imgLgHero} />
           <img
@@ -31,11 +31,15 @@ export default function Header() {
           />
         </picture>
         <div
-          className={`bg-[url(/mobile/index/Hero%20Section2.png)] bg-cover bg-center p-6 text-primary md:bg-[url(/desktop/index/Hero%20Section2.png)] sm:w-1/2 sm:grid lg:pl-20 ${
-            isIndex ? "pb-40" : ""
+          className={`bg-[url(/mobile/index/Hero%20Section2.png)] bg-cover bg-center p-6 text-primary md:bg-[url(/desktop/index/Hero%20Section2.png)]  sm:grid lg:pr-0 ${
+            isIndex ? "pb-40 md:w-1/2 lg:pl-15 2xl:pl-20" : "sm:w-1/2 lg:pl-20"
           }`}
         >
-          <h1 className="mb-3 text-52 font-black lg:text-120 sm:mt-auto">
+          <h1
+            className={`mb-3 text-52 font-black sm:mt-auto ${
+              isIndex ? "lg:text-64 xl:text-8xl 2xl:text-120" : "lg:text-120"
+            }`}
+          >
             {title}
           </h1>
           <h2 className="text-28 font-bold sm:mb-auto">
@@ -43,45 +47,58 @@ export default function Header() {
           </h2>
         </div>
       </div>
-      <div className={`${isIndex ? "xl:ml-auto xl:mr-20" : "hidden"}`}>
-        <div className="mx-3 -mt-30 px-6 py-10 bg-white text-2xl font-medium xl:px-10 xl:py-20 xl:w-[1077px] xl:ml-auto xl:-mt-40 xl:text-28">
-          <p className="mb-2 xl:flex xl:mb-0">
-            嗨，我是<span className="inline-block mx-2">Alyse</span>
-          <span className="mb-4">一名深耕前端技術的工程師。</span>
-          </p>
-          <p className="mb-4">
-            擅長 React、Vue
-            等框架，同時熱愛為轉職與新手工程師提供職涯指導。邀請你與我一起，開啟更具潛能的程式與職涯之旅！
-          </p>
-          <nav>
-            <ul className="flex gap-x-1">
-              <li>
-                <a href="https://www.youtube.com" target="_blank">
-                  <i className="icon icon-lg icon-yt"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://podcasters.apple.com/zh-tw" target="_blank">
-                  <i className="icon icon-lg icon-podcast"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/" target="_blank">
-                  <i className="icon icon-lg icon-fb"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/" target="_blank">
-                  <i className="icon icon-lg icon-linkedin"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/" target="_blank">
-                  <i className="icon icon-lg icon-ig"></i>
-                </a>
-              </li>
-            </ul>
-          </nav>
+      <div
+        className={`${
+          isIndex
+            ? "-mt-30 relative xl:ml-auto xl:mr-20 lg:-mt-40 xl:max-w-324"
+            : "hidden"
+        }`}
+      >
+        <div className="flex xl:-mx-3">
+          <div className="px-3 mx-auto xl:ml-auto lg:w-5/6">
+            <div className="px-6 py-10 bg-white text-2xl font-medium lg:px-10 lg:py-20 lg:text-28">
+              <p className="mb-2 xl:flex xl:mb-0">
+                嗨，我是<span className="inline-block mx-2">Alyse</span>
+                <span className="mb-4">一名深耕前端技術的工程師。</span>
+              </p>
+              <p className="mb-4">
+                擅長 React、Vue
+                等框架，同時熱愛為轉職與新手工程師提供職涯指導。邀請你與我一起，開啟更具潛能的程式與職涯之旅！
+              </p>
+              <nav>
+                <ul className="flex gap-x-1">
+                  <li>
+                    <a href="https://www.youtube.com" target="_blank">
+                      <i className="icon icon-lg icon-yt"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://podcasters.apple.com/zh-tw"
+                      target="_blank"
+                    >
+                      <i className="icon icon-lg icon-podcast"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                      <i className="icon icon-lg icon-fb"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                      <i className="icon icon-lg icon-linkedin"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                      <i className="icon icon-lg icon-ig"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </header>

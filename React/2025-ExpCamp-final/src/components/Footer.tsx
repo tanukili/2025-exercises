@@ -47,20 +47,22 @@ export default function Footer() {
     },
   ];
 
+  // swiper 可視範圍控制
+
   const snsListItems = snsList.map((sns, index) => {
     return (
-      <li className={isIndex ? "border-b pb-5 xl:flex" : ""}>
+      <li className={isIndex ? "border-b pb-5 sm:flex" : ""}>
         <a
-          className="flex items-center mb-2 hover:text-primary xl:mb-0"
+          className="flex items-center mb-2 hover:text-primary sm:mb-0"
           href={sns.link}
           target="_blank"
         >
           <i className={`icon icon-lg ${sns.iconClass} xl:mr-2`}></i>
           <span className={isIndex ? "ml-2" : "hidden"}>
-            <span className={`mr-2 ${index % 2 || index === 4 ? 'xl:mr-4': ''}`}>{sns.name}</span>{sns.subtitle}
+            <span className={`mr-2 ${index % 2 || index === 4 ? 'sm:mr-4': ''}`}>{sns.name}</span>{sns.subtitle}
           </span>
         </a>
-        <i className={ isIndex ? "icon icon-arrow-right mt-2 xl:mt-2.5 xl:ml-auto" : "hidden"}></i>
+        <i className={ isIndex ? "icon icon-arrow-right mt-2 sm:mt-2.5 sm:ml-auto" : "hidden"}></i>
       </li>
     );
   });
@@ -87,15 +89,15 @@ export default function Footer() {
               isIndex ? "flex-col text-2xl gap-y-6 xl:text-28 xl:gap-y-4" : ""
             }`}
           >
-            <li className={isIndex ? "border-b pb-4 mb-1 lg:flex xl:mb-0" : "hidden"}>
+            <li className={isIndex ? "border-b pb-4 mb-1 sm:flex sm:mb-0" : "hidden"}>
               <a
                 className=" underline hover:text-primary xl:text-32"
                 href="mailto:alysewang@hexschool.com"
               >
                 alysewang@hexschool.com
               </a>
-              <span className="block my-2 xl:ml-4 xl:my-0">合作洽談</span>
-              <i className="icon icon-arrow-right xl:ml-auto xl:mt-2.5"></i>
+              <span className="block my-2 sm:ml-4 sm:my-0">合作洽談</span>
+              <i className="icon icon-arrow-right sm:ml-auto sm:mt-2.5"></i>
             </li>
             {snsListItems}
           </ul>

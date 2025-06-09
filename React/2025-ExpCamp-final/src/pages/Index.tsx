@@ -56,22 +56,22 @@ const consultations = [
   },
 ];
 export default function Index() {
-  const servesCard = serves.map((serve) => {
+  const servesCard = serves.map((serve, index) => {
     return (
-      <li className="mb-8 items-center xl:w-5/6 xl:px-3 xl:mx-auto xl:flex xl:not-last:mb-16 xl:last even:flex-row-reverse">
-        <picture>
-          <source media="(min-width: 992px)" srcSet={serve.imgUrlLg} />
+      <li className="mb-8 items-center justify-center lg:-mx-3 md:flex lg:not-last:mb-16 lg:last even:flex-row-reverse">
+        <picture className="xl:w-1/2 lg:px-3">
+          <source media="(min-width: 640px)" srcSet={serve.imgUrlLg} />
           <img
-            className="w-full object-cover object-center"
+            className="w-full h-full object-cover object-center"
             src={serve.imgUrl}
             alt={serve.title}
           />
         </picture>
-        <div className="p-6 bg-white xl:w-3/5">
-          <i className="icon icon-lg icon-dash"></i>
-          <h3 className="mb-2 text-28 font-bold">{serve.title}</h3>
-          <p className="text-gray-650">{serve.describe}</p>
-        </div>
+          <div className={`p-6 bg-white relative md:w-120 xl:w-120 ${index % 2 ? "md:-mr-16 md:-mr-16" : "md:-ml-20 xl:-ml-16"}`}>
+            <i className="icon icon-lg icon-dash"></i>
+            <h3 className="mb-2 text-28 font-bold">{serve.title}</h3>
+            <p className="text-gray-650">{serve.describe}</p>
+          </div>
       </li>
     );
   });
@@ -86,7 +86,7 @@ export default function Index() {
     ));
 
     return (
-      <li className="p-3">
+      <li className="p-3 md:w-1/2">
         <img
           src={consultation.avatarUrl}
           alt={`個案頭像：${consultation.title}`}
@@ -107,10 +107,10 @@ export default function Index() {
 
   return (
     <>
-      <section className="px-3 pb-16 mt-16 border-b-2 border-secondary xl:pb-20">
-        <div className="xl:max-w-324 xl:mx-auto xl:px-0">
+      <section className="pb-16 mt-16 border-b-2 border-secondary xl:pb-20">
+        <div className="px-3 xl:max-w-214 xl:mx-auto xl:px-0 2xl:max-w-324">
           <h2 className="mb-8 text-5xl font-bold xl:text-64">專業服務與方案</h2>
-          <ul className="xl:-mx-3">{servesCard}</ul>
+          <ul>{servesCard}</ul>
           <div className="flex flex-col items-end justify-end text-28 font-bold xl:flex-row">
             <a
               className="hover:text-primary"
@@ -122,52 +122,58 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section className="px-3 pb-16 mt-16 border-b-2 border-secondary">
-        <h2 className="mb-6 text-5xl font-bold">部落格精選</h2>
-        <div className="grid grid-cols-[44px_1fr_44px] grid-rows-[1fr_44px]">
-          <div className="col-span-3 w-full  overflow-hidden">
-            <ul className="w-[4125px] grid grid-cols-11 -mx-3">
+      <section className="px-3 pb-16 mt-16 border-b-2 border-secondary xl:px-0 xl:pb-20 xl:mt-20">
+        <h2 className="mb-6 text-5xl font-bold xl:text-64 xl:mx-auto xl:max-w-214 2xl:max-w-324">
+          部落格精選
+        </h2>
+        <div className="grid grid-cols-[44px_1fr_44px] grid-rows-[1fr_44px] xl:grid-rows-1 xl:-mx-auto xl:grid-cols-[1fr_auto_1fr]">
+          <div className="col-span-3 max-w-88 overflow-hidden xl:col-span-1  xl:max-w-214 2xl:max-w-324 mx-auto">
+            <ul className="w-[4125px] grid grid-cols-11 -mx-3 xl:w-[4840px]">
               <Card />
             </ul>
           </div>
-          <button className="col-start-2 ml-auto mr-6" type="button" disabled>
+          <button
+            className="col-start-2 ml-auto mr-6 xl:-order-1 xl:col-start-auto"
+            type="button"
+            disabled
+          >
             <i className="icon icon-lg icon-swiper-arrow"></i>
           </button>
-          <button type="button">
+          <button className="2xl:ml-6" type="button">
             <i className="icon icon-lg icon-swiper-arrow"></i>
           </button>
         </div>
       </section>
-      <section className="px-3 my-16 font-bold xl:my-20 xl:max-w-324 xl:mx-auto">
+      <section className="px-3 my-16 font-bold xl:my-20 lg:mx-auto lg:max-w-214 xl:max-w-6xl 2xl:max-w-1296">
         <div className="xl:-mx-3">
           <h2 className="mb-6 text-5xl xl:text-64">
             職涯諮詢
-            <br className="xl:hidden" />
+            <br className="sm:hidden" />
             成功案例
           </h2>
-          <div className="mb-10 xl:-mx-3 xl:flex">
-            <div className="xl:w-7/12 xl:px-3">
-            <picture className="block w-full p-6 bg-gray-150">
-              <source
-                media="(min-width: 768px)"
-                srcSet={`${import.meta.env.BASE_URL}desktop/index/photo8.png`}
-              />
-              <img
-                src={`${import.meta.env.BASE_URL}mobile/index/photo8.png`}
-                className="w-full object-fit objext-center"
-                alt="職業諮詢情境"
-              />
-            </picture>
+          <div className="mb-10 xl:-mx-3 lg:flex grow">
+            <div className="lg:w-1/2 xl:px-3">
+              <picture className="flex p-6 bg-gray-150 max-h-200 lg:h-full">
+                <source
+                  media="(min-width: 640px)"
+                  srcSet={`${import.meta.env.BASE_URL}desktop/index/photo8.png`}
+                />
+                <img
+                  src={`${import.meta.env.BASE_URL}mobile/index/photo8.png`}
+                  className="w-full mx-auto object-cover objext-center"
+                  alt="職業諮詢情境"
+                />
+              </picture>
             </div>
-            <div className="xl:w-5/12 xl:px-3">
-              <div className="px-6 py-10 xl:px-10 xl:py-20">
+            <div className="flex-col justify-center -mt-34 lg:mt-0 lg:px-3 lg:w-1/2 xl:w-5/12 lg:flex">
+              <div className="relative px-6 py-10 bg-white lg:-ml-30 lg:mr-30 xl:px-10 xl:py-20 xl:-ml-[219px] xl:mr-[219px]">
                 <i className="icon icon-dash before:w-10 before:h-10"></i>
                 <p className="mt-6">
                   在職涯發展的關鍵轉折點上，適時的協助與正確的方向至關重要。藉由職涯諮詢，我可以幫助你加速釐清目標、建立更全面的技術與軟實力，並有效
                   <span className="text-primary">突破原有的舒適圈</span>。
                 </p>
               </div>
-              <div className="px-6 py-10 bg-gray-50 xl:px-10 xl:py-20">
+              <div className="px-6 py-10 bg-gray-50 lg:-mt-5 xl:px-10 xl:py-20 xl:-mt-10">
                 <i className="icon icon-dash before:w-10 before:h-10"></i>
                 <p className="my-6">
                   期待在下一個新機會中，我能與你一起攜手邁向更高峰！
@@ -181,21 +187,24 @@ export default function Index() {
               </div>
             </div>
           </div>
-          <ul className="p-3 bg-gray-50 xl:flex xl:gap-x-6 xl:g-6">{consultationsCard}</ul>
+          <ul className="p-3 bg-gray-50 flex-wrap md:flex xl:gap-x-6 xl:g-6">
+            {consultationsCard}
+          </ul>
         </div>
       </section>
-      <section className="xl:flex">
-        <picture className="xl:w-1/2">
+      <section className="md:flex">
+        <picture className="md:w-1/2">
           <source
-            media="(min-width: 992px)"
+            media="(min-width: 460px)"
             srcSet={`${import.meta.env.BASE_URL}desktop/index/photo9.png`}
           />
           <img
             src={`${import.meta.env.BASE_URL}mobile/index/photo9.png`}
+            className="w-full h-full object-cover object-center"
             alt="笑容滿面的個人畫像"
           />
         </picture>
-        <div className="p-3 bg-[url(/mobile/index/Hero%20Section2.png)] bg-cover bg-center xl:w-1/2 xl:px-20 xl:grid xl:place-items-center">
+        <div className="p-3 bg-[url(/mobile/index/Hero%20Section2.png)] bg-cover bg-center md:w-1/2 lg:px-20 lg:grid lg:place-items-center">
           <div className="px-6 py-10 bg-white xl:w-full xl:p-20">
             <h2 className="mb-4 text-5xl font-bold xl:text-64">訂閱電子報</h2>
             <p className="mb-6 text-xl">
