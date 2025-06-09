@@ -47,20 +47,20 @@ export default function Footer() {
     },
   ];
 
-  const snsListItems = snsList.map((sns) => {
+  const snsListItems = snsList.map((sns, index) => {
     return (
-      <li className={isIndex ? "border-b pb-5" : ""}>
+      <li className={isIndex ? "border-b pb-5 xl:flex" : ""}>
         <a
-          className="flex items-center mb-2"
+          className="flex items-center mb-2 hover:text-primary xl:mb-0"
           href={sns.link}
           target="_blank"
         >
-          <i className={`icon icon-lg ${sns.iconClass}`}></i>
+          <i className={`icon icon-lg ${sns.iconClass} xl:mr-2`}></i>
           <span className={isIndex ? "ml-2" : "hidden"}>
-            <span className="mr-2">{sns.name}</span>{sns.subtitle}
+            <span className={`mr-2 ${index % 2 || index === 4 ? 'xl:mr-4': ''}`}>{sns.name}</span>{sns.subtitle}
           </span>
         </a>
-        <i className={ isIndex ? "icon icon-arrow-right mt-2" : "hidden"}></i>
+        <i className={ isIndex ? "icon icon-arrow-right mt-2 xl:mt-2.5 xl:ml-auto" : "hidden"}></i>
       </li>
     );
   });
@@ -68,11 +68,11 @@ export default function Footer() {
   return (
     <footer className="border-t border-secondary">
       <section
-        className={`justify-between py-16 lg:py-20 lg:flex lg:mx-auto lg:max-w-4xl xl:max-w-6xl 2xl:max-w-1296 ${
-          isIndex ? "px-3 border-b border-secondary" : "hidden"
+        className={`py-16 lg:py-20 lg:mx-auto lg:max-w-4xl xl:max-w-6xl 2xl:max-w-1296 ${
+          isIndex ? "px-3 lg:px-0" : "hidden justify-between lg:flex"
         }`}
       >
-        <h2 className={isIndex ? "mb-6 text-5xl font-bold" : "hidden"}>
+        <h2 className={isIndex ? "mb-6 text-5xl font-bold xl:text-64" : "hidden"}>
           與我聯繫
         </h2>
         <a
@@ -84,24 +84,24 @@ export default function Footer() {
         <nav>
           <ul
             className={`flex gap-x-1  ${
-              isIndex ? "flex-col text-2xl gap-y-6" : ""
+              isIndex ? "flex-col text-2xl gap-y-6 xl:text-28 xl:gap-y-4" : ""
             }`}
           >
-            <li className={isIndex ? "border-b pb-4 mb-1" : "hidden"}>
+            <li className={isIndex ? "border-b pb-4 mb-1 lg:flex xl:mb-0" : "hidden"}>
               <a
-                className={`hover:text-primary ${isIndex ? "underline" : ""}`}
+                className=" underline hover:text-primary xl:text-32"
                 href="mailto:alysewang@hexschool.com"
               >
                 alysewang@hexschool.com
               </a>
-              <span className="block my-2">合作洽談</span>
-              <i className="icon icon-arrow-right"></i>
+              <span className="block my-2 xl:ml-4 xl:my-0">合作洽談</span>
+              <i className="icon icon-arrow-right xl:ml-auto xl:mt-2.5"></i>
             </li>
             {snsListItems}
           </ul>
         </nav>
       </section>
-      <p className="py-6 text-center">
+      <p className="py-6 border-t border-secondary text-center">
         © 2025 Alyse Wang. All rights reserved.
       </p>
     </footer>

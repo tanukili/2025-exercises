@@ -58,12 +58,16 @@ const consultations = [
 export default function Index() {
   const servesCard = serves.map((serve) => {
     return (
-      <li className="mb-8">
+      <li className="mb-8 items-center xl:w-5/6 xl:px-3 xl:mx-auto xl:flex xl:not-last:mb-16 xl:last even:flex-row-reverse">
         <picture>
           <source media="(min-width: 992px)" srcSet={serve.imgUrlLg} />
-          <img src={serve.imgUrl} alt={serve.title} />
+          <img
+            className="w-full object-cover object-center"
+            src={serve.imgUrl}
+            alt={serve.title}
+          />
         </picture>
-        <div className="p-6 bg-white">
+        <div className="p-6 bg-white xl:w-3/5">
           <i className="icon icon-lg icon-dash"></i>
           <h3 className="mb-2 text-28 font-bold">{serve.title}</h3>
           <p className="text-gray-650">{serve.describe}</p>
@@ -103,16 +107,20 @@ export default function Index() {
 
   return (
     <>
-      <section className="px-3 pb-16 mt-16 border-b-2 border-secondary">
-        <h2 className="mb-8 text-5xl font-bold">專業服務與方案</h2>
-        <ul>{servesCard}</ul>
-        <a
-          className="flex flex-col items-end text-28 font-bold"
-          href="mailto: alysewang@hexschool.com"
-        >
-          聯繫我，取得更多資訊！
-          <i className="icon icon-arrow-right  btn-outline p-2 mt-2"></i>
-        </a>
+      <section className="px-3 pb-16 mt-16 border-b-2 border-secondary xl:pb-20">
+        <div className="xl:max-w-324 xl:mx-auto xl:px-0">
+          <h2 className="mb-8 text-5xl font-bold xl:text-64">專業服務與方案</h2>
+          <ul className="xl:-mx-3">{servesCard}</ul>
+          <div className="flex flex-col items-end justify-end text-28 font-bold xl:flex-row">
+            <a
+              className="hover:text-primary"
+              href="mailto: alysewang@hexschool.com"
+            >
+              聯繫我，取得更多資訊！
+            </a>
+            <i className="icon icon-arrow-right  btn-outline p-2 mt-2"></i>
+          </div>
+        </div>
       </section>
       <section className="px-3 pb-16 mt-16 border-b-2 border-secondary">
         <h2 className="mb-6 text-5xl font-bold">部落格精選</h2>
@@ -130,61 +138,81 @@ export default function Index() {
           </button>
         </div>
       </section>
-      <section className="px-3 my-16 font-bold">
-        <h2 className="mb-8 text-5xl">
-          職涯諮詢
-          <br />
-          成功案例
-        </h2>
-        <div className="mb-10">
-          <picture className="block w-full p-6 bg-gray-150">
-            <source
-              media="(min-width: 768px)"
-              srcSet={`${import.meta.env.BASE_URL}/desktop/index/photo8.png`}
-            />
-            <img src={`${import.meta.env.BASE_URL}/mobile/index/photo8.png`} alt="職業諮詢情境" />
-          </picture>
-          <div>
-            <div className="px-6 py-10">
-              <i className="icon icon-lg icon-dash"></i>
-              <p className="mt-6">
-                在職涯發展的關鍵轉折點上，適時的協助與正確的方向至關重要。藉由職涯諮詢，我可以幫助你加速釐清目標、建立更全面的技術與軟實力，並有效
-                <span className="text-primary">突破原有的舒適圈</span>。
-              </p>
+      <section className="px-3 my-16 font-bold xl:my-20 xl:max-w-324 xl:mx-auto">
+        <div className="xl:-mx-3">
+          <h2 className="mb-6 text-5xl xl:text-64">
+            職涯諮詢
+            <br className="xl:hidden" />
+            成功案例
+          </h2>
+          <div className="mb-10 xl:-mx-3 xl:flex">
+            <div className="xl:w-7/12 xl:px-3">
+            <picture className="block w-full p-6 bg-gray-150">
+              <source
+                media="(min-width: 768px)"
+                srcSet={`${import.meta.env.BASE_URL}desktop/index/photo8.png`}
+              />
+              <img
+                src={`${import.meta.env.BASE_URL}mobile/index/photo8.png`}
+                className="w-full object-fit objext-center"
+                alt="職業諮詢情境"
+              />
+            </picture>
             </div>
-            <div className="px-6 py-10 bg-gray-50">
-              <i className="icon icon-lg icon-dash"></i>
-              <p className="my-6">
-                期待在下一個新機會中，我能與你一起攜手邁向更高峰！
-              </p>
-              <button
-                className="btn-outline btn-outline-primary bg-white"
-                type="button"
-              >
-                立即預約諮詢
-              </button>
+            <div className="xl:w-5/12 xl:px-3">
+              <div className="px-6 py-10 xl:px-10 xl:py-20">
+                <i className="icon icon-dash before:w-10 before:h-10"></i>
+                <p className="mt-6">
+                  在職涯發展的關鍵轉折點上，適時的協助與正確的方向至關重要。藉由職涯諮詢，我可以幫助你加速釐清目標、建立更全面的技術與軟實力，並有效
+                  <span className="text-primary">突破原有的舒適圈</span>。
+                </p>
+              </div>
+              <div className="px-6 py-10 bg-gray-50 xl:px-10 xl:py-20">
+                <i className="icon icon-dash before:w-10 before:h-10"></i>
+                <p className="my-6">
+                  期待在下一個新機會中，我能與你一起攜手邁向更高峰！
+                </p>
+                <button
+                  className="btn-outline btn-outline-primary bg-white"
+                  type="button"
+                >
+                  立即預約諮詢
+                </button>
+              </div>
             </div>
           </div>
+          <ul className="p-3 bg-gray-50 xl:flex xl:gap-x-6 xl:g-6">{consultationsCard}</ul>
         </div>
-        <ul className="p-3 bg-gray-50">{consultationsCard}</ul>
       </section>
-      <section>
-        <picture>
+      <section className="xl:flex">
+        <picture className="xl:w-1/2">
           <source
             media="(min-width: 992px)"
-            srcSet={`${import.meta.env.BASE_URL}/desktop/index/photo9.png`}
+            srcSet={`${import.meta.env.BASE_URL}desktop/index/photo9.png`}
           />
-          <img src={`${import.meta.env.BASE_URL}/mobile/index/photo9.png`} alt="笑容滿面的個人畫像" />
+          <img
+            src={`${import.meta.env.BASE_URL}mobile/index/photo9.png`}
+            alt="笑容滿面的個人畫像"
+          />
         </picture>
-        <div className="p-3 bg-[url(/mobile/index/Hero%20Section2.png)] bg-cover bg-center">
-          <div className="px-6 py-10 bg-white">
-            <h2 className="mb-4 text-5xl font-bold">訂閱電子報</h2>
+        <div className="p-3 bg-[url(/mobile/index/Hero%20Section2.png)] bg-cover bg-center xl:w-1/2 xl:px-20 xl:grid xl:place-items-center">
+          <div className="px-6 py-10 bg-white xl:w-full xl:p-20">
+            <h2 className="mb-4 text-5xl font-bold xl:text-64">訂閱電子報</h2>
             <p className="mb-6 text-xl">
-              立即訂閱，搶先掌握<span className="text-primary">前端 x 職涯</span>的獨家資訊！
+              立即訂閱，搶先掌握
+              <span className="text-primary">前端 x 職涯</span>的獨家資訊！
             </p>
             <form action="#">
-              <input className="w-full mb-2 px-4 py-2 text-gray-650 bg-gray-75" type="text" placeholder="請輸入您的大名" />
-              <input className="w-full mb-6 px-4 py-2 text-gray-650 bg-gray-75" type="text" placeholder="請輸入您的電子信箱" />
+              <input
+                className="w-full mb-2 px-4 py-2 text-gray-650 bg-gray-75"
+                type="text"
+                placeholder="請輸入您的大名"
+              />
+              <input
+                className="w-full mb-6 px-4 py-2 text-gray-650 bg-gray-75"
+                type="text"
+                placeholder="請輸入您的電子信箱"
+              />
               <button className="btn-outline btn-outline-primary" type="submit">
                 啟動訂閱
               </button>
