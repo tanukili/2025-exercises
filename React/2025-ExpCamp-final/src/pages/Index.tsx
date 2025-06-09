@@ -86,12 +86,12 @@ export default function Index() {
     ));
 
     return (
-      <li className="p-3 md:w-1/2">
+      <li className="p-3 md:w-1/2 md:px-6 xl:w-1/4 xl:p-2 2xl:p-3">
         <img
           src={consultation.avatarUrl}
           alt={`個案頭像：${consultation.title}`}
         />
-        <h3 className="mt-4 mb-2 text-2xl">{consultation.title}</h3>
+        <h3 className="mt-4 mb-2 text-2xl xl:line-clamp-1">{consultation.title}</h3>
         <ul className="pb-2 mb-4 border-b border-gray-650 font-medium">
           {completionList}
         </ul>
@@ -108,7 +108,7 @@ export default function Index() {
   return (
     <>
       <section className="pb-16 mt-16 border-b-2 border-secondary xl:pb-20">
-        <div className="px-3 xl:max-w-214 xl:mx-auto xl:px-0 2xl:max-w-324">
+        <div className="px-3 xl:px-0 lg:mx-auto lg:max-w-4xl xl:max-w-6xl 2xl:max-w-324">
           <h2 className="mb-8 text-5xl font-bold xl:text-64">專業服務與方案</h2>
           <ul>{servesCard}</ul>
           <div className="flex flex-col items-end justify-end text-28 font-bold xl:flex-row">
@@ -123,23 +123,23 @@ export default function Index() {
         </div>
       </section>
       <section className="px-3 pb-16 mt-16 border-b-2 border-secondary xl:px-0 xl:pb-20 xl:mt-20">
-        <h2 className="mb-6 text-5xl font-bold xl:text-64 xl:mx-auto xl:max-w-214 2xl:max-w-324">
+        <h2 className="mb-6 text-5xl font-bold xl:text-64 xl:mx-auto lg:mx-auto lg:max-w-214 xl:max-w-6xl 2xl:max-w-324">
           部落格精選
         </h2>
-        <div className="grid grid-cols-[44px_1fr_44px] grid-rows-[1fr_44px] xl:grid-rows-1 xl:-mx-auto xl:grid-cols-[1fr_auto_1fr]">
-          <div className="col-span-3 max-w-88 overflow-hidden xl:col-span-1  xl:max-w-214 2xl:max-w-324 mx-auto">
+        <div className="grid grid-cols-[44px_1fr_44px] grid-rows-[1fr_44px] lg:grid-rows-1 lg:-mx-auto lg:grid-cols-[1fr_auto_1fr]">
+          <div className="col-span-3 max-w-88 mx-auto overflow-hidden lg:col-span-1 md:max-w-182 xl:max-w-214 2xl:max-w-324">
             <ul className="w-[4125px] grid grid-cols-11 -mx-3 xl:w-[4840px]">
               <Card />
             </ul>
           </div>
           <button
-            className="col-start-2 ml-auto mr-6 xl:-order-1 xl:col-start-auto"
+            className="col-start-2 ml-auto mr-6 lg:-order-1 lg:col-start-auto"
             type="button"
             disabled
           >
             <i className="icon icon-lg icon-swiper-arrow"></i>
           </button>
-          <button className="2xl:ml-6" type="button">
+          <button className="lg:ml-6" type="button">
             <i className="icon icon-lg icon-swiper-arrow"></i>
           </button>
         </div>
@@ -187,7 +187,7 @@ export default function Index() {
               </div>
             </div>
           </div>
-          <ul className="p-3 bg-gray-50 flex-wrap md:flex xl:gap-x-6 xl:g-6">
+          <ul className="p-3 bg-gray-50 flex-wrap md:flex">
             {consultationsCard}
           </ul>
         </div>

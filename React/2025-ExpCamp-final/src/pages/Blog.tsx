@@ -16,9 +16,9 @@ export default function Blog() {
               />
             </div>
           </form>
-          <section className="my-10 md:flex md:flex-wrap lg:my-0">
+          <ul className="my-10 md:flex md:flex-wrap lg:my-0">
             <Card />
-          </section>
+          </ul>
         </div>
       </div>
       <nav className="flex justify-center mb-16 lg:mb-20">

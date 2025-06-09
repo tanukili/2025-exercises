@@ -176,7 +176,7 @@ export default function Card() {
             </span>
           )}
         </div>
-        <h3 className="grow text-28 font-bold mb-2">{article.title}</h3>
+        <h3 className={`text-28 font-bold mb-2 ${isIndex ? 'line-clamp-2' : ''}`}>{article.title}</h3>
         <p className="text-gray-650 mb-4 line-clamp-2">{article.description}</p>
         <Link
           to={`/blog/${article.id}`}

@@ -32,7 +32,7 @@ export default function Header() {
         </picture>
         <div
           className={`bg-[url(/mobile/index/Hero%20Section2.png)] bg-cover bg-center p-6 text-primary md:bg-[url(/desktop/index/Hero%20Section2.png)]  sm:grid lg:pr-0 ${
-            isIndex ? "pb-40 md:w-1/2 lg:pl-15 2xl:pl-20" : "sm:w-1/2 lg:pl-20"
+            isIndex ? "pb-40 md:w-1/2 lg:pl-10 2xl:pl-20" : "sm:w-1/2 lg:pl-20"
           }`}
         >
           <h1
@@ -55,7 +55,7 @@ export default function Header() {
         }`}
       >
         <div className="flex xl:-mx-3">
-          <div className="px-3 mx-auto xl:ml-auto lg:w-5/6">
+          <div className="px-3 mx-auto xl:ml-auto md:w-5/6">
             <div className="px-6 py-10 bg-white text-2xl font-medium lg:px-10 lg:py-20 lg:text-28">
               <p className="mb-2 xl:flex xl:mb-0">
                 嗨，我是<span className="inline-block mx-2">Alyse</span>
