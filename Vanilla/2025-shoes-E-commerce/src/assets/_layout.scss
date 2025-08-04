@@ -1,0 +1,57 @@
+
+.container {
+  width: 100%;
+  padding-inline: $spacer * .75;
+  margin-inline: auto;
+  // sm
+  @media (min-width: 576px) {
+    max-width: 540px;
+    padding-inline: unset;
+  }
+  // md
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  // lg
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  //xl
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  // xxl
+  @media (min-width: 1400px) {
+    max-width: 1296px;
+  }
+}
+
+.row {
+  --gutter-y: 0;
+  --gutter-x: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--gutter-y) * -1);  // 當有垂直 gutter 時將頂部多的 gutter 內推
+  margin-inline: calc(var(--gutter-x) * -.5);  // 左右加上一半的 gutter
+  &>* {
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: var(--gutter-y);
+    padding-inline: calc(var(--gutter-x) * .5);
+  }
+}
+
+
+.col {
+  flex: 1 0 0;
+}
+@media (min-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33%;
+  }
+  .col-md-8 {
+    flex: 0 0 auto;
+    width: 66.66%;
+  }
+}

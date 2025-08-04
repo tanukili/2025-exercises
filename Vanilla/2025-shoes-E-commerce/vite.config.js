@@ -31,6 +31,7 @@ export default defineConfig({
     liveReload([
       "./src/layout/**/*.ejs",
       "./src/pages/**/*.ejs",
+      "./src/components/**/*.ejs",
       "./src/page/**/*.html",
     ]),
     // 讓 .html 支援 <%= ... %> EJS 模板語法

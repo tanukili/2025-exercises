@@ -1,0 +1,125 @@
+// links
+.link-primary {
+  --link-color: #{$primary-color-400};
+  --border-width: 1px;
+  color: var(--link-color);
+
+  // 互動樣式
+  &:hover:not(disabled, .disabled),
+  &:focus {
+    --link-color: #{$primary-color-500};
+  }
+  &:focus,
+  &:focus-visible {
+    --border-width: 2px;
+  }
+  &:disabled,
+  &.disabled {
+    opacity: 0.4;
+  }
+
+  // 裝飾底線
+  .link-border {
+    border-bottom: var(--border-width) solid var(--link-color);
+  }
+}
+
+.link-neutral {
+  --link-color: #{$neutral-color-900};
+  color: var(--link-color);
+
+  // 互動樣式
+  &:hover:not(disabled, .disabled) {
+    --link-color: #{$neutral-color-600};
+  }
+  &:focus,
+  &:focus-visible {
+    border-bottom: 2px solid var(--link-color);
+  }
+  &:disabled,
+  &.disabled {
+    opacity: 0.4;
+  }
+}
+
+// btns
+.btn {
+  padding: 8px 16px;
+  // padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: $font-weight-medium;
+}
+
+// btn-style
+.btn {
+  --btn-text-color: unset;
+  --btn-bg-color: unset;
+  color: var(--btn-text-color);
+  background-color: var(--btn-bg-color);
+
+  &-neutral {
+    --btn-text-color: #{$white-color};
+    --btn-bg-color: #{$neutral-color-900};
+
+    &:not(:disabled, .disabled) {
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        --btn-bg-color: #{$neutral-color-700};
+      }
+      &:focus,
+      &:focus-visible {
+        box-shadow: 0px 0px 0px 3px rgba(33, 37, 41, 0.1);
+      }
+    }
+    &:disabled,
+    &.disabled {
+      opacity: 0.4;
+    }
+  }
+}
+// icon
+.icon-base, .icon-lg {
+  line-height: 1;
+  letter-spacing: normal;
+  display: inline-flex;
+}
+.icon-base {
+  font-size: $h5-font-size;
+}
+.icon-lg {
+  font-size: $h4-font-size;
+}
+
+.btn-icon {
+  --btn-text-color: #{$neutral-color-900};
+  --btn-bg-color: unset;
+  color: var(--btn-text-color);
+  background-color: var(--btn-bg-color);
+  border-radius: $border-radius-xs;
+
+  &:not(:disabled, .disabled) {
+    &:hover {
+      --btn-text-color: #{$primary-color-400};
+    }
+    &:focus,
+    &:focus-visible {
+      --btn-bg-color: #{$primary-color-200};
+    }
+  }
+  &:disabled,
+  &.disabled {
+    opacity: 0.4;
+  }
+}
+
+// logo
+.logo {
+  background: center/cover no-repeat url("/public/logo.svg");
+  display: block;
+  width: 129px;
+  height: 46px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
