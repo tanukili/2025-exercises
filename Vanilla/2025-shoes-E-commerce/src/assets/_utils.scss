@@ -2,7 +2,7 @@
   .bg-primary-#{$key} {
     background-color: $value;
   }
-  .text-primary-#{$key} {                 
+  .text-primary-#{$key} {
     color: $value;
   }
 }
@@ -11,7 +11,7 @@
   .bg-neutral-#{$key} {
     background-color: $value;
   }
-  .text-neutral-#{$key} {                 
+  .text-neutral-#{$key} {
     color: $value;
   }
 }
@@ -24,47 +24,14 @@
 }
 
 // spacing
-@include generate-spacing-utils(); // 無斷點
-
-@each $infix, $width in $breakpoints {
-  @media (min-width: $width) {
-    @include generate-spacing-utils($infix);
+@include generate-spacing-utils();
+@each $breakpoint, $value in $breakpoints {
+  @include breakpoint($breakpoint) {
+    @include generate-spacing-utils("-#{$breakpoint}");
   }
 }
 
-// @each $space, $value in $spacers {
-//   .p-#{$space} {
-//     padding: $value;
-//   }
-//   .px-#{$space} {
-//     padding-left: $value;
-//     padding-right: $value;
-//   }
-//   .py-#{$space} {
-//     padding-top: $value;
-//     padding-bottom: $value;
-//   }
-//   .pb-#{$space} {
-//     padding-bottom: $value;
-//   }
-//   .ps-#{$space} {
-//     padding-left: $value;
-//   }
-
-//   .m-#{$space} {
-//     margin: $value;
-//   }
-//   .me-#{$space} {
-//     margin-right: $value;
-//   }
-//   .mb-#{$space} {
-//     margin-bottom: $value;
-//   }
-//   .ms-#{$space} {
-//     margin-left: $value;
-//   }
-// }
-
+// font-size
 @each $size, $value in $font-sizes {
   .h#{$size} {
     font-size: $value;
@@ -75,7 +42,30 @@
     font-size: $value;
   }
 }
+@each $size, $value in $font-sizes {
+  @include breakpoint(md) {
+    .h#{$size}-md {
+      font-size: $value;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-sm;
+    }
+  }
+}
 
+// text
+.text-center {
+  text-align: center;
+}
+
+.fw-medium {
+  font-weight: $font-weight-medium;
+}
+
+@include breakpoint(md) {
+  .text-md-center {
+    text-align: center;
+  }
+}
 
 // flex
 .d-flex {
@@ -100,19 +90,13 @@
   align-items: center;
 }
 
-.d-md-block {
-  @include breakpoint(md) {
+@include breakpoint(md) {
+  .d-md-block {
     display: block;
   }
-}
-
-// text
-.text-center {
-  text-align: center;
-}
-
-.fw-medium {
-  font-weight: $font-weight-medium;
+  .d-md-flex {
+    display: flex;
+  }
 }
 
 // border
@@ -142,13 +126,18 @@
   }
 }
 
+// width
+.w-full {
+  width: 100%;
+}
+
 // list-style
 .list-circle {
-  &>* {
-    display: flex;    
+  & > * {
+    display: flex;
     &::before {
-      content: '·';
-      padding-inline: .25rem;
+      content: "·";
+      padding-inline: 0.25rem;
     }
   }
 }

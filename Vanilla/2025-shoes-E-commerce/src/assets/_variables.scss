@@ -49,17 +49,17 @@ $spacer: 1rem;
 
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer * .75,
-  4: $spacer * 1,
-  5: $spacer * 1.5,
-  6: $spacer * 2,
-  7: $spacer * 2.5,
-  8: $spacer * 3,
-  9: $spacer * 3.5,
-  10: $spacer * 4,
-  11: $spacer * 5,
+  1: $spacer * .25,   // 4px
+  2: $spacer * .5,    // 8px
+  3: $spacer * .75,   // 12px
+  4: $spacer * 1,     // 16px
+  5: $spacer * 1.5,   // 24px
+  6: $spacer * 2,     // 32px
+  7: $spacer * 2.5,   // 40px
+  8: $spacer * 3,     // 48px
+  9: $spacer * 3.5,   // 56px
+  10: $spacer * 4,    // 64px
+  11: $spacer * 5,    // 80px
   auto: auto,
 );
 

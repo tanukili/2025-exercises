@@ -45,9 +45,11 @@
 // btns
 .btn {
   padding: 8px 16px;
-  // padding: 12px 24px;
   border-radius: 4px;
   font-weight: $font-weight-medium;
+  @include breakpoint(md) {
+    padding: 12px 24px;
+  }
 }
 
 // btn-style

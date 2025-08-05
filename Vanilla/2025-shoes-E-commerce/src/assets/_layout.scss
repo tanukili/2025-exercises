@@ -6,7 +6,6 @@
   // sm
   @media (min-width: 576px) {
     max-width: 540px;
-    padding-inline: unset;
   }
   // md
   @media (min-width: 768px) {
@@ -22,7 +21,7 @@
   }
   // xxl
   @media (min-width: 1400px) {
-    max-width: 1296px;
+    max-width: 1320px;
   }
 }
 
@@ -45,7 +44,8 @@
 .col {
   flex: 1 0 0;
 }
-@media (min-width: 768px) {
+
+@include breakpoint(md) {
   .col-md-4 {
     flex: 0 0 auto;
     width: 33.33%;
@@ -53,5 +53,9 @@
   .col-md-8 {
     flex: 0 0 auto;
     width: 66.66%;
+  }
+  .col-md-10 {
+    flex: 0 0 auto;
+    width: 83.33%;
   }
 }

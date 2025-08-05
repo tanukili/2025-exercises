@@ -1,4 +1,10 @@
 .banner {
+  --bg-url: url('/public/brand-hero-sm.png');
   padding-block: 87px;
-  background: center / cover no-repeat url('/public/brand-hero-sm.png');
+  background: center / cover no-repeat var(--bg-url);
+
+  @include breakpoint(md) {
+    padding-block: 151px;
+    --bg-url: url('/public/brand-hero.png')
+  }
 }

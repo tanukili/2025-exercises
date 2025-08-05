@@ -8,14 +8,14 @@
   </head>
   <body>
     <%- include('src/layout/header.ejs')%>
-    <section class="banner mb-6 text-center text-white">
-      <h2 class="h3 mb-2">品牌故事</h2>
-      <p class="h5">Brand Story</p>
+    <section class="banner mb-6 text-center text-white mb-md-10">
+      <h2 class="h3 mb-2 mb-md-4 h1-md">品牌故事</h2>
+      <p class="h5 h3-md">Brand Story</p>
     </section>
     <main class="container">
-      <section class="row mb-6">
-        <div class="col-md-8">
-          <div class="p-5 bg-primary-100">
+      <div class="row justify-content-center">
+        <section class="col-md-8 mb-6 mb-md-8">
+          <div class="p-5 bg-primary-100 text-md-center p-md-6">
             <h3 class="mb-3 h5 text-primary-400">
               走出城市的節奏，穿上自己的步調。
             </h3>
@@ -27,99 +27,110 @@
               融合城市結構與機能語彙，我們打造適合都會節奏的風格鞋款，陪你自信穿梭每一場風景。
             </p>
           </div>
-        </div>
-      </section>
-      <section class="mb-6 pb-6 border-bottom">
-        <figure class="mb-4">
+        </section>
+        <figure class="col-md-10 mb-md-5">
           <picture>
-            <source srcset="/band-cover.png" media="(min-width: 992px)" />
-            <img src="/band-cover-sm.png" alt="品牌形象產品" />
+            <source srcset="/band-cover.png" media="(min-width: 768px)" />
+            <img class="w-full" src="/band-cover-sm.png" alt="品牌形象產品" />
           </picture>
         </figure>
-        <div>
-          <h3 class="mb-4 h5">品牌簡介</h3>
-          <h4 class="d-flex flex-column mb-3 h6 text-primary-400">
-            <span class="mb-2">URBNSTEP 是來自台灣的街頭機能鞋品牌，</span>
-            <span>致力於打造「風格與功能並存」的鞋履體驗。</span>
-          </h4>
-          <p class="mb-3">
-            在城市與日常的交錯中，我們看見了步伐的力量。URBNSTEP
-            誕生於一群設計師與文化觀察者的交會點——一個相信風格應該來自「真實場景」而非伸展台的團隊。從都市的清晨街角，到午後光影灑落的人行道，我們捕捉的是那些不被刻意編排的時刻，那些用一雙鞋踏出的態度與節奏。每一款鞋的誕生，不只是設計與工藝的結晶，更是一段來自城市靈感的延伸，我們相信：鞋，是穿在腳上的語言。
-          </p>
-          <p>
-            URBNSTEP 的名字來自 Urban +
-            Step，代表著我們對每一個走進城市生活的人致敬。我們不追逐潮流，我們關注輪廓、材質、穿著者的心境與身型，創造能陪伴你走進自我節奏的經典之作。選用高品質麂皮、織物與天然橡膠大底，並與獨立插畫家、攝影師合作，打造具有街頭詩意的形象風格。URBNSTEP
-            相信，美不是炫耀，而是由內而外的呼吸——一雙鞋，剛好說出你心中的樣子。
-          </p>
-        </div>
-      </section>
-      <section class="mb-6 pb-6 border-bottom">
-        <h3 class="mb-4 h5">品牌歷程</h3>
-        <ul class="list-circle">
-          <li class="mb-3">
-            <span
-              ><time>2019</time>｜URBNSTEP 在台北東區的創意工作室誕生。</span
+        <section class="col-md-8">
+          <div class="mb-6 pb-6 border-bottom mb-md-8 pb-md-8">
+            <h3 class="mb-4 h5 mb-md-5 h4-md">品牌簡介</h3>
+            <h4
+              class="d-flex flex-column mb-3 h6 text-primary-400 h5-md mb-md-4"
             >
-          </li>
-          <li class="mb-3">
-            <span
-              ><time>2021</time>｜首款【Urban Flow
-              系列】誕生，結合針織鞋面與城市靈感。</span
-            >
-          </li>
-          <li>
-            <span
-              ><time>2025</time>｜URBNSTEP
-              已成為台灣街頭生活風格的代表鞋履品牌之一。</span
-            >
-          </li>
-        </ul>
-      </section>
-      <section class="mb-6 pb-6 border-bottom">
-        <h3 class="mb-4 h5">品牌理念</h3>
-        <ul>
-          <li class="mb-3 ps-3 border-start border-3">
-            機能先行：輕量、透氣、防潑水
-          </li>
-          <li class="mb-3 ps-3 border-start border-3">
-            美學延伸：極簡線條 + 實驗配色
-          </li>
-          <li class="ps-3 border-start border-3">
-            永續材料：選用環保合成皮革與可回收包裝
-          </li>
-        </ul>
-      </section>
-      <section class="mb-6 pb-6 border-bottom">
-        <h3 class="mb-4 h5">品牌小故事</h3>
-        <ul>
-          <li class="py-2">
-            <a
-              class="link-primary d-flex align-items-center"
-              href="brandStory.html"
-              ><i class="icon-base bi bi-arrow-up-right me-2"></i
-              ><span class="link-border pb-1"
-                >創辦人筆記：我們為什麼想做鞋？</span
-              ></a
-            >
-          </li>
-          <li class="py-2">
-            <a
-              class="link-primary d-flex align-items-center"
-              href="brandStory.html"
-              ><i class="icon-base bi bi-arrow-up-right me-2"></i
-              ><span class="link-border pb-1">穿上 URBNSTEP 的他們</span></a
-            >
-          </li>
-          <li class="py-2">
-            <a
-              class="link-primary d-flex align-items-center"
-              href="brandStory.html"
-              ><i class="icon-base bi bi-arrow-up-right me-2"></i
-              ><span class="link-border pb-1">URBNSTEP 鞋履的誕生過程</span></a
-            >
-          </li>
-        </ul>
-      </section>
+              <span class="mb-2">URBNSTEP 是來自台灣的街頭機能鞋品牌，</span>
+              <span>致力於打造「風格與功能並存」的鞋履體驗。</span>
+            </h4>
+            <p class="mb-3 mb-md-4">
+              在城市與日常的交錯中，我們看見了步伐的力量。URBNSTEP
+              誕生於一群設計師與文化觀察者的交會點——一個相信風格應該來自「真實場景」而非伸展台的團隊。從都市的清晨街角，到午後光影灑落的人行道，我們捕捉的是那些不被刻意編排的時刻，那些用一雙鞋踏出的態度與節奏。每一款鞋的誕生，不只是設計與工藝的結晶，更是一段來自城市靈感的延伸，我們相信：鞋，是穿在腳上的語言。
+            </p>
+            <p>
+              URBNSTEP 的名字來自 Urban +
+              Step，代表著我們對每一個走進城市生活的人致敬。我們不追逐潮流，我們關注輪廓、材質、穿著者的心境與身型，創造能陪伴你走進自我節奏的經典之作。選用高品質麂皮、織物與天然橡膠大底，並與獨立插畫家、攝影師合作，打造具有街頭詩意的形象風格。URBNSTEP
+              相信，美不是炫耀，而是由內而外的呼吸——一雙鞋，剛好說出你心中的樣子。
+            </p>
+          </div>
+        </section>
+        <section class="col-md-8">
+          <div class="mb-6 pb-6 border-bottom mb-md-8 pb-md-8">
+            <h3 class="mb-4 h5 mb-md-5 h4-md">品牌歷程</h3>
+            <ul class="list-circle">
+              <li class="mb-3">
+                <span
+                  ><time>2019</time>｜URBNSTEP
+                  在台北東區的創意工作室誕生。</span
+                >
+              </li>
+              <li class="mb-3">
+                <span
+                  ><time>2021</time>｜首款【Urban Flow
+                  系列】誕生，結合針織鞋面與城市靈感。</span
+                >
+              </li>
+              <li>
+                <span
+                  ><time>2025</time>｜URBNSTEP
+                  已成為台灣街頭生活風格的代表鞋履品牌之一。</span
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="col-md-8">
+          <div class="mb-6 pb-6 border-bottom mb-md-8 pb-md-8">
+            <h3 class="mb-4 h5 mb-md-5 h4-md">品牌理念</h3>
+            <ul>
+              <li class="mb-3 ps-3 border-start border-3">
+                機能先行：輕量、透氣、防潑水
+              </li>
+              <li class="mb-3 ps-3 border-start border-3">
+                美學延伸：極簡線條 + 實驗配色
+              </li>
+              <li class="ps-3 border-start border-3">
+                永續材料：選用環保合成皮革與可回收包裝
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="col-md-8">
+          <div class="mb-6 pb-6 border-bottom mb-md-10 pb-md-8">
+            <h3 class="mb-4 h5 mb-md-5 h4-md">品牌小故事</h3>
+            <ul>
+              <li class="py-2">
+                <a
+                  class="link-primary fw-medium d-flex align-items-center"
+                  href="brandStory.html"
+                  ><i class="icon-base bi bi-arrow-up-right me-2"></i
+                  ><span class="link-border pb-1"
+                    >創辦人筆記：我們為什麼想做鞋？</span
+                  ></a
+                >
+              </li>
+              <li class="py-2">
+                <a
+                  class="link-primary fw-medium d-flex align-items-center"
+                  href="brandStory.html"
+                  ><i class="icon-base bi bi-arrow-up-right me-2"></i
+                  ><span class="link-border pb-1">穿上 URBNSTEP 的他們</span></a
+                >
+              </li>
+              <li class="py-2">
+                <a
+                  class="link-primary fw-medium d-flex align-items-center"
+                  href="brandStory.html"
+                  ><i class="icon-base bi bi-arrow-up-right me-2"></i
+                  ><span class="link-border pb-1"
+                    >URBNSTEP 鞋履的誕生過程</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </main>
     <%- include('src/components/sale-banner.ejs') %> <%-
     include('src/layout/footer.ejs') %>

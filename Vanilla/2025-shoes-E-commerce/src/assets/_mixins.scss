@@ -7,41 +7,38 @@
   }
 }
 
-@mixin generate-spacing-utils($breakpoint: null) {
-  // 判斷有無傳入斷點名稱（斷點前的 - 在這裡加入）
-  $infix: if($breakpoint == null, "", "-#{breakpoint}");
-
-  // 跑 spacers map
+// 傳入斷點生成對應 spacing utils
+@mixin generate-spacing-utils($infix: null) {
   @each $space, $value in $spacers {
-    .p#{infix}-#{$space} {
-      padding: $value;
-    }
-    .px#{infix}-#{$space} {
-      padding-left: $value;
-      padding-right: $value;
-    }
-    .py#{infix}-#{$space} {
-      padding-top: $value;
-      padding-bottom: $value;
-    }
-    .pb#{infix}-#{$space} {
-      padding-bottom: $value;
-    }
-    .ps#{infix}-#{$space} {
-      padding-left: $value;
-    }
-
-    .m#{infix}-#{$space} {
-      margin: $value;
-    }
-    .me#{infix}-#{$space} {
-      margin-right: $value;
-    }
-    .mb#{infix}-#{$space} {
-      margin-bottom: $value;
-    }
-    .ms#{infix}-#{$space} {
-      margin-left: $value;
-    }
+  .p#{$infix}-#{$space} {
+    padding: $value;
   }
+  .px#{$infix}-#{$space} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  .py#{$infix}-#{$space} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+  .pb#{$infix}-#{$space} {
+    padding-bottom: $value;
+  }
+  .ps#{$infix}-#{$space} {
+    padding-left: $value;
+  }
+
+  .m#{$infix}-#{$space} {
+    margin: $value;
+  }
+  .me#{$infix}-#{$space} {
+    margin-right: $value;
+  }
+  .mb#{$infix}-#{$space} {
+    margin-bottom: $value;
+  }
+  .ms#{$infix}-#{$space} {
+    margin-left: $value;
+  }
+}
 }
