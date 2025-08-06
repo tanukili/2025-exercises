@@ -2,7 +2,7 @@
 $breakpoints: (
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
 );
 
 // colors
@@ -31,7 +31,7 @@ $primary-colors: (
   400: $primary-color-400,
 );
 
-$neutral-colors: (  
+$neutral-colors: (
   100: $neutral-color-100,
   200: $neutral-color-200,
   300: $neutral-color-300,
@@ -40,41 +40,50 @@ $neutral-colors: (
   600: $neutral-color-600,
   700: $neutral-color-700,
   800: $neutral-color-800,
-  900: $neutral-color-900
+  900: $neutral-color-900,
 );
-
 
 // spacing
 $spacer: 1rem;
 
 $spacers: (
   0: 0,
-  1: $spacer * .25,   // 4px
-  2: $spacer * .5,    // 8px
-  3: $spacer * .75,   // 12px
-  4: $spacer * 1,     // 16px
-  5: $spacer * 1.5,   // 24px
-  6: $spacer * 2,     // 32px
-  7: $spacer * 2.5,   // 40px
-  8: $spacer * 3,     // 48px
-  9: $spacer * 3.5,   // 56px
-  10: $spacer * 4,    // 64px
-  11: $spacer * 5,    // 80px
+  1: $spacer * 0.25,
+  // 4px
+  2: $spacer * 0.5,
+  // 8px
+  3: $spacer * 0.75,
+  // 12px
+  4: $spacer * 1,
+  // 16px
+  5: $spacer * 1.5,
+  // 24px
+  6: $spacer * 2,
+  // 32px
+  7: $spacer * 2.5,
+  // 40px
+  8: $spacer * 3,
+  // 48px
+  9: $spacer * 3.5,
+  // 56px
+  10: $spacer * 4,
+  // 64px
+  11: $spacer * 5,
+  // 80px
   auto: auto,
 );
 
-
 // font
 $font-size-base: 1rem;
-$font-size-sm: $font-size-base * .875;
-$font-size-xs: $font-size-base * .75;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-xs: $font-size-base * 0.75;
 
-$h1-font-size: $font-size-base * 2.5;    // 40px
-$h2-font-size: $font-size-base * 2;      // 32px
-$h3-font-size: $font-size-base * 1.75;   // 28px
-$h4-font-size: $font-size-base * 1.5;    // 24px
-$h5-font-size: $font-size-base * 1.25;   // 20px
-$h6-font-size: $font-size-base;          // 16px
+$h1-font-size: $font-size-base * 2.5; // 40px
+$h2-font-size: $font-size-base * 2; // 32px
+$h3-font-size: $font-size-base * 1.75; // 28px
+$h4-font-size: $font-size-base * 1.5; // 24px
+$h5-font-size: $font-size-base * 1.25; // 20px
+$h6-font-size: $font-size-base; // 16px
 
 $font-weight-bold: 700;
 $font-weight-medium: 500;
@@ -88,8 +97,8 @@ $font-sizes: (
   4: $font-size-base * 1.5,
   5: $font-size-base * 1.25,
   6: $font-size-base,
-  7: $font-size-base * .875,
-  8: $font-size-base * .75,
+  7: $font-size-base * 0.875,
+  8: $font-size-base * 0.75,
 );
 
 // border
@@ -97,17 +106,17 @@ $border-width: 1px;
 
 $border-widths: (
   1: 1px,
-  3: 3px
+  3: 3px,
 );
 
 $border-color: $neutral-color-300;
 
-$border-radius-xs: .25rem;
-$border-radius-sm: .75rem;
+$border-radius-xs: 0.25rem;
+$border-radius-sm: 0.75rem;
 $border-radius-pill: 50rem;
 
 $roundeds: (
   xs: $border-radius-xs,
   sm: $border-radius-sm,
   pill: $border-radius-pill,
-)
+);

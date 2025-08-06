@@ -1,11 +1,13 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
   font-family: "Noto Sans TC", sans-serif, serif;
   line-height: 1.5;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   color: $neutral-color-900;
 }
 
