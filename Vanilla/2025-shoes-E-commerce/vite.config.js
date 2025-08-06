@@ -13,8 +13,8 @@ const moveOutputPlugin = () => {
     apply: "build",
     async generateBundle(options, bundle) {
       for (const fileName in bundle) {
-        if (fileName.startsWith("pages/")) {
-          const newFileName = fileName.slice("pages/".length);
+        if (fileName.startsWith("src/pages/")) {
+          const newFileName = fileName.slice("src/pages/".length);
           bundle[fileName].fileName = newFileName;
         }
       }
@@ -25,7 +25,7 @@ const moveOutputPlugin = () => {
 // vite 專案設定
 export default defineConfig({
   // 對應靜態網站部屬時的子資料夾
-  // base: "/Vanilla/2025-shoes-E-commerce/",
+  base: "/Vanilla/2025-shoes-E-commerce/",
   plugins: [
     // 指定熱更新的監聽檔案
     liveReload([
@@ -48,14 +48,14 @@ export default defineConfig({
       input: Object.fromEntries(
         // 找到所有 pages 的 HTML
         glob
-          .sync("pages/**/*.html")
+          .sync("src/pages/**/*.html")
           .map((file) => [
             path.relative(
-              "pages",
-              file.slice(0, file.length - path.extname(file).length)
+              "src/pages",
+              file.slice(0, file.length - path.extname(file).length),
             ),
             fileURLToPath(new URL(file, import.meta.url)),
-          ])
+          ]),
       ),
     },
     // 輸出到 dist 資料夾
