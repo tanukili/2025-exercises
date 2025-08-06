@@ -1,3 +1,219 @@
-<%- include('./src/layout/main-layout.ejs', { title: "Index", body: `
-<h1>我是首頁</h1>
-` }) %>
+<!DOCTYPE html>
+<html lang="zh-Tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URBNSTEP | 品牌故事</title>
+  </head>
+  <body>
+    <%- include('src/layout/header.ejs')%>
+    <section>
+      <h2>URBNSTEP</h2>
+      <p>Your Step, Your Statement</p>
+      <button type="button">立即選購</button>
+    </section>
+    <main>
+      <section class="container">
+        <h3 class="text-center">New Arrival</h3>
+        <h2 class="text-center">新品上市</h2>
+        <div class="row">
+          <div class="col-6">
+            <picture>
+              <source srcset="" media="(min-width: 768px)" />
+              <img src="/new-1.png" alt="Monoverse" />
+            </picture>
+            <h4>Monoverse</h4>
+            <p>NT$3,600</p>
+          </div>
+          <div class="col-6">
+            <picture>
+              <source srcset="" media="(min-width: 768px)" />
+              <img src="/new-2.png" alt="PLATFORM 404" />
+            </picture>
+            <h4>PLATFORM 404</h4>
+            <p>NT$2,600</p>
+          </div>
+          <div class="col-6">
+            <picture>
+              <source srcset="" media="(min-width: 768px)" />
+              <img src="/new-3.png" alt="URBN Force" />
+            </picture>
+            <h4>URBN Force</h4>
+            <p>NT$3,200</p>
+          </div>
+          <div class="col-6">
+            <picture>
+              <source srcset="" media="(min-width: 768px)" />
+              <img src="/new-4.png" alt="Mode90" />
+            </picture>
+            <h4>Mode90</h4>
+            <p>NT$4,000</p>
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <h2>熱銷補貨</h2>
+        <div class="row">
+          <div class="col-3">
+            <a href="productDetail.html"
+              ><img src="/product-10.png" alt="hotSale-1" /><span
+                >人氣 No.1</span
+              ></a
+            >
+          </div>
+          <div class="col-3">
+            <a href="productDetail.html"
+              ><img src="/product-10.png" alt="hotSale-2" /><span
+                >人氣 No.1</span
+              ></a
+            >
+          </div>
+          <div class="col-3">
+            <a href="productDetail.html"
+              ><img src="/product-10.png" alt="hotSale-3" /><span
+                >人氣 No.1</span
+              ></a
+            >
+          </div>
+          <div class="col-3">
+            <a href="productDetail.html"
+              ><img src="/product-10.png" alt="hotSale-4" /><span
+                >人氣 No.1</span
+              ></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="text-center">
+        <h2>URBNSTEP<span>x</span>Kevin Chen</h2>
+        <h3>跨界聯名，限量發售</h3>
+        <p>新銳漫畫家 Kevin Chen 親自操刀設計，街頭能量全面引爆！</p>
+        <button class="btn" type="button">立即搶購</button>
+        <div><i></i><i></i><i></i><i></i></div>
+      </section>
+      <section class="container">
+        <h2>依系列選購</h2>
+        <div class="row text-center">
+          <div class="col-3">
+            <a href="productDetail.html"
+              ><img src="/product-10.png" alt="hotSale-1" />
+              <div class="text-white">
+                <h4>URBN RUNNER</h4>
+                <h3>慢跑系列</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-3">
+            <a href="productDetail.html"
+              ><img src="/product-10.png" alt="hotSale-2" />
+              <div class="text-white">
+                <h4>STREETMODE</h4>
+                <h3>滑板系列</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-3">
+            <a href="productDetail.html"
+              ><img src="/product-10.png" alt="hotSale-3" />
+              <div class="text-white">
+                <h4>CHUNK DISTRICT</h4>
+                <h3>厚底系列</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-3">
+            <a href="productDetail.html"
+              ><img src="/product-10.png" alt="hotSale-4" />
+              <div class="text-white">
+                <h4>COLLAB ZONE</h4>
+                <h3>聯名企劃</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <h2>穿搭靈感</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-6">
+                <a href="productDetail.html">
+                  <img src="/inspiration-1.png" alt="inspiration-1" />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="productDetail.html">
+                  <img src="/inspiration-2.png" alt="inspiration-2" />
+                </a>
+              </div>
+              <div class="col">
+                <a href="productDetail.html">
+                  <img src="/inspiration-3.png" alt="inspiration-3" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-6">
+                <a href="productDetail.html">
+                  <img src="/inspiration-4.png" alt="inspiration-4" />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="productDetail.html">
+                  <img src="/inspiration-5.png" alt="inspiration-5" />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="productDetail.html">
+                  <img src="/inspiration-6.png" alt="inspiration-6" />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="productDetail.html">
+                  <img src="/inspiration-7.png" alt="inspiration-7" />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="productDetail.html">
+                  <img src="/inspiration-8.png" alt="inspiration-8" />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="productDetail.html">
+                  <img src="/inspiration-9.png" alt="inspiration-9" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-12">
+                <a href="productDetail.html">
+                  <img src="/inspiration-10.png" alt="inspiration-10" />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="productDetail.html">
+                  <img src="/inspiration-11.png" alt="inspiration-11" />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="productDetail.html">
+                  <img src="/inspiration-12.png" alt="inspiration-12" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('src/components/sale-banner.ejs') %> <%-
+    include('src/layout/footer.ejs') %>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
