@@ -25,7 +25,7 @@ const moveOutputPlugin = () => {
 // vite 專案設定
 export default defineConfig({
     // 對應靜態網站部屬時的子資料夾
-    base: '/Vanilla/2025-shoes-E-commerce/',
+    base: '/2025-exercises/2025-shoes-E-commerce/',
     plugins: [
         // 指定熱更新的監聽檔案
         liveReload(['./layout/**/*.ejs', './pages/**/*.ejs', './components/**/*.ejs', './page/**/*.html']),
