@@ -7,7 +7,7 @@
     <title>URBNSTEP | 品牌故事</title>
   </head>
   <body>
-    <%- include('src/layout/header.ejs')%>
+    <%- include('./layout/header'); -%>
     <section class="banner mb-6 text-center text-white mb-md-10">
       <h2 class="h3 mb-2 mb-md-4 h1-md">品牌故事</h2>
       <p class="h5 h3-md">Brand Story</p>
@@ -30,8 +30,8 @@
         </section>
         <figure class="col-md-10 mb-md-5">
           <picture>
-            <source srcset="/band-cover.png" media="(min-width: 768px)" />
-            <img class="w-full" src="/band-cover-sm.png" alt="品牌形象產品" />
+            <source srcset="../assets/images/band-cover.png" media="(min-width: 768px)" />
+            <img class="w-full" src="../assets/images/band-cover-sm.png" alt="品牌形象產品" />
           </picture>
         </figure>
         <section class="col-md-8">
@@ -132,8 +132,8 @@
         </section>
       </div>
     </main>
-    <%- include('src/components/sale-banner.ejs') %> <%-
-    include('src/layout/footer.ejs') %>
+    <%- include('./components/sale-banner') %>
+    <%- include('./layout/footer') %>
 
     <script type="module" src="../main.js"></script>
   </body>
