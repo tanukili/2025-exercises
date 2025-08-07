@@ -1,0 +1,5 @@
+layout
+dist
+node_modules
+.vscode
+tmp-deploy
