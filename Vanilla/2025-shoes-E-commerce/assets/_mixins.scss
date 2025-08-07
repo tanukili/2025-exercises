@@ -31,6 +31,13 @@
     .m#{$infix}-#{$space} {
       margin: $value;
     }
+    .my#{$infix}-#{$space} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+    .mt#{$infix}-#{$space} {
+      margin-top: $value;
+    }
     .me#{$infix}-#{$space} {
       margin-right: $value;
     }

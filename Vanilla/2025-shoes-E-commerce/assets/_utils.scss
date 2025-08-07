@@ -72,6 +72,14 @@
   font-weight: $font-weight-medium;
 }
 
+.font-family-tw {
+  font-family: "Noto Sans TC", sans-serif, serif;
+}
+// 等待確認字型
+// .font-family-en {
+//   font-family: serif;
+// }
+
 @include breakpoint(md) {
   .text-md-center {
     text-align: center;
