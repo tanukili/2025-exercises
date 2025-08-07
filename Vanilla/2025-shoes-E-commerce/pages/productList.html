@@ -1,1 +1,136 @@
-<h1>我是 productList</h1>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>URBNSTEP | 產品列表</title>
+    </head>
+    <body>
+        <%- include('./layout/header'); -%>
+        <main class="container">
+            <section>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="productList.html">女鞋</a></li>
+                        <li>所有商品</li>
+                    </ol>
+                </nav>
+                <h2 class="h3 mb-5">女鞋</h2>
+            </section>
+            <section class="row">
+                <nav class="d-none d-md-block col-md-2">
+                    <ul>
+                        <li><a href="#">所有商品</a></li>
+                        <li><a href="#">慢跑鞋</a></li>
+                        <li><a href="#">滑板鞋</a></li>
+                        <li><a href="#">厚底鞋</a></li>
+                        <li><a href="#">限定 / 聯名企劃</a></li>
+                    </ul>
+                </nav>
+                <div class="col-md-10">
+                    <ul class="row gx-3 gy-5">
+                        <li class="col-6 col-md-4">
+                            <picture>
+                                <source
+                                    srcset="../assets/images/product-11.png"
+                                    media="(min-width: 768px)"
+                                />
+                                <img
+                                    class="w-full"
+                                    src="../assets/images/product-11.png"
+                                    alt="品牌形象產品"
+                                />
+                            </picture>
+                            <h3 class="h6">PLATFORM 404</h3>
+                            <p>NT$2,600</p>
+                        </li>
+                        <li class="col-6 col-md-4">
+                            <picture>
+                                <source
+                                    srcset="../assets/images/product-11.png"
+                                    media="(min-width: 768px)"
+                                />
+                                <img
+                                    class="w-full"
+                                    src="../assets/images/product-11.png"
+                                    alt="品牌形象產品"
+                                />
+                            </picture>
+                            <h3 class="h6">PLATFORM 404</h3>
+                            <p>NT$2,600</p>
+                        </li>
+                        <li class="col-6 col-md-4">
+                            <picture>
+                                <source
+                                    srcset="../assets/images/product-11.png"
+                                    media="(min-width: 768px)"
+                                />
+                                <img
+                                    class="w-full"
+                                    src="../assets/images/product-11.png"
+                                    alt="品牌形象產品"
+                                />
+                            </picture>
+                            <h3 class="h6">PLATFORM 404</h3>
+                            <p>NT$2,600</p>
+                        </li>
+                    </ul>
+                    <nav class="d-flex justify-content-center mb-7">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <span class="page-link">上一頁</span>
+                            </li>
+                            <li class="page-item active">
+                                <span class="page-link">1</span>
+                            </li>
+                            <li class="page-item">
+                                <a
+                                    class="page-link"
+                                    href="#"
+                                    >2</a
+                                >
+                            </li>
+                            <li class="page-item">
+                                <a
+                                    class="page-link"
+                                    href="#"
+                                    >3</a
+                                >
+                            </li>
+                            <li class="page-item">
+                                <a
+                                    class="page-link"
+                                    href="#"
+                                    >...</a
+                                >
+                            </li>
+                            <li class="page-item">
+                                <a
+                                    class="page-link"
+                                    href="#"
+                                    >10</a
+                                >
+                            </li>
+                            <li class="page-item">
+                                <a
+                                    class="page-link"
+                                    href="#"
+                                    >下一頁</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+        </main>
+        <%- include('./layout/footer') %>
+        <script
+            type="module"
+            src="../main.js"
+        ></script>
+    </body>
+</html>
