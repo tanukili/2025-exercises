@@ -4,215 +4,227 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>URBNSTEP | 品牌故事</title>
+    <title>URBNSTEP</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <section>
-      <h2>URBNSTEP</h2>
-      <p>Your Step, Your Statement</p>
-      <button type="button">立即選購</button>
+    <section class="index-banner text-white mb-7">
+      <div class="container">
+        <div class="px-3">
+          <h2 class="display-2 mb-2">URBNSTEP</h2>
+          <p class="h5 mb-6">Your Step, Your Statement</p>
+          <button class="btn btn-lg btn-primary" type="button">立即選購</button>
+        </div>
+      </div>
     </section>
     <main>
-      <section class="container">
-        <h3 class="text-center">New Arrival</h3>
-        <h2 class="text-center">新品上市</h2>
-        <div class="row">
+      <section class="container text-center mb-11">
+        <h3 class="h2 mb-2">New Arrival</h3>
+        <h2 class="h4 mb-5">新品上市</h2>
+        <div class="row gx-3 gy-5 text-start">
           <div class="col-6">
-            <picture>
+            <picture class="d-inline-block mb-2">
               <source srcset="" media="(min-width: 768px)" />
-              <img src="/new-1.png" alt="Monoverse" />
+              <img src="../assets/images/new-1.png" alt="Monoverse" />
             </picture>
-            <h4>Monoverse</h4>
-            <p>NT$3,600</p>
+            <h4 class="h6">Monoverse</h4>
+            <p class="fw-medium">NT$3,600</p>
           </div>
           <div class="col-6">
-            <picture>
+            <picture class="d-inline-block mb-2">
               <source srcset="" media="(min-width: 768px)" />
-              <img src="/new-2.png" alt="PLATFORM 404" />
+              <img src="../assets/images/new-2.png" alt="PLATFORM 404" />
             </picture>
-            <h4>PLATFORM 404</h4>
-            <p>NT$2,600</p>
+            <h4 class="h6">PLATFORM 404</h4>
+            <p class="fw-medium">NT$2,600</p>
           </div>
           <div class="col-6">
-            <picture>
+            <picture class="d-inline-block mb-2">
               <source srcset="" media="(min-width: 768px)" />
-              <img src="/new-3.png" alt="URBN Force" />
+              <img src="../assets/images/new-3.png" alt="URBN Force" />
             </picture>
-            <h4>URBN Force</h4>
-            <p>NT$3,200</p>
+            <h4 class="h6">URBN Force</h4>
+            <p class="fw-medium">NT$3,200</p>
           </div>
           <div class="col-6">
-            <picture>
+            <picture class="d-inline-block mb-2">
               <source srcset="" media="(min-width: 768px)" />
-              <img src="/new-4.png" alt="Mode90" />
+              <img src="../assets/images/new-4.png" alt="Mode90" />
             </picture>
-            <h4>Mode90</h4>
-            <p>NT$4,000</p>
+            <h4 class="h6">Mode90</h4>
+            <p class="fw-medium">NT$4,000</p>
           </div>
         </div>
       </section>
-      <section class="container">
-        <h2>熱銷補貨</h2>
-        <div class="row">
-          <div class="col-3">
-            <a href="productDetail.html"
-              ><img src="/product-10.png" alt="hotSale-1" /><span
-                >人氣 No.1</span
-              ></a
-            >
-          </div>
-          <div class="col-3">
-            <a href="productDetail.html"
-              ><img src="/product-10.png" alt="hotSale-2" /><span
-                >人氣 No.1</span
-              ></a
-            >
-          </div>
-          <div class="col-3">
-            <a href="productDetail.html"
-              ><img src="/product-10.png" alt="hotSale-3" /><span
-                >人氣 No.1</span
-              ></a
-            >
-          </div>
-          <div class="col-3">
-            <a href="productDetail.html"
-              ><img src="/product-10.png" alt="hotSale-4" /><span
-                >人氣 No.1</span
-              ></a
-            >
+      <section class="container mb-10">
+        <h2 class="h4 mb-4" style="padding-block: 6px;">熱銷補貨</h2>
+        <div class="product-swiper">
+          <div class="row swiper-item-4">
+            <div class="col-3">
+              <a class="position-relative" href="productDetail.html">
+                <img src="../assets/images/product-10.png" alt="hotSale-1" />
+                <span class="position-absolute top-0 start-0 badge badge-primary">人氣 No.1</span>
+              </a>
+            </div>
+            <div class="col-3">
+              <a class="position-relative" href="productDetail.html">
+                <img src="../assets/images/product-10.png" alt="hotSale-2" />
+                <span class="position-absolute top-0 start-0 badge badge-primary">人氣 No.1</span>
+              </a>
+            </div>
+            <div class="col-3">
+              <a class="position-relative" href="productDetail.html">
+                <img src="../assets/images/product-10.png" alt="hotSale-3" />
+                <span class="position-absolute top-0 start-0 badge badge-primary">人氣 No.1</span>
+              </a>
+            </div>
+            <div class="col-3">
+              <a class="position-relative" href="productDetail.html">
+                <img src="../assets/images/product-10.png" alt="hotSale-4" />
+                <span class="position-absolute top-0 start-0 badge badge-primary">人氣 No.1</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
-      <section class="text-center">
-        <h2>URBNSTEP<span>x</span>Kevin Chen</h2>
-        <h3>跨界聯名，限量發售</h3>
-        <p>新銳漫畫家 Kevin Chen 親自操刀設計，街頭能量全面引爆！</p>
-        <button class="btn" type="button">立即搶購</button>
-        <div><i></i><i></i><i></i><i></i></div>
+      <section class="bg-co-branding text-center  mb-10 py-10">
+        <div class="container">
+          <h2 class="deco-star h2 text-white d-flex flex-column mb-4">
+            <span class="mb-2">URBNSTEP</span>
+            <span class="h3 text-primary-300 mb-2">x</span>
+            <span>Kevin Chen</span></h2>
+          <h3 class="h5 text-white mb-5">跨界聯名，限量發售</h3>
+          <p class="deco-sparkle text-neutral-500 d-flex flex-column mb-6">
+            <span class="mb-1">新銳漫畫家 Kevin Chen 親自操刀設計</span>
+            <span class="d-none">，</span>
+            <span>街頭能量全面引爆！</span></p>
+          <button class=" btn btn-lg btn-primary" type="button">立即搶購</button>
+        </div>
+        <div class="d-none"><i></i><i></i><i></i><i></i></div>
       </section>
-      <section class="container">
-        <h2>依系列選購</h2>
-        <div class="row text-center">
-          <div class="col-3">
-            <a href="productDetail.html"
-              ><img src="/product-10.png" alt="hotSale-1" />
-              <div class="text-white">
-                <h4>URBN RUNNER</h4>
+      <section class="container mb-11">
+        <h2 class="h4 mb-4">依系列選購</h2>
+        <div class="row g-3 h6 text-center">
+          <div class="col-6 col-md-3">
+            <a class="position-relative d-block" href="productDetail.html">
+              <img src="../assets/images/product-10.png" alt="hotSale-1" />
+              <div class="mask text-white">
+                <h4 class="mb-2">URBN RUNNER</h4>
                 <h3>慢跑系列</h3>
               </div>
             </a>
           </div>
-          <div class="col-3">
-            <a href="productDetail.html"
-              ><img src="/product-10.png" alt="hotSale-2" />
-              <div class="text-white">
-                <h4>STREETMODE</h4>
+          <div class="col-6 col-md-3">
+            <a class="position-relative d-block" href="productDetail.html">
+              <img src="../assets/images/product-10.png" alt="hotSale-2" />
+              <div class="mask text-white">
+                <h4 class="mb-2">STREETMODE</h4>
                 <h3>滑板系列</h3>
               </div>
             </a>
           </div>
-          <div class="col-3">
-            <a href="productDetail.html"
-              ><img src="/product-10.png" alt="hotSale-3" />
-              <div class="text-white">
-                <h4>CHUNK DISTRICT</h4>
+          <div class="col-6 col-md-3">
+            <a class="position-relative d-block" href="productDetail.html">
+              <img src="../assets/images/product-10.png" alt="hotSale-3" />
+              <div class="mask text-white">
+                <h4 class="mb-2">CHUNK DISTRICT</h4>
                 <h3>厚底系列</h3>
               </div>
             </a>
           </div>
-          <div class="col-3">
-            <a href="productDetail.html"
-              ><img src="/product-10.png" alt="hotSale-4" />
-              <div class="text-white">
-                <h4>COLLAB ZONE</h4>
+          <div class="col-6 col-md-3">
+            <a class="position-relative d-block" href="productDetail.html">
+              <img src="../assets/images/product-10.png" alt="hotSale-4" />
+              <div class="mask text-white">
+                <h4 class="mb-2">COLLAB ZONE</h4>
                 <h3>聯名企劃</h3>
               </div>
             </a>
           </div>
         </div>
       </section>
-      <section class="container">
-        <h2>穿搭靈感</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-6">
-                <a href="productDetail.html">
-                  <img src="/inspiration-1.png" alt="inspiration-1" />
-                </a>
-              </div>
-              <div class="col-md-6">
-                <a href="productDetail.html">
-                  <img src="/inspiration-2.png" alt="inspiration-2" />
-                </a>
-              </div>
-              <div class="col">
-                <a href="productDetail.html">
-                  <img src="/inspiration-3.png" alt="inspiration-3" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-6">
-                <a href="productDetail.html">
-                  <img src="/inspiration-4.png" alt="inspiration-4" />
-                </a>
-              </div>
-              <div class="col-md-6">
-                <a href="productDetail.html">
-                  <img src="/inspiration-5.png" alt="inspiration-5" />
-                </a>
-              </div>
-              <div class="col-md-6">
-                <a href="productDetail.html">
-                  <img src="/inspiration-6.png" alt="inspiration-6" />
-                </a>
-              </div>
-              <div class="col-md-6">
-                <a href="productDetail.html">
-                  <img src="/inspiration-7.png" alt="inspiration-7" />
-                </a>
-              </div>
-              <div class="col-md-6">
-                <a href="productDetail.html">
-                  <img src="/inspiration-8.png" alt="inspiration-8" />
-                </a>
-              </div>
-              <div class="col-md-6">
-                <a href="productDetail.html">
-                  <img src="/inspiration-9.png" alt="inspiration-9" />
-                </a>
+      <section class="container mb-10">
+        <h2 class="h4 mb4" style="padding-block: 6px;">穿搭靈感</h2>
+        <div class="product-swiper">
+          <div class="row swiper-item-3">
+            <div class="col-md-4">
+              <div class="row">
+                <div class="col col-md-6">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-1.png" alt="inspiration-1" />
+                  </a>
+                </div>
+                <div class="col col-md-6">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-2.png" alt="inspiration-2" />
+                  </a>
+                </div>
+                <div class="col">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-3.png" alt="inspiration-3" />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-12">
-                <a href="productDetail.html">
-                  <img src="/inspiration-10.png" alt="inspiration-10" />
-                </a>
+            <div class="col-md-4 d-none">
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-4.png" alt="inspiration-4" />
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-5.png" alt="inspiration-5" />
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-6.png" alt="inspiration-6" />
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-7.png" alt="inspiration-7" />
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-8.png" alt="inspiration-8" />
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-9.png" alt="inspiration-9" />
+                  </a>
+                </div>
               </div>
-              <div class="col-md-6">
-                <a href="productDetail.html">
-                  <img src="/inspiration-11.png" alt="inspiration-11" />
-                </a>
-              </div>
-              <div class="col-md-6">
-                <a href="productDetail.html">
-                  <img src="/inspiration-12.png" alt="inspiration-12" />
-                </a>
+            </div>
+            <div class="col-md-4 d-none">
+              <div class="row">
+                <div class="col-12">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-10.png" alt="inspiration-10" />
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-11.png" alt="inspiration-11" />
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="productDetail.html">
+                    <img src="../assets/images/inspiration-12.png" alt="inspiration-12" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <!-- <%- include('./components/sale-banner.ejs') %> <%-
-    include('./layout/footer.ejs') %> -->
+    <%- include('./components/sale-banner') %>
+    <%- include('./layout/footer') %>
 
     <script type="module" src="../main.js"></script>
   </body>

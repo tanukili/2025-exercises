@@ -6,23 +6,23 @@ $breakpoints: (
 );
 
 // colors
-$primary-color-100: rgba(245, 254, 231, 1);
-$primary-color-200: rgba(232, 254, 197, 1);
-$primary-color-300: rgba(192, 250, 115, 1);
-$primary-color-400: rgba(87, 162, 3, 1);
-$primary-color-500: rgba(71, 122, 17, 1);
+$primary-color-100: rgb(245, 254, 231);
+$primary-color-200: rgb(232, 254, 197);
+$primary-color-300: rgb(192, 250, 115);
+$primary-color-400: rgb(87, 162, 3);
+$primary-color-500: rgb(71, 122, 17);
 
-$neutral-color-100: rgba(248, 249, 250, 1);
-$neutral-color-200: rgba(233, 236, 239, 1);
-$neutral-color-300: rgba(222, 226, 230, 1);
-$neutral-color-400: rgba(206, 212, 218, 1);
-$neutral-color-500: rgba(173, 181, 189, 1);
-$neutral-color-600: rgba(108, 117, 125, 1);
-$neutral-color-700: rgba(73, 80, 87, 1);
-$neutral-color-800: rgba(52, 58, 64, 1);
-$neutral-color-900: rgba(33, 37, 41, 1);
+$neutral-color-100: rgb(248, 249, 250);
+$neutral-color-200: rgb(233, 236, 239);
+$neutral-color-300: rgb(222, 226, 230);
+$neutral-color-400: rgb(206, 212, 218);
+$neutral-color-500: rgb(173, 181, 189);
+$neutral-color-600: rgb(108, 117, 125);
+$neutral-color-700: rgb(73, 80, 87);
+$neutral-color-800: rgb(52, 58, 64);
+$neutral-color-900: rgb(33, 37, 41);
 
-$white-color: rgba(255, 255, 255, 1);
+$white-color: rgb(255, 255, 255);
 
 $primary-colors: (
   100: $primary-color-100,
@@ -48,28 +48,17 @@ $spacer: 1rem;
 
 $spacers: (
   0: 0,
-  1: $spacer * 0.25,
-  // 4px
-  2: $spacer * 0.5,
-  // 8px
-  3: $spacer * 0.75,
-  // 12px
-  4: $spacer * 1,
-  // 16px
-  5: $spacer * 1.5,
-  // 24px
-  6: $spacer * 2,
-  // 32px
-  7: $spacer * 2.5,
-  // 40px
-  8: $spacer * 3,
-  // 48px
-  9: $spacer * 3.5,
-  // 56px
-  10: $spacer * 4,
-  // 64px
-  11: $spacer * 5,
-  // 80px
+  1: $spacer * 0.25, // 4px
+  2: $spacer * 0.5, // 8px
+  3: $spacer * 0.75, // 12px
+  4: $spacer * 1, // 16px
+  5: $spacer * 1.5, // 24px
+  6: $spacer * 2, // 32px
+  7: $spacer * 2.5, // 40px
+  8: $spacer * 3, // 48px
+  9: $spacer * 3.5, // 56px
+  10: $spacer * 4, // 64px
+  11: $spacer * 5, // 80px
   auto: auto,
 );
 
@@ -99,6 +88,10 @@ $font-sizes: (
   6: $font-size-base,
   7: $font-size-base * 0.875,
   8: $font-size-base * 0.75,
+);
+$display-sizes: (
+  1: $font-size-base * 4,
+  2: $font-size-base * 3,
 );
 
 // border

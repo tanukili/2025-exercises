@@ -42,6 +42,14 @@
     font-size: $value;
   }
 }
+@each $size, $value in $display-sizes {
+  .display-#{$size} {
+    font-size: $value;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-sm;
+  }
+}
+
 @each $size, $value in $font-sizes {
   @include breakpoint(md) {
     .h#{$size}-md {
@@ -55,6 +63,9 @@
 // text
 .text-center {
   text-align: center;
+}
+.text-start {
+  text-align: start;
 }
 
 .fw-medium {
@@ -70,6 +81,9 @@
 // flex
 .d-flex {
   display: flex;
+}
+.d-block {
+  display: block;
 }
 .d-inline-block {
   display: inline-block;
@@ -88,6 +102,21 @@
 
 .align-items-center {
   align-items: center;
+}
+
+// position
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0;
+}
+.start-0 {
+  left: 0;
 }
 
 @include breakpoint(md) {

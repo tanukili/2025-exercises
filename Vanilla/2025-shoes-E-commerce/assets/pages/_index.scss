@@ -1,0 +1,45 @@
+.index-banner {
+    --bg-url: url("../images/banner-sm.png");
+  padding-block: 155px;
+  background: center / cover no-repeat var(--bg-url);
+
+  @include breakpoint(md) {
+    padding-block: 151px;
+    --bg-url: url("../images/banner.png");
+    // -112px
+  }
+}
+
+.bg-co-branding {
+    --bg-url: url("../images/banner-co-branded-sm.png");
+  background: center / cover no-repeat var(--bg-url);
+  .deco-star {
+    position: relative;
+    &::before {
+      content: "";
+      width: 48px;
+      height: 48px;
+      background: center / cover no-repeat url("../images/star.svg");
+      position: absolute;
+      top: -32px;
+      left: -32px;
+    }
+  }
+  .deco-sparkle {
+    position: relative;
+    &::before {
+      content: "";
+      width: 76px;
+      height: 64px;
+      background: center / cover no-repeat url("../images/sparkle.svg");
+      position: absolute;
+      bottom: -40px;
+      right: -40px;
+    }
+  }
+
+  @include breakpoint(md) {
+    --bg-url: url("../images/banner-co-branded.png");
+    // -112px
+  }
+}

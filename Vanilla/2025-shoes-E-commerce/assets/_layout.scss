@@ -41,6 +41,17 @@
   }
 }
 
+.g-3 {
+  --gutter-x: .75rem;
+  --gutter-y: .75rem;
+}
+.gx-3 {
+  --gutter-x: .75rem
+}
+.gy-5 {
+  --gutter-y: 1.5rem
+}
+
 .col {
   flex: 1 0 0;
 }
@@ -58,6 +69,10 @@
 }
 
 @include breakpoint(md) {
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
   .col-md-4 {
     flex: 0 0 auto;
     width: 33.33%;

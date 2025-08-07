@@ -21,6 +21,7 @@
   // 裝飾底線
   .link-border {
     border-bottom: var(--border-width) solid var(--link-color);
+    margin-bottom: calc(var(--border-width) * -1);
   }
 }
 
@@ -46,8 +47,15 @@
 .btn {
   padding: 8px 16px;
   border-radius: 4px;
+  font-size: $font-size-base;
   font-weight: $font-weight-medium;
+  line-height: 1.5;
+
   @include breakpoint(md) {
+    padding: 12px 24px;
+  }
+
+  &-lg {
     padding: 12px 24px;
   }
 }
@@ -58,6 +66,7 @@
   --btn-bg-color: unset;
   color: var(--btn-text-color);
   background-color: var(--btn-bg-color);
+  border: none;
 
   &-neutral {
     --btn-text-color: #{$white-color};
@@ -71,7 +80,29 @@
       }
       &:focus,
       &:focus-visible {
-        box-shadow: 0px 0px 0px 3px rgba(33, 37, 41, 0.1);
+        box-shadow: 0px 0px 0px 3px rgba($color: $neutral-color-900, $alpha: 0.1);
+      }
+    }
+    &:disabled,
+    &.disabled {
+      opacity: 0.4;
+    }
+  }
+
+  &-primary {
+    --btn-text-color: #{$neutral-color-900};
+    --btn-bg-color: #{$primary-color-300}; 
+
+        &:not(:disabled, .disabled) {
+      &:hover,
+      &:focus,
+      &:focus-visible {
+    --btn-text-color: #{$primary-color-500};
+      }
+      &:focus,
+      &:focus-visible {
+        box-shadow: 0px 0px 0px 3px rgba($color: $primary-color-300, $alpha: 0.4);
+
       }
     }
     &:disabled,
@@ -116,6 +147,19 @@
   }
 }
 
+// badges
+.badge {
+  padding: 8px 12px;
+  font-size: $font-size-sm;
+  font-weight:  $font-weight-medium;
+  line-height: 1.5;
+
+  &-primary {
+    background-color: $primary-color-100;
+    color: $primary-color-400;
+  }
+}
+
 // logo
 .logo {
   background: center/cover no-repeat url("../assets/images/logo.svg");
@@ -125,4 +169,33 @@
   text-indent: 101%;
   overflow: hidden;
   white-space: nowrap;
+}
+
+
+// swiper
+.product-swiper {
+  overflow: hidden;
+  .row {
+    --gutter-x: 1rem;
+    flex-wrap: nowrap;
+    &.swiper-item-3 {
+      width: 948px;
+    }
+    &.swiper-item-4 {
+      width: 1264px;
+    }
+  }
+}
+
+.mask {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
