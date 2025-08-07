@@ -203,30 +203,59 @@
 .breadcrumb {
   display: flex;
   align-items: center;
-  gap: $spacer * 0.5; // 8px
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
   color: $neutral-color-600;
-
-  // .breadcrumb-item {
-  //   display: inline-flex;
-  //   align-items: center;
-
-  //   &.active {
-  //     color: $neutral-color-900;
-  //     font-weight: $font-weight-bold;
-  //   }
-
-  //   &:not(:last-child)::after {
-  //     content: "/";
-  //     margin-left: $spacer * 0.5; // 8px
-  //   }
-  // }
+  
+  >* {
+    &:not(:first-child)::before {
+      content: '/';
+      margin-inline: 8px;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      color: $neutral-color-300;
+    }
+    &:last-child {
+      color: $neutral-color-900;
+      
+    }
+  }
 }
 
 .pagination {
   display: flex;
   align-items: center;
-  // gap: $spacer * 0.5; // 8px
-  // color: $neutral-color-600;
+  gap: 8px;
+  
+  .page-item {
+    &:first-child {
+      margin-right: 4px;
+    }
+    &:last-child {
+      margin-left: 4px;
+    }
+
+    .page-link {
+      display: block;
+      width: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+    &:first-child, &:last-child {
+      .page-link {
+        display: flex;
+        padding: 10px;
+      }
+      &.disabled {
+        opacity: 0.4;
+      } 
+    }
+    &.active {
+      background-color: $primary-color-300;
+      font-weight: $font-weight-medium;
+    }
+
+  }
 
   // .page-item {
   //   display: inline-flex;
@@ -235,11 +264,6 @@
   //   border-radius: $border-radius-xs;
   //   cursor: pointer;
 
-  //   &.active {
-  //     background-color: $primary-color-100;
-  //     color: $primary-color-400;
-  //     font-weight: $font-weight-bold;
-  //   }
 
   //   &:hover:not(.active) {
   //     background-color: $neutral-color-200;
