@@ -35,6 +35,10 @@
       margin-top: $value;
       margin-bottom: $value;
     }
+    .mx#{$infix}-#{$space} {
+      margin-left: $value;
+      margin-right: $value;
+    }
     .mt#{$infix}-#{$space} {
       margin-top: $value;
     }

@@ -1,18 +1,39 @@
 .index-banner {
-    --bg-url: url("../images/banner-sm.png");
+  --bg-url: url("../images/banner-sm.png");
   padding-block: 155px;
   background: center / cover no-repeat var(--bg-url);
 
   @include breakpoint(md) {
-    padding-block: 151px;
     --bg-url: url("../images/banner.png");
-    // -112px
+  }
+
+  @include breakpoint(xxl) {
+    padding-top: 289px;
+    padding-bottom: 288px;
+  }
+  .banner-content {
+    @include breakpoint(md) {
+      margin-left: -24px;
+    }
+    @include breakpoint(xl) {
+      margin-left: -40px;
+    }
+    @media (min-width: 1550px) {
+      margin-left: -112px;
+    }
   }
 }
 
 .bg-co-branding {
-    --bg-url: url("../images/banner-co-branded-sm.png");
+  --bg-url: url("../images/banner-co-branded-sm.png");
   background: center / cover no-repeat var(--bg-url);
+  overflow: hidden;
+
+  @include breakpoint(md) {
+    padding-block: 100px;
+    position: relative;
+  }
+
   .deco-star {
     position: relative;
     &::before {
@@ -35,11 +56,38 @@
       position: absolute;
       bottom: -40px;
       right: -40px;
+      @include breakpoint(md) {
+        bottom: -64px;
+        right: -36px;
+      }
     }
   }
 
   @include breakpoint(md) {
     --bg-url: url("../images/banner-co-branded.png");
-    // -112px
+  }
+
+  .swiper-pagination {
+    display: none;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    > * {
+      width: 8px;
+      height: 8px;
+      background-color: $neutral-color-400;
+      border-radius: 999px;
+      &.active {
+        width: 24px;
+        background-color: $neutral-color-600;
+      }
+    }
+
+    @include breakpoint(md) {
+      display: flex;
+      gap: 8px;
+    }
   }
 }

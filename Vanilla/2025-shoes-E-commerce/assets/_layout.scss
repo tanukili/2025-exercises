@@ -42,14 +42,26 @@
 }
 
 .g-3 {
-  --gutter-x: .75rem;
-  --gutter-y: .75rem;
+  --gutter-x: 0.75rem;
+  --gutter-y: 0.75rem;
 }
 .gx-3 {
-  --gutter-x: .75rem
+  --gutter-x: 0.75rem;
 }
 .gy-5 {
-  --gutter-y: 1.5rem
+  --gutter-y: 1.5rem;
+}
+@include breakpoint(md) {
+  .g-md-2 {
+    --gutter-x: 0.5rem;
+    --gutter-y: 0.5rem;
+  }
+  .gx-md-5 {
+    --gutter-x: 1.5rem;
+  }
+  .gy-md-7 {
+    --gutter-y: 2.5rem;
+  }
 }
 
 .col {
