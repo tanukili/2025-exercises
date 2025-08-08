@@ -231,6 +231,10 @@
       color: $neutral-color-900;
     }
   }
+
+  @include breakpoint(md) {
+    font-size: $font-size-base;
+  }
 }
 
 .pagination {

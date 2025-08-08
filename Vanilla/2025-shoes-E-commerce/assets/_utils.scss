@@ -140,6 +140,12 @@
   }
 }
 
+@include breakpoint(lg) {
+  .d-lg-block {
+    display: block;
+  }
+}
+
 // position
 .position-relative {
   position: relative;
