@@ -96,6 +96,9 @@
   .text-md-center {
     text-align: center;
   }
+  .text-md-end {
+    text-align: end;
+  }
 }
 
 // flex
@@ -123,6 +126,11 @@
 .align-items-center {
   align-items: center;
 }
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
 @include breakpoint(md) {
   .d-md-none {
     display: none;
