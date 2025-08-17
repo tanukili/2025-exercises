@@ -24,8 +24,8 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/terms-of-service' element={<TermsOfService />} />
-        <Route path='/member/:memberId' element={<MemberIndex />}>
-          <Route index element={<MemberProfile />} />
+        <Route path='/:memberId' element={<MemberIndex />}>
+          <Route path="profile" element={<MemberProfile />} />
           <Route path="booking-history" element={<BookingHistory />} />
           <Route path="career-planning" element={<CareerPlanning />} />
         </Route>

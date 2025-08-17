@@ -2,21 +2,29 @@ import { Outlet, NavLink } from "react-router-dom";
 
 export default function MemberIndex() {
   return (
-    <div>
-      <h1>我是會員主頁</h1>
-      <nav>
-        <li>
-          <NavLink to="">profile</NavLink>
-        </li>
-        <li>
-          <NavLink to="booking-history">booking-history</NavLink>
-        </li>
-        <li>
-          <NavLink to="career-planning">career-planning</NavLink>
-        </li>
-      </nav>
-      <div>
+    <div className="bg-light py-5">
+      <div className="container">
+        <ul className="nav nav-pills justify-content-center mb-3 ">
+          <li className="nav-item">
+            <NavLink to="profile" className="nav-link d-flex align-items-center" aria-current="page">
+              <span class="material-symbols-outlined">face</span>個人資料
+            </NavLink>
+          </li>
+          <li className="nav-item mx-4">
+            <NavLink to="booking-history" className="nav-link d-flex align-items-center">
+              <span class="material-symbols-outlined">pending_actions</span>
+              預約紀錄
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="career-planning" className="nav-link d-flex align-items-center">
+              <span class="material-symbols-outlined">list_alt</span>職旅計劃
+            </NavLink>
+          </li>
+        </ul>
+      <div className="row bg-white rounded-4 shadow">
         <Outlet />
+      </div>
       </div>
     </div>
   );

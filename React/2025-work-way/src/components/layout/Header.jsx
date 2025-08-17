@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function Header() {
   return (
     <header>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <Link
             className="navbar-brand"
@@ -30,7 +30,7 @@ export default function Header() {
                 <li className="nav-item">
                   <Link
                     to="/plans"
-                    className="nav-link active"
+                    className="nav-link"
                     aria-current="page"
                   >
                     服務方案
@@ -53,24 +53,24 @@ export default function Header() {
                   </Link>
                 </li>
               </ul>
-              <button
-                className="d-lg-none btn btn-outline-secondary"
-                type="button"
-              >
+              <Link
+                to="/member/fakeId"
+                className="d-lg-none btn btn-outline-secondary"              >
                 登入/註冊
-              </button>
+              </Link>
               <Link className='d-none d-lg-block' to="/member/123">
                 <img src="avatar_default.png" alt="會員頭像" width={44}  />
                 Mokumaru
               </Link>
             </div>
           </div>
-          <button
+          <Link
+                to="/member/fakeId"
+
             className="btn btn-outline-secondary"
-            type="button"
           >
             登入/註冊
-          </button>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
