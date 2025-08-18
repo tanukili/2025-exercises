@@ -1,1 +1,187 @@
-<h1>我是 productDetail</h1>
+<!doctype html>
+<html lang="zh-Tw">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URBNSTEP | Platform 404</title>
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
+    <main class="container">
+      <div class="row mb-7">
+        <section class="col-md-6">
+          <figure class="row g-md-2">
+            <img class="col-md-6" src="../assets/images/product-detail/image.png" alt="鞋子細節圖" />
+            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-1.png" alt="鞋子細節圖" />
+            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-2.png" alt="鞋子細節圖" />
+            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-3.png" alt="鞋子細節圖" />
+            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-4.png" alt="鞋子細節圖" />
+            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-5.png" alt="鞋子細節圖" />
+            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-6.png" alt="鞋子細節圖" />
+            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-7.png" alt="鞋子細節圖" />
+          </figure>
+        </section>
+        <div class="col-md-6">
+          <section>
+            <nav class="mb-2 mb-md-3">
+              <ol class="breadcrumb">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="productList.html">女鞋</a></li>
+                <li><a href="productList.html">滑板鞋</a></li>
+                <li>Platform 404</li>
+              </ol>
+            </nav>
+          </section>
+          <section class="mb-6">
+            <h2 class="h4 mb-3 h3-md mb-md-4">Platform 404</h2>
+            <p class="d-flex align-items-center h6 text-primary-400 mb-3 h5-md mb-md-4 ">NT$2,600<span
+                class="ms-2  text-neutral-500">NT$3,200</span>
+            </p>
+            <p class="mb-3">Platform 404 以柔和奶白為底，搭配深藍色皮革點綴，走在街上自帶回頭率。鞋型採用復古運動風輪廓，結合輕量厚底與柔軟泡棉鞋舌，兼顧美感與舒適。</p>
+            <p>鞋身選用柔軟皮革材質，打造出清新卻不失個性的氛圍，並以鞋面透氣孔設計提升穿著體驗，兼顧質感與舒適度，適合日常長時間著用。無論是街頭穿搭、日常通勤或週末出遊都能輕鬆駕馭。 </p>
+          </section>
+          <form class="mb-6">
+            <fieldset>
+              <legend>顏色</legend>
+              <div class="d-flex">
+                <label for="bule">
+                  <input type="radio" name="color" value="bule" id="bule">
+                  <img src="../assets/images/products/product.png" alt="藍色款式">
+                  藍色
+                </label>
+                <label for="khaki">
+                  <input type="radio" name="color" value="khaki" id="khaki">
+                  <img src="../assets/images/products/product-1.png" alt="卡其色款式">
+                  卡其色
+                </label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>尺寸</legend>
+              <label>
+                <input type="radio" name="size" value="35">
+                35 (22.5cm)
+              </label>
+              <label>
+                <input type="radio" name="size" value="36">
+                36 (23.0cm)
+              </label>
+              <label>
+                <input type="radio" name="size" value="37" disabled>
+                37 (23.5cm)
+              </label>
+              <label>
+                <input type="radio" name="size" value="37" disabled>
+                38(24.0cm)
+              </label>
+              <label>
+                <input type="radio" name="size" value="37" disabled>
+                39(24.5cm)
+              </label>
+              <label>
+                <input type="radio" name="size" value="37" disabled>
+                40(25.0cm)
+              </label>
+              <label>
+                <input type="radio" name="size" value="37" disabled>
+                41(26.0cm)
+              </label>
+              <label>
+                <input type="radio" name="size" value="37" disabled>
+                42(26.5cm)
+              </label>
+              <label>
+                <input type="radio" name="size" value="37" disabled>
+                43(27.0cm)
+              </label>
+            </fieldset>
+            <p>僅剩 3 雙</p>
+            <div class="d-flex">
+              <button class="btn" type="button">加入收藏</button>
+              <button class="btn btn-primary" type="submit">門市預約試穿</button>
+            </div>
+          </form>
+          <section>
+            <div class="pb-3 mb-3 border-bottom">
+              <h3 class="mb-1">商品材質</h3>
+              <ul class="text-neutral-600">
+                <li>鞋面：合成皮革（Synthetic Leather）</li>
+                <li>內裡：透氣網布材質，提升舒適與排汗性</li>
+                <li>鞋底：EVA 輕量發泡橡膠，具備良好緩震與止滑效果</li>
+                <li>鞋帶：聚酯纖維，耐拉扯不易鬆脫</li>
+              </ul>
+            </div>
+            <div class="pb-3 mb-3 border-bottom">
+              <h3 class="mb-1">購買須知</h3>
+              <ul class="text-neutral-600">
+                <li>商品顏色因螢幕顯示可能略有差異，請以實品為準。</li>
+                <li>建議首次穿著前試穿確認尺寸，避免影響退換貨權益。</li>
+                <li>本商品為限量發售，庫存有限，如需更換尺寸請儘早聯繫客服協助處理。</li>
+              </ul>
+            </div>
+            <div class="pb-3 border-bottom">
+              <h3 class="mb-1">保養方式</h3>
+              <ul class="text-neutral-600">
+                <li>建議以乾布或微濕軟布擦拭表面汙漬，避免機洗或長時間浸水。</li>
+                <li>收納時請放置於乾燥通風處，避免日曬及高溫導致變形或龜裂。</li>
+                <li>若需深層清潔，建議使用中性清潔劑並搭配柔刷輕刷，勿使用漂白水或強酸強鹼清潔劑。</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+      <section class="mb-11">
+        <h2 class="h5 mb-5">你可能也喜歡... </h2>
+        <div class="product-swiper">
+          <ul class="row swiper-slides-4">
+            <li class="col-3">
+              <a href="productDetail.html">
+                <picture class="mb-2 d-block mb-md-3">
+                  <source srcset="../assets/images/products/product-2.png" media="(min-width: 768px)" />
+                  <img class="w-full" src="../assets/images/products/product-2.png" alt="VM001" />
+                </picture>
+                <h3 class="h6 fw-bold mb-md-1">VM001</h3>
+                <p class="fw-medium">NT$2,600</p>
+              </a>
+            </li>
+            <li class="col-3">
+              <a href="productDetail.html">
+                <picture class="mb-2 d-block mb-md-3">
+                  <source srcset="../assets/images/products/product-3.png" media="(min-width: 768px)" />
+                  <img class="w-full" src="../assets/images/products/product-3.png" alt="Melty Kiss" />
+                </picture>
+                <h3 class="h6 fw-bold mb-md-1">Melty Kiss</h3>
+                <p class="fw-medium">NT$4,000</p>
+              </a>
+            </li>
+            <li class="col-3">
+              <a href="productDetail.html">
+                <picture class="mb-2 d-block mb-md-3">
+                  <source srcset="../assets/images/products/product-4.png" media="(min-width: 768px)" />
+                  <img class="w-full" src="../assets/images/products/product-4.png" alt="BOOMBLOK" />
+                </picture>
+                <h3 class="h6 fw-bold mb-md-1">BOOMBLOK</h3>
+                <p class="fw-medium">NT$3,200</p>
+              </a>
+            </li>
+            <li class="col-3">
+              <a href="productDetail.html">
+                <picture class="mb-2 d-block mb-md-3">
+                  <source srcset="../assets/images/products/product-5.png" media="(min-width: 768px)" />
+                  <img class="w-full" src="../assets/images/products/product-5.png" alt="Sugar Snap" />
+                </picture>
+                <h3 class="h6 fw-bold mb-md-1">Sugar Snap</h3>
+                <p class="fw-medium">NT$3,200</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <%- include('./components/sale-banner') %> <%- include('./layout/footer') %>
+        <script type="module" src="../main.js"></script>
+</body>
+
+</html>
