@@ -12,7 +12,7 @@ export default function MemberProfile() {
   let reconfirmPassword = ''
 
   return (
-    <div className="col-md-10">
+    <div className="col-md-10 bg-white rounded-4 shadow">
       <div className="py-4 px-3">
         <h2 className="mb-3">個人資料</h2>
         <div className="d-flex align-items-end mb-4">

@@ -22,7 +22,7 @@ export default function MemberIndex() {
             </NavLink>
           </li>
         </ul>
-      <div className="row bg-white rounded-4 shadow">
+      <div className="row justify-content-center">
         <Outlet />
       </div>
       </div>
