@@ -9,13 +9,13 @@
 }
 
 .border-linear {
-  border-top: 1px solid;
-  background: linear-gradient(
+  --bs-border-color: transparent;
+  background: linear-gradient($white, $white) padding-box,
+    linear-gradient(
         90deg,
         rgba(209, 217, 225, 0) 0%,
         #d1d9e1 50%,
         rgba(209, 217, 225, 0) 100%
       )
-      padding-box,
-    linear-gradient($white) border-box;
+      border-box;
 }

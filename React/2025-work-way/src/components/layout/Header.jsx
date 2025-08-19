@@ -32,8 +32,8 @@ export default function Header() {
   };
 
   return (
-    <header className="container">
-      <nav className="navbar navbar-expand-lg bg-white py-md-3">
+    <header className="bg-white">
+      <nav className="navbar navbar-expand-lg container py-md-3">
         <div className="container-fluid">
           <Link className="logo" to="/">
             職旅 WorkWay
