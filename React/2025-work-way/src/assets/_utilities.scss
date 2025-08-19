@@ -7,3 +7,15 @@
     font-size: $h7-font-size !important;
   }
 }
+
+.border-linear {
+  border-top: 1px solid;
+  background: linear-gradient(
+        90deg,
+        rgba(209, 217, 225, 0) 0%,
+        #d1d9e1 50%,
+        rgba(209, 217, 225, 0) 100%
+      )
+      padding-box,
+    linear-gradient($white) border-box;
+}
