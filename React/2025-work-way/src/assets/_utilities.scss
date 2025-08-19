@@ -1,0 +1,9 @@
+.tracking-normal {
+  letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+  .fs-md-7 {
+    font-size: $h7-font-size !important;
+  }
+}

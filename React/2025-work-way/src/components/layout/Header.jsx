@@ -1,14 +1,41 @@
-import { Link } from 'react-router-dom'
+import { Link, useMatch } from "react-router-dom";
 
 export default function Header() {
+  const isLogin = !!useMatch("/:memberId/*");
+  console.log(isLogin);
+
+  const loginTemplate = () => {
+    if (isLogin) {
+      return (
+        <Link
+          className="d-flex align-items-center fw-medium fs-8 lh-sm tracking-normal fs-md-7"
+          to="/member/123"
+        >
+          <img
+            className="rounded-circle me-2"
+            src="/avatar.png"
+            alt="會員頭像"
+            width={44}
+          />
+          Mokumaru
+        </Link>
+      );
+    }
+    return (
+      <Link
+        to="/fakeId/profile"
+        className="btn btn-sm btn-outline-primary fs-md-7"
+      >
+        登入/註冊
+      </Link>
+    );
+  };
+
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <header className="container">
+      <nav className="navbar navbar-expand-lg bg-white py-md-3">
         <div className="container-fluid">
-          <Link
-            className="navbar-brand"
-            to="/"
-          >
+          <Link className="logo" to="/">
             職旅 WorkWay
           </Link>
           <div
@@ -17,20 +44,22 @@ export default function Header() {
             id="headerNavbar"
             aria-labelledby="headerNavbarLabel"
           >
-            <div className="offcanvas-header">
+            <div className="offcanvas-header pb-4">
               <button
                 type="button"
-                className="btn-close"
+                className="btn btn-outline-primary border-0 p-13 ms-auto"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
-              ></button>
+              >
+                <span class="material-symbols-outlined d-block">close</span>
+              </button>
             </div>
-            <div className="offcanvas-body">
-              <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <div className="offcanvas-body text-center pt-0 d-flex flex-column justify-content-between">
+              <ul className="navbar-nav flex-grow-1 fs-8 fs-md-7 justify-content-md-center">
                 <li className="nav-item">
                   <Link
                     to="/plans"
-                    className="nav-link"
+                    className="nav-link link-primary py-4 py-md-2 px-md-6"
                     aria-current="page"
                   >
                     服務方案
@@ -39,7 +68,7 @@ export default function Header() {
                 <li className="nav-item">
                   <Link
                     to="/about"
-                    className="nav-link"
+                    className="nav-link link-primary py-4 py-md-2 px-md-6"
                   >
                     關於職旅
                   </Link>
@@ -47,30 +76,23 @@ export default function Header() {
                 <li className="nav-item">
                   <Link
                     to="/contact"
-                    className="nav-link"
+                    className="nav-link link-primary py-4 py-md-2 px-md-6"
                   >
                     聯絡我們
                   </Link>
                 </li>
               </ul>
-              <Link
-                to="/member/fakeId"
-                className="d-lg-none btn btn-outline-secondary"              >
-                登入/註冊
-              </Link>
-              <Link className='d-none d-lg-block' to="/member/123">
-                <img src="avatar_default.png" alt="會員頭像" width={44}  />
-                Mokumaru
-              </Link>
+              {isLogin || (
+                <Link
+                  to="/fakeId/profile"
+                  className="btn btn-sm btn-secondary fs-5 fw-bold lh-sm d-md-none"
+                >
+                  登入/註冊
+                </Link>
+              )}
             </div>
           </div>
-          <Link
-                to="/member/fakeId"
-
-            className="btn btn-outline-secondary"
-          >
-            登入/註冊
-          </Link>
+          <div className="ms-auto me-3">{loginTemplate()}</div>
           <button
             className="navbar-toggler"
             type="button"
@@ -79,10 +101,10 @@ export default function Header() {
             aria-controls="headerNavbar"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span class="material-symbols-outlined d-block">menu</span>
           </button>
         </div>
       </nav>
     </header>
-  )
+  );
 }

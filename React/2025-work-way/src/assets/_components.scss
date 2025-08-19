@@ -1,0 +1,54 @@
+.logo {
+  width: 92px;
+  height: 35.6px;
+  background: center / cover no-repeat url("/logo.svg");
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  @media (min-width: 768px) {
+    width: 124px;
+    height: 48px;
+  }
+}
+
+.btn {
+  &.btn-outline-primary {
+    --bs-btn-border-color: #{$natural-85};
+    --bs-btn-bg: #{$white};
+    --bs-btn-hover-color: #{$primary};
+    --bs-btn-hover-bg: #{$natural-90};
+    --bs-btn-hover-border-color: #{$natural-90};
+    --bs-btn-active-color: #{$primary};
+    --bs-btn-active-bg: #{$natural-90};
+    --bs-btn-active-border-color: #{$natural-90};
+  }
+  &.btn-secondary {
+    --bs-btn-hover-color: #{$white};
+    --bs-btn-hover-bg: #{$primary-60};
+    --bs-btn-hover-border-color: #{$primary-60};
+    --bs-btn-active-color: #{$white};
+    --bs-btn-active-bg: #{$primary-60};
+    --bs-btn-active-border-color: #{$primary-60};
+  }
+}
+
+.navbar-toggler {
+  --bs-border-width: 0;
+  &:hover,
+  &:active {
+    background: $natural-90;
+  }
+}
+
+.offcanvas .btn-close {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-link.link-primary {
+  border-radius: $border-radius;
+  &:hover,
+  &:active {
+    background-color: $natural-90;
+  }
+}
