@@ -241,7 +241,7 @@
 
 // list-style
 .list-circle {
-  &>* {
+  & > * {
     display: flex;
 
     &::before {

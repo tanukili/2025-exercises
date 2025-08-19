@@ -47,7 +47,7 @@ $neutral-colors: (
 );
 
 $danger-colors: (
-  300: $danger-color-300
+  300: $danger-color-300,
 );
 
 // spacing
@@ -78,8 +78,7 @@ $spacers: (
   11: $spacer * 5,
   // 80px
   auto: auto,
-  12: $spacer * 0.375,
-  // 6px
+  12: $spacer * 0.375, // 6px
 );
 
 // font

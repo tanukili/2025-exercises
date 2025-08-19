@@ -52,10 +52,10 @@ export default defineConfig({
           .map((file) => [
             path.relative(
               "pages",
-              file.slice(0, file.length - path.extname(file).length)
+              file.slice(0, file.length - path.extname(file).length),
             ),
             fileURLToPath(new URL(file, import.meta.url)),
-          ])
+          ]),
       ),
     },
     // 輸出到 dist 資料夾

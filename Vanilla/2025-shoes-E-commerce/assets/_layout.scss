@@ -34,10 +34,12 @@
   --gutter-x: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--gutter-y) * -1); // 當有垂直 gutter 時將頂部多的 gutter 內推
+  margin-top: calc(
+    var(--gutter-y) * -1
+  ); // 當有垂直 gutter 時將頂部多的 gutter 內推
   margin-inline: calc(var(--gutter-x) * -0.5); // 左右加上一半的 gutter
 
-  &>* {
+  & > * {
     flex-shrink: 0;
     width: 100%;
     margin-top: var(--gutter-y);
