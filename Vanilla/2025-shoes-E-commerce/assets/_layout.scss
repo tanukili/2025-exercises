@@ -2,22 +2,27 @@
   width: 100%;
   padding-inline: $spacer * 0.75;
   margin-inline: auto;
+
   // sm
   @media (min-width: 576px) {
     max-width: 540px;
   }
+
   // md
   @media (min-width: 768px) {
     max-width: 720px;
   }
+
   // lg
   @media (min-width: 992px) {
     max-width: 960px;
   }
+
   //xl
   @media (min-width: 1200px) {
     max-width: 1140px;
   }
+
   // xxl
   @media (min-width: 1400px) {
     max-width: 1320px;
@@ -29,11 +34,10 @@
   --gutter-x: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(
-    var(--gutter-y) * -1
-  ); // 當有垂直 gutter 時將頂部多的 gutter 內推
+  margin-top: calc(var(--gutter-y) * -1); // 當有垂直 gutter 時將頂部多的 gutter 內推
   margin-inline: calc(var(--gutter-x) * -0.5); // 左右加上一半的 gutter
-  & > * {
+
+  &>* {
     flex-shrink: 0;
     width: 100%;
     margin-top: var(--gutter-y);
@@ -45,20 +49,38 @@
   --gutter-x: 0.75rem;
   --gutter-y: 0.75rem;
 }
+
+.g-2 {
+  --gutter-x: 0.5rem;
+  --gutter-y: 0.5rem;
+}
+
+.gx-2 {
+  --gutter-x: 0.5rem;
+}
+
 .gx-3 {
   --gutter-x: 0.75rem;
 }
+
+.gx-4 {
+  --gutter-x: 1rem;
+}
+
 .gy-5 {
   --gutter-y: 1.5rem;
 }
+
 @include breakpoint(md) {
   .g-md-2 {
     --gutter-x: 0.5rem;
     --gutter-y: 0.5rem;
   }
+
   .gx-md-5 {
     --gutter-x: 1.5rem;
   }
+
   .gy-md-7 {
     --gutter-y: 2.5rem;
   }
@@ -67,17 +89,25 @@
 .col {
   flex: 1 0 0;
 }
+
 .col-3 {
   flex: 0 0 auto;
   width: 25%;
 }
+
 .col-6 {
   flex: 0 0 auto;
   width: 50%;
 }
+
 .col-12 {
   flex: 0 0 auto;
   width: 100%;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
 }
 
 @include breakpoint(md) {
@@ -85,22 +115,27 @@
     flex: 0 0 auto;
     width: 16.67%;
   }
+
   .col-md-3 {
     flex: 0 0 auto;
     width: 25%;
   }
+
   .col-md-4 {
     flex: 0 0 auto;
     width: 33.33%;
   }
+
   .col-md-6 {
     flex: 0 0 auto;
     width: 50%;
   }
+
   .col-md-8 {
     flex: 0 0 auto;
     width: 66.66%;
   }
+
   .col-md-10 {
     flex: 0 0 auto;
     width: 83.33%;
@@ -112,10 +147,12 @@
     flex: 0 0 auto;
     width: 16.67%;
   }
+
   .col-lg-6 {
     flex: 0 0 auto;
     width: 50%;
   }
+
   .col-lg-10 {
     flex: 0 0 auto;
     width: 83.33%;

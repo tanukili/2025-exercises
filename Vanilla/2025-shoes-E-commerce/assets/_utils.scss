@@ -2,6 +2,7 @@
   .bg-primary-#{$key} {
     background-color: $value;
   }
+
   .text-primary-#{$key} {
     color: $value;
   }
@@ -11,7 +12,14 @@
   .bg-neutral-#{$key} {
     background-color: $value;
   }
+
   .text-neutral-#{$key} {
+    color: $value;
+  }
+}
+
+@each $key, $value in $danger-colors {
+  .text-danger-#{$key} {
     color: $value;
   }
 }
@@ -19,12 +27,14 @@
 .bg-white {
   background-color: $white-color;
 }
+
 .text-white {
   color: $white-color;
 }
 
 // spacing
 @include generate-spacing-utils();
+
 @each $breakpoint, $value in $breakpoints {
   @include breakpoint($breakpoint) {
     @include generate-spacing-utils("-#{$breakpoint}");
@@ -38,10 +48,12 @@
     font-weight: $font-weight-bold;
     line-height: $line-height-sm;
   }
+
   .fs-#{$size} {
     font-size: $value;
   }
 }
+
 @each $size, $value in $display-sizes {
   .display-#{$size} {
     font-size: $value;
@@ -57,11 +69,13 @@
       font-weight: $font-weight-bold;
       line-height: $line-height-sm;
     }
+
     .fs-md-#{$size} {
       font-size: $value;
     }
   }
 }
+
 @each $size, $value in $display-sizes {
   @include breakpoint(md) {
     .display-md-#{$size} {
@@ -76,17 +90,31 @@
 .text-center {
   text-align: center;
 }
+
 .text-start {
   text-align: start;
+}
+
+.fw-normal {
+  font-weight: 400;
 }
 
 .fw-medium {
   font-weight: $font-weight-medium;
 }
 
+.lh-none {
+  line-height: 0;
+}
+
+.lh-base {
+  line-height: 1.5;
+}
+
 .font-family-tw {
   font-family: "Noto Sans TC", sans-serif, serif;
 }
+
 // 等待確認字型
 // .font-family-en {
 //   font-family: serif;
@@ -96,6 +124,7 @@
   .text-md-center {
     text-align: center;
   }
+
   .text-md-end {
     text-align: end;
   }
@@ -105,12 +134,15 @@
 .d-flex {
   display: flex;
 }
+
 .d-block {
   display: block;
 }
+
 .d-inline-block {
   display: inline-block;
 }
+
 .d-none {
   display: none;
 }
@@ -135,6 +167,7 @@
   .d-md-none {
     display: none;
   }
+
   .flex-md-row {
     flex-direction: row;
   }
@@ -150,6 +183,7 @@
 .position-relative {
   position: relative;
 }
+
 .position-absolute {
   position: absolute;
 }
@@ -157,6 +191,7 @@
 .top-0 {
   top: 0;
 }
+
 .start-0 {
   left: 0;
 }
@@ -165,6 +200,7 @@
   .d-md-block {
     display: block;
   }
+
   .d-md-flex {
     display: flex;
   }
@@ -175,6 +211,7 @@
   --border-width: #{$border-width};
   border-bottom: var(--border-width) solid $border-color;
 }
+
 .border-start {
   border-left: $border-width solid $border-color;
 }
@@ -204,8 +241,9 @@
 
 // list-style
 .list-circle {
-  & > * {
+  &>* {
     display: flex;
+
     &::before {
       content: "·";
       padding-inline: 0.25rem;

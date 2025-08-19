@@ -9,18 +9,21 @@
 
 <body>
   <%- include('./layout/header'); -%>
+    <section class="mb-5 d-md-none">
+      <img class="" src="../assets/images/product-detail/image.png" alt="鞋子細節圖" />
+    </section>
     <main class="container">
       <div class="row mb-7">
-        <section class="col-md-6">
+        <section class="d-none d-md-block col-md-6">
           <figure class="row g-md-2">
             <img class="col-md-6" src="../assets/images/product-detail/image.png" alt="鞋子細節圖" />
-            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-1.png" alt="鞋子細節圖" />
-            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-2.png" alt="鞋子細節圖" />
-            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-3.png" alt="鞋子細節圖" />
-            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-4.png" alt="鞋子細節圖" />
-            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-5.png" alt="鞋子細節圖" />
-            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-6.png" alt="鞋子細節圖" />
-            <img class="d-none d-md-block col-md-6" src="../assets/images/product-detail/image-7.png" alt="鞋子細節圖" />
+            <img class="col-md-6" src="../assets/images/product-detail/image-1.png" alt="鞋子細節圖" />
+            <img class="col-md-6" src="../assets/images/product-detail/image-2.png" alt="鞋子細節圖" />
+            <img class="col-md-6" src="../assets/images/product-detail/image-3.png" alt="鞋子細節圖" />
+            <img class="col-md-6" src="../assets/images/product-detail/image-4.png" alt="鞋子細節圖" />
+            <img class="col-md-6" src="../assets/images/product-detail/image-5.png" alt="鞋子細節圖" />
+            <img class="col-md-6" src="../assets/images/product-detail/image-6.png" alt="鞋子細節圖" />
+            <img class="col-md-6" src="../assets/images/product-detail/image-7.png" alt="鞋子細節圖" />
           </figure>
         </section>
         <div class="col-md-6">
@@ -37,75 +40,84 @@
           <section class="mb-6">
             <h2 class="h4 mb-3 h3-md mb-md-4">Platform 404</h2>
             <p class="d-flex align-items-center h6 text-primary-400 mb-3 h5-md mb-md-4 ">NT$2,600<span
-                class="ms-2  text-neutral-500">NT$3,200</span>
+                class="ms-2 text-neutral-500 fw-normal fs-7 lh-base">NT$3,200</span>
             </p>
             <p class="mb-3">Platform 404 以柔和奶白為底，搭配深藍色皮革點綴，走在街上自帶回頭率。鞋型採用復古運動風輪廓，結合輕量厚底與柔軟泡棉鞋舌，兼顧美感與舒適。</p>
             <p>鞋身選用柔軟皮革材質，打造出清新卻不失個性的氛圍，並以鞋面透氣孔設計提升穿著體驗，兼顧質感與舒適度，適合日常長時間著用。無論是街頭穿搭、日常通勤或週末出遊都能輕鬆駕馭。 </p>
           </section>
           <form class="mb-6">
-            <fieldset>
-              <legend>顏色</legend>
-              <div class="d-flex">
+            <fieldset class="mb-5">
+              <legend class="mb-2">顏色</legend>
+              <div class="variants-colors">
                 <label for="bule">
                   <input type="radio" name="color" value="bule" id="bule">
                   <img src="../assets/images/products/product.png" alt="藍色款式">
-                  藍色
+                  <span>藍色</span>
                 </label>
                 <label for="khaki">
                   <input type="radio" name="color" value="khaki" id="khaki">
                   <img src="../assets/images/products/product-1.png" alt="卡其色款式">
-                  卡其色
+                  <span>卡其色</span>
                 </label>
               </div>
             </fieldset>
-            <fieldset>
-              <legend>尺寸</legend>
-              <label>
-                <input type="radio" name="size" value="35">
-                35 (22.5cm)
-              </label>
-              <label>
-                <input type="radio" name="size" value="36">
-                36 (23.0cm)
-              </label>
-              <label>
-                <input type="radio" name="size" value="37" disabled>
-                37 (23.5cm)
-              </label>
-              <label>
-                <input type="radio" name="size" value="37" disabled>
-                38(24.0cm)
-              </label>
-              <label>
-                <input type="radio" name="size" value="37" disabled>
-                39(24.5cm)
-              </label>
-              <label>
-                <input type="radio" name="size" value="37" disabled>
-                40(25.0cm)
-              </label>
-              <label>
-                <input type="radio" name="size" value="37" disabled>
-                41(26.0cm)
-              </label>
-              <label>
-                <input type="radio" name="size" value="37" disabled>
-                42(26.5cm)
-              </label>
-              <label>
-                <input type="radio" name="size" value="37" disabled>
-                43(27.0cm)
-              </label>
+            <fieldset class="mb-5">
+              <legend class="mb-2">尺寸</legend>
+              <div class="variants-sizes">
+                <label>
+                  <input type="radio" name="size" value="35" checked>
+                  <span>35 (22.5cm)</span>
+                </label>
+                <label>
+                  <input type="radio" name="size" value="36">
+                  <span>36 (23.0cm)</span>
+                </label>
+                <label>
+                  <input type="radio" name="size" value="37">
+                  <span>37 (23.5cm)</span>
+                </label>
+                <label>
+                  <input type="radio" name="size" value="37">
+                  <span>38(24.0cm)</span>
+                </label>
+                <label>
+                  <input type="radio" name="size" value="37">
+                  <span>39(24.5cm)</span>
+                </label>
+                <label>
+                  <input type="radio" name="size" value="37">
+                  <span>40(25.0cm)</span>
+                </label>
+                <label>
+                  <input type="radio" name="size" value="37">
+                  <span>41(26.0cm)</span>
+                </label>
+                <label class="disabled">
+                  <input type="radio" name="size" value="37" disabled>
+                  <span>42(26.5cm)</span>
+                </label>
+                <label class="disabled">
+                  <input type="radio" name="size" value="37" disabled>
+                  <span>43(27.0cm)</span>
+                </label>
+              </div>
+              <p class="mt-2 text-danger-300 fs-7">僅剩 3 雙</p>
             </fieldset>
-            <p>僅剩 3 雙</p>
-            <div class="d-flex">
-              <button class="btn" type="button">加入收藏</button>
-              <button class="btn btn-primary" type="submit">門市預約試穿</button>
+            <div class="row gx-2">
+              <div class="col">
+                <button class="w-full btn btn-lg btn-neutral d-flex align-items-center justify-content-center"
+                  type="submit"><i class="bi bi-handbag fs-5 lh-none me-2"></i>
+                  門市預約試穿</button>
+              </div>
+              <div class="col-auto">
+                <button class="btn btn-outline-neutral p-3 d-flex align-items-center" type="button"><i
+                    class="bi bi-heart fs-4 lh-none me-md-2"></i><span class="d-none d-md-block">加入收藏</span></button>
+              </div>
             </div>
           </form>
           <section>
-            <div class="pb-3 mb-3 border-bottom">
-              <h3 class="mb-1">商品材質</h3>
+            <div class="py-3 mb-3 border-bottom">
+              <h3 class="fw-medium mb-1">商品材質</h3>
               <ul class="text-neutral-600">
                 <li>鞋面：合成皮革（Synthetic Leather）</li>
                 <li>內裡：透氣網布材質，提升舒適與排汗性</li>
@@ -114,7 +126,7 @@
               </ul>
             </div>
             <div class="pb-3 mb-3 border-bottom">
-              <h3 class="mb-1">購買須知</h3>
+              <h3 class="fw-medium mb-1">購買須知</h3>
               <ul class="text-neutral-600">
                 <li>商品顏色因螢幕顯示可能略有差異，請以實品為準。</li>
                 <li>建議首次穿著前試穿確認尺寸，避免影響退換貨權益。</li>
@@ -122,7 +134,7 @@
               </ul>
             </div>
             <div class="pb-3 border-bottom">
-              <h3 class="mb-1">保養方式</h3>
+              <h3 class="fw-medium mb-1">保養方式</h3>
               <ul class="text-neutral-600">
                 <li>建議以乾布或微濕軟布擦拭表面汙漬，避免機洗或長時間浸水。</li>
                 <li>收納時請放置於乾燥通風處，避免日曬及高溫導致變形或龜裂。</li>
@@ -132,37 +144,37 @@
           </section>
         </div>
       </div>
-      <section class="mb-11">
+      <section class="mb-10">
         <h2 class="h5 mb-5">你可能也喜歡... </h2>
         <div class="product-swiper">
-          <ul class="row swiper-slides-4">
+          <ul class="row swiper-slides-4 gx-4">
             <li class="col-3">
               <a href="productDetail.html">
-                <picture class="mb-2 d-block mb-md-3">
+                <picture class="mb-3 d-block mb-md-3">
                   <source srcset="../assets/images/products/product-2.png" media="(min-width: 768px)" />
                   <img class="w-full" src="../assets/images/products/product-2.png" alt="VM001" />
                 </picture>
-                <h3 class="h6 fw-bold mb-md-1">VM001</h3>
+                <h3 class="h6 fw-bold mb-1">VM001</h3>
                 <p class="fw-medium">NT$2,600</p>
               </a>
             </li>
             <li class="col-3">
               <a href="productDetail.html">
-                <picture class="mb-2 d-block mb-md-3">
+                <picture class="mb-3 d-block mb-md-3">
                   <source srcset="../assets/images/products/product-3.png" media="(min-width: 768px)" />
                   <img class="w-full" src="../assets/images/products/product-3.png" alt="Melty Kiss" />
                 </picture>
-                <h3 class="h6 fw-bold mb-md-1">Melty Kiss</h3>
+                <h3 class="h6 fw-bold mb-1">Melty Kiss</h3>
                 <p class="fw-medium">NT$4,000</p>
               </a>
             </li>
             <li class="col-3">
               <a href="productDetail.html">
-                <picture class="mb-2 d-block mb-md-3">
+                <picture class="mb-3 d-block mb-md-3">
                   <source srcset="../assets/images/products/product-4.png" media="(min-width: 768px)" />
                   <img class="w-full" src="../assets/images/products/product-4.png" alt="BOOMBLOK" />
                 </picture>
-                <h3 class="h6 fw-bold mb-md-1">BOOMBLOK</h3>
+                <h3 class="h6 fw-bold mb-1">BOOMBLOK</h3>
                 <p class="fw-medium">NT$3,200</p>
               </a>
             </li>
@@ -172,7 +184,7 @@
                   <source srcset="../assets/images/products/product-5.png" media="(min-width: 768px)" />
                   <img class="w-full" src="../assets/images/products/product-5.png" alt="Sugar Snap" />
                 </picture>
-                <h3 class="h6 fw-bold mb-md-1">Sugar Snap</h3>
+                <h3 class="h6 fw-bold mb-1">Sugar Snap</h3>
                 <p class="fw-medium">NT$3,200</p>
               </a>
             </li>

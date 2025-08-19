@@ -25,6 +25,8 @@ $neutral-color-900: rgb(33, 37, 41);
 
 $white-color: rgb(255, 255, 255);
 
+$danger-color-300: rgb(215, 79, 79);
+
 $primary-colors: (
   100: $primary-color-100,
   200: $primary-color-200,
@@ -42,6 +44,10 @@ $neutral-colors: (
   700: $neutral-color-700,
   800: $neutral-color-800,
   900: $neutral-color-900,
+);
+
+$danger-colors: (
+  300: $danger-color-300
 );
 
 // spacing
@@ -72,7 +78,8 @@ $spacers: (
   11: $spacer * 5,
   // 80px
   auto: auto,
-  12: $spacer * 0.375, // 6px
+  12: $spacer * 0.375,
+  // 6px
 );
 
 // font
