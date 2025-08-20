@@ -102,6 +102,11 @@
   width: 50%;
 }
 
+.col-7 {
+  flex: 0 0 auto;
+  width: 58.33%;
+}
+
 .col-12 {
   flex: 0 0 auto;
   width: 100%;
@@ -113,6 +118,10 @@
 }
 
 @include breakpoint(md) {
+  .col-md {
+    flex: 1 0 0;
+  }
+
   .col-md-2 {
     flex: 0 0 auto;
     width: 16.67%;
@@ -153,6 +162,11 @@
   .col-lg-6 {
     flex: 0 0 auto;
     width: 50%;
+  }
+
+  .col-lg-7 {
+    flex: 0 0 auto;
+    width: 58.33%;
   }
 
   .col-lg-10 {
