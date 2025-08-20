@@ -30,6 +30,9 @@
     --bs-btn-active-bg: #{$primary-60};
     --bs-btn-active-border-color: #{$primary-60};
   }
+  @media (min-width: 768px) {
+    --bs-btn-border-radius: 1rem;
+  }
 }
 
 .navbar-toggler {
@@ -48,7 +51,17 @@
 .nav-link.link-primary {
   border-radius: $border-radius;
   &:hover,
-  &:active {
+  &:active,
+  &.active {
     background-color: $natural-90;
   }
+}
+
+// 表單元素客製化
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-control-plaintext ~ label,
+.form-floating > .form-select ~ label {
+  color: $natural-50;
+  font-size: $h8-font-size;
 }

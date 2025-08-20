@@ -2,29 +2,42 @@ import { Outlet, NavLink } from "react-router-dom";
 
 export default function MemberIndex() {
   return (
-    <div className="bg-light py-5">
+    <div className="bg-natural-95 py-9">
       <div className="container">
-        <ul className="nav nav-pills justify-content-center mb-3 ">
+        <ul className="nav nav-pills justify-content-center mb-4">
           <li className="nav-item">
-            <NavLink to="profile" className="nav-link d-flex align-items-center" aria-current="page">
-              <span class="material-symbols-outlined">face</span>個人資料
+            <NavLink
+              to="profile"
+              className="btn btn-sm btn-outline-primary p-3 d-flex align-items-center"
+              aria-current="page"
+            >
+              <span class="material-symbols-outlined fs-5">face</span>個人資料
             </NavLink>
           </li>
           <li className="nav-item mx-4">
-            <NavLink to="booking-history" className="nav-link d-flex align-items-center">
-              <span class="material-symbols-outlined">pending_actions</span>
+            <NavLink
+              to="booking-history"
+              className="btn btn-sm btn-outline-primary p-3 d-flex align-items-center"
+            >
+              <span class="material-symbols-outlined fs-5">
+                pending_actions
+              </span>
               預約紀錄
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="career-planning" className="nav-link d-flex align-items-center">
-              <span class="material-symbols-outlined">list_alt</span>職旅計劃
+            <NavLink
+              to="career-planning"
+              className="btn btn-sm btn-outline-primary p-3 d-flex align-items-center"
+            >
+              <span class="material-symbols-outlined fs-5">list_alt</span>
+              職旅計劃
             </NavLink>
           </li>
         </ul>
-      <div className="row justify-content-center">
-        <Outlet />
-      </div>
+        <div className="row justify-content-center">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
