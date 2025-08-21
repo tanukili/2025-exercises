@@ -65,3 +65,63 @@
   color: $natural-50;
   font-size: $h8-font-size;
 }
+
+.form-floating > .form-control:disabled,
+.form-floating > .form-control[readonly],
+.form-floating > .form-select:disabled {
+  ~ label {
+    transform: none; // disabled 時取消浮動
+  }
+  &:not(:placeholder-shown) {
+    // 隱藏 input value
+    -webkit-text-security: disc;
+    color: $natural-75;
+    ~ label {
+      color: $natural-10;
+      font-size: $h7-font-size;
+    }
+  }
+}
+
+.form-check .form-check-input:checked,
+.form-check .form-check-input:valid:checked {
+  background-color: $white;
+  border-color: $primary-60;
+  display: flex;
+  &::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    margin: auto;
+    background-color: $primary-60;
+    border-radius: 50%;
+  }
+}
+.form-check .form-check-input,
+.form-check .form-check-input:checked,
+.form-check .form-check-input:valid:checked {
+  &:disabled {
+    opacity: unset;
+    background-color: $natural-75;
+    border-color: $natural-75;
+    &::after {
+      background-color: $natural-75;
+    }
+  }
+}
+
+.invalid-feedback {
+  font-size: $h9-font-size;
+  padding-inline: 0.5rem;
+  background: $pink;
+}
+
+.was-validated .form-check-input:invalid,
+.form-check-input.is-invalid {
+  background: $pink;
+  border-color: $danger;
+}
+.was-validated .form-check-input:invalid ~ .form-check-label,
+.form-check-input.is-invalid ~ .form-check-label {
+  color: inherit;
+}

@@ -1,7 +1,6 @@
 export default function MemberProfile() {
   const memberInfo = {
     name: "Mokumaru",
-    // name: "",
     email: "mokumaru@mail.com",
     birthday: "2000/01/10",
     gender: "female",
@@ -28,11 +27,11 @@ export default function MemberProfile() {
                 className="btn btn-outline-primary ms-4 d-inline-flex align-items-center fs-8 p-3"
                 type="button"
               >
-                <span class="material-symbols-outlined fs-5 ">upload</span>
+                <span class="material-symbols-outlined fs-5">upload</span>
                 更新頭貼
               </button>
             </div>
-            <form>
+            <form className="was-validated">
               <div class="form-floating mb-4">
                 <input
                   type="text"
@@ -41,8 +40,17 @@ export default function MemberProfile() {
                   id="name"
                   placeholder="請輸入您的姓名"
                   value={memberInfo.name}
+                  required
                 />
                 <label for="name">姓名</label>
+                <div class="invalid-feedback">
+                  <div className="d-flex align-items-center">
+                    <span class="material-symbols-outlined me-1 fs-9">
+                      error
+                    </span>
+                    請輸入您的姓名
+                  </div>
+                </div>
               </div>
               <div className="mb-4">
                 <p className="mb-2 fs-8">性別</p>
@@ -119,11 +127,20 @@ export default function MemberProfile() {
                   id="email"
                   placeholder="請輸入您的信箱"
                   value={memberInfo.email}
+                  required
                 />
                 <label for="email">信箱</label>
                 <p className="text-natural-50 fs-8 px-2">
                   盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信
                 </p>
+                <div class="invalid-feedback">
+                  <div className="d-flex align-items-center">
+                    <span class="material-symbols-outlined me-1 fs-9">
+                      error
+                    </span>
+                    請輸入您的姓名
+                  </div>
+                </div>
               </div>
               <div class="form-floating mb-4">
                 <input
@@ -132,18 +149,27 @@ export default function MemberProfile() {
                   id="phone"
                   placeholder="請輸入您的聯絡電話"
                   value={memberInfo.phone}
+                  required
                 />
                 <label for="phone">聯絡電話</label>
+                <div class="invalid-feedback">
+                  <div className="d-flex align-items-center">
+                    <span class="material-symbols-outlined me-1 fs-9">
+                      error
+                    </span>
+                    請輸入您的聯絡電話
+                  </div>
+                </div>
               </div>
               <div class="form-floating">
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
-                  id="email"
+                  id="adress"
                   placeholder="請輸入您的通訊地址"
                   value={memberInfo.address}
                 />
-                <label for="email">通訊地址</label>
+                <label for="adress">通訊地址</label>
               </div>
             </form>
           </div>
