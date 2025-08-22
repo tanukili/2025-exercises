@@ -20,10 +20,10 @@ export default function MemberProfile() {
 
   return (
     <section className="col-md-10">
-      <div className="p-6 bg-white rounded-4 shadow">
+      <div className="p-6 bg-white rounded-4 shadow p-md-9">
         <div className="row">
-          <h2 className="mb-4 fw-medium fs-5">個人資料</h2>
-          <div className="mb-12">
+          <h2 className="col-md-4 mb-4 fw-medium fs-5">個人資料</h2>
+          <div className="col-md-8 mb-12">
             <div className="d-flex align-items-end mb-4">
               <img
                 className="rounded-circle"
@@ -193,10 +193,10 @@ export default function MemberProfile() {
               </div>
             </form>
           </div>
-          <div className="d-flex flex-column flex-md-row">
+          <div className="d-flex flex-column flex-md-row-reverse justify-content-center gap-6">
             <button
               type="submit"
-              className="btn btn-primary d-inline-flex justify-content-center fs-8 mb-4"
+              className="btn btn-primary d-inline-flex justify-content-center fs-8 fs-md-7"
             >
               儲存更新
               <span className="material-symbols-outlined fs-5">
@@ -205,7 +205,7 @@ export default function MemberProfile() {
             </button>
             <button
               type="submit"
-              className="btn btn-outline-primary d-inline-flex justify-content-center fs-8"
+              className="btn btn-outline-primary d-inline-flex justify-content-center fs-8 fs-md-7"
             >
               重新填寫
               <span className="material-symbols-outlined fs-5">

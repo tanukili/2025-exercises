@@ -2,24 +2,25 @@ import { Outlet, NavLink } from "react-router-dom";
 
 export default function MemberIndex() {
   return (
-    <div className="bg-natural-95 py-9">
+    <div className="bg-natural-95 py-9 py-md-12">
       <div className="container">
-        <ul className="nav nav-pills justify-content-center mb-4">
+        <ul className="nav nav-pills justify-content-center mb-4 mb-md-6">
           <li className="nav-item">
             <NavLink
               to="profile"
-              className="btn btn-sm btn-outline-primary p-3 d-flex align-items-center"
+              className="btn btn-sm btn-outline-primary p-3 d-flex align-items-center fs-md-7 px-md-5"
               aria-current="page"
             >
-              <span class="material-symbols-outlined fs-5">face</span>個人資料
+              <span className="material-symbols-outlined fs-5">face</span>
+              個人資料
             </NavLink>
           </li>
-          <li className="nav-item mx-4">
+          <li className="nav-item mx-4 mx-md-6">
             <NavLink
               to="booking-history"
-              className="btn btn-sm btn-outline-primary p-3 d-flex align-items-center"
+              className="btn btn-sm btn-outline-primary p-3 d-flex align-items-center fs-md-7 px-md-5"
             >
-              <span class="material-symbols-outlined fs-5">
+              <span className="material-symbols-outlined fs-5">
                 pending_actions
               </span>
               預約紀錄
@@ -28,9 +29,9 @@ export default function MemberIndex() {
           <li className="nav-item">
             <NavLink
               to="career-planning"
-              className="btn btn-sm btn-outline-primary p-3 d-flex align-items-center"
+              className="btn btn-sm btn-outline-primary p-3 d-flex align-items-center fs-md-7 px-md-5"
             >
-              <span class="material-symbols-outlined fs-5">list_alt</span>
+              <span className="material-symbols-outlined fs-5">list_alt</span>
               職旅計劃
             </NavLink>
           </li>
