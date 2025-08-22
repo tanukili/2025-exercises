@@ -2,20 +2,19 @@
   letter-spacing: 0;
 }
 
-@media (min-width: 768px) {
-  .fs-md-7 {
-    font-size: $h7-font-size !important;
-  }
-}
-
 .border-linear {
   --bs-border-color: transparent;
   background: linear-gradient($natural-95, $natural-95) padding-box,
-    linear-gradient(
-        90deg,
-        rgba(209, 217, 225, 0) 0%,
-        #d1d9e1 50%,
-        rgba(209, 217, 225, 0) 100%
-      )
-      border-box;
+    linear-gradient(90deg,
+      rgba(209, 217, 225, 0) 0%,
+      #d1d9e1 50%,
+      rgba(209, 217, 225, 0) 100%) border-box;
 }
+
+// API
+$utilities: (
+  "font-size": (rfs: false,
+    property: font-size,
+    class: fs,
+    values: $font-sizes,
+    responsive: true))

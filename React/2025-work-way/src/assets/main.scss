@@ -1,16 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap");
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined";
 
-// 關閉 RFS
-$enable-rfs: false;
-
 @import "bootstrap/scss/functions";
 
 @import "variables";
+
 @import "bootstrap/scss/mixins";
+
+@import "utilities.scss";
 
 @import "bootstrap/scss/bootstrap";
 
 @import "base.scss";
 @import "components.scss";
-@import "utilities.scss";
