@@ -58,8 +58,9 @@
 }
 
 // 表單元素客製化
-.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:focus:not(:disabled) ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-control:not(:disabled) ~ label,
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label {
   color: $natural-50;
@@ -69,6 +70,7 @@
 .form-floating > .form-control:disabled,
 .form-floating > .form-control[readonly],
 .form-floating > .form-select:disabled {
+  pointer-events: none;
   ~ label {
     transform: none; // disabled 時取消浮動
   }
@@ -83,18 +85,22 @@
   }
 }
 
-.form-check .form-check-input:checked,
-.form-check .form-check-input:valid:checked {
-  background-color: $white;
-  border-color: $primary-60;
-  display: flex;
-  &::after {
-    content: "";
-    width: 12px;
-    height: 12px;
-    margin: auto;
-    background-color: $primary-60;
-    border-radius: 50%;
+// check input
+.form-check .form-check-input,
+.form-check .form-check-input:valid {
+  &:checked,
+  d &:hover {
+    background-color: $white;
+    border-color: $primary-60;
+    display: flex;
+    &::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      margin: auto;
+      background-color: $primary-60;
+      border-radius: 50%;
+    }
   }
 }
 .form-check .form-check-input,
@@ -110,6 +116,22 @@
   }
 }
 
+.form-check-input ~ .form-check-label {
+  font-size: $h8-font-size;
+}
+
+// 加上驗證後的客製化
+.was-validated .form-control:valid:focus:not(:disabled),
+.form-control.is-valid:focus:not(:disabled) {
+  --bs-form-valid-border-color: #{$input-focus-border-color};
+  box-shadow: 0 0 0 4px rgba($primary-90, 1);
+}
+
+.was-validated .form-control:invalid:disabled,
+.form-control.is-invalid:disabled {
+  --bs-form-invalid-border-color: #{$natural-75};
+}
+
 .invalid-feedback {
   font-size: $h9-font-size;
   padding-inline: 0.5rem;
@@ -117,11 +139,16 @@
 }
 
 .was-validated .form-check-input:invalid,
+.was-validated .form-check-input:invalid:checked,
 .form-check-input.is-invalid {
-  background: $pink;
+  background-color: $pink;
   border-color: $danger;
 }
 .was-validated .form-check-input:invalid ~ .form-check-label,
 .form-check-input.is-invalid ~ .form-check-label {
   color: inherit;
+}
+.was-validated .form-check-input:disabled ~ .form-check-label {
+  color: $natural-10;
+  opacity: unset;
 }

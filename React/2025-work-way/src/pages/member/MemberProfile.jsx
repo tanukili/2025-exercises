@@ -1,5 +1,7 @@
+import { useState } from "react";
+
 export default function MemberProfile() {
-  const memberInfo = {
+  const [memberInfo, setMemberInfo] = useState({
     name: "Mokumaru",
     email: "mokumaru@mail.com",
     birthday: "2000/01/10",
@@ -7,9 +9,14 @@ export default function MemberProfile() {
     phone: "09-1234-5678",
     address: "高雄市三民區九如一路 87 號",
     password: "",
-  };
+  });
 
   let reconfirmPassword = "";
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setMemberInfo((prev) => ({ ...prev, [name]: value }));
+  };
 
   return (
     <section className="col-md-10">
@@ -27,25 +34,26 @@ export default function MemberProfile() {
                 className="btn btn-outline-primary ms-4 d-inline-flex align-items-center fs-8 p-3"
                 type="button"
               >
-                <span class="material-symbols-outlined fs-5">upload</span>
+                <span className="material-symbols-outlined fs-5">upload</span>
                 更新頭貼
               </button>
             </div>
             <form className="was-validated">
-              <div class="form-floating mb-4">
+              <div className="form-floating mb-4">
                 <input
                   type="text"
                   name="name"
-                  class="form-control"
+                  className="form-control"
                   id="name"
                   placeholder="請輸入您的姓名"
                   value={memberInfo.name}
+                  onChange={handleInputChange}
                   required
                 />
-                <label for="name">姓名</label>
-                <div class="invalid-feedback">
+                <label htmlFor="name">姓名</label>
+                <div className="invalid-feedback">
                   <div className="d-flex align-items-center">
-                    <span class="material-symbols-outlined me-1 fs-9">
+                    <span className="material-symbols-outlined me-1 fs-9">
                       error
                     </span>
                     請輸入您的姓名
@@ -53,123 +61,135 @@ export default function MemberProfile() {
                 </div>
               </div>
               <div className="mb-4">
-                <p className="mb-2 fs-8">性別</p>
+                <p className="mb-2 lh-base fs-8">性別</p>
                 <div className="d-flex">
-                  <div class="form-check mx-2">
+                  <div className="form-check lh-1 d-flex align-items-center mb-0 mx-2">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="radio"
                       name="gender"
                       id="female"
                       value="female"
+                      onChange={handleInputChange}
                       checked={memberInfo.gender === "female"}
                     />
-                    <label class="form-check-label" for="female">
+                    <label className="form-check-label ms-1" htmlFor="female">
                       女性
                     </label>
                   </div>
-                  <div class="form-check mx-2">
+                  <div className="form-check lh-1 d-flex align-items-center mb-0 mx-2">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="radio"
                       name="gender"
                       id="male"
                       value="male"
+                      onChange={handleInputChange}
                       checked={memberInfo.gender === "male"}
                     />
-                    <label class="form-check-label" for="male">
+                    <label className="form-check-label ms-1" htmlFor="male">
                       男性
                     </label>
                   </div>
-                  <div class="form-check mx-2">
+                  <div className="form-check lh-1 d-flex align-items-center mb-0 mx-2">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="radio"
                       name="gender"
                       id="undisclosed"
                       value="undisclosed"
+                      onChange={handleInputChange}
                       checked={memberInfo.gender === "undisclosed"}
                     />
-                    <label class="form-check-label" for="undisclosed">
+                    <label
+                      className="form-check-label ms-1"
+                      htmlFor="undisclosed"
+                    >
                       不願透露
                     </label>
                   </div>
                 </div>
               </div>
-              <div class="form-floating mb-4">
+              <div className="form-floating mb-4">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="birthday"
                   placeholder="請輸入您的生日"
                   value={memberInfo.birthday}
+                  onChange={handleInputChange}
                 />
-                <label for="birthday">生日</label>
+
+                <label htmlFor="birthday">生日</label>
               </div>
               <div className="mb-4">
-                <p className="mb-2 fs-8">密碼</p>
+                <p className="mb-2 lh-base fs-8">密碼</p>
                 <button
                   type="button"
-                  class="btn btn-outline-primary d-inline-flex align-items-center fs-8 p-3"
+                  className="btn btn-outline-primary d-inline-flex align-items-center fs-8 p-3"
                   data-bs-toggle="modal"
                   data-bs-target="#passwordModal"
                 >
                   修改密碼
-                  <span class="material-symbols-outlined fs-5">
+                  <span className="material-symbols-outlined fs-5">
                     keyboard_arrow_right
                   </span>
                 </button>
               </div>
-              <div class="form-floating mb-4">
+              <div className="form-floating mb-4">
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="email"
                   placeholder="請輸入您的信箱"
                   value={memberInfo.email}
+                  onChange={handleInputChange}
                   required
                 />
-                <label for="email">信箱</label>
-                <p className="text-natural-50 fs-8 px-2">
+                <label htmlFor="email">信箱</label>
+                <p className="text-natural-50 lh-base fs-8 px-2">
                   盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信
                 </p>
-                <div class="invalid-feedback">
+                <div className="invalid-feedback">
                   <div className="d-flex align-items-center">
-                    <span class="material-symbols-outlined me-1 fs-9">
+                    <span className="material-symbols-outlined me-1 fs-9">
                       error
                     </span>
                     請輸入您的姓名
                   </div>
                 </div>
               </div>
-              <div class="form-floating mb-4">
+              <div className="form-floating mb-4">
                 <input
                   type="tel"
-                  class="form-control"
+                  className="form-control"
                   id="phone"
                   placeholder="請輸入您的聯絡電話"
                   value={memberInfo.phone}
+                  onChange={handleInputChange}
                   required
                 />
-                <label for="phone">聯絡電話</label>
-                <div class="invalid-feedback">
+                <label htmlFor="phone">聯絡電話</label>
+                <div className="invalid-feedback">
                   <div className="d-flex align-items-center">
-                    <span class="material-symbols-outlined me-1 fs-9">
+                    <span className="material-symbols-outlined me-1 fs-9">
                       error
                     </span>
                     請輸入您的聯絡電話
                   </div>
                 </div>
               </div>
-              <div class="form-floating">
+              <div className="form-floating">
                 <input
                   type="text"
-                  class="form-control"
-                  id="adress"
+                  className="form-control"
+                  id="address"
                   placeholder="請輸入您的通訊地址"
                   value={memberInfo.address}
+                  onChange={handleInputChange}
                 />
-                <label for="adress">通訊地址</label>
+
+                <label htmlFor="address">通訊地址</label>
               </div>
             </form>
           </div>
@@ -179,7 +199,7 @@ export default function MemberProfile() {
               className="btn btn-primary d-inline-flex justify-content-center fs-8 mb-4"
             >
               儲存更新
-              <span class="material-symbols-outlined fs-5">
+              <span className="material-symbols-outlined fs-5">
                 keyboard_arrow_right
               </span>
             </button>
@@ -188,7 +208,7 @@ export default function MemberProfile() {
               className="btn btn-outline-primary d-inline-flex justify-content-center fs-8"
             >
               重新填寫
-              <span class="material-symbols-outlined fs-5">
+              <span className="material-symbols-outlined fs-5">
                 keyboard_arrow_right
               </span>
             </button>
@@ -197,9 +217,9 @@ export default function MemberProfile() {
       </div>
       {/* modal */}
       <div
-        class="modal fade"
+        className="modal fade"
         id="passwordModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -224,8 +244,10 @@ export default function MemberProfile() {
                   id="password"
                   placeholder="請輸入您的新密碼"
                   value={memberInfo.password}
+                  onChange={handleInputChange}
                 />
-                <label for="password">新密碼</label>
+
+                <label htmlFor="password">新密碼</label>
               </div>
               <div class="form-floating mb-3">
                 <input
@@ -234,8 +256,10 @@ export default function MemberProfile() {
                   id="reconfirmPassword"
                   placeholder="請再次輸入您的新密碼"
                   value={reconfirmPassword}
+                  onChange={handleInputChange}
                 />
-                <label for="reconfirmPassword">再次密碼</label>
+
+                <label htmlFor="reconfirmPassword">再次密碼</label>
               </div>
             </div>
             <div class="modal-footer">

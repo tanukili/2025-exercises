@@ -2,7 +2,6 @@ import { Link, useMatch } from "react-router-dom";
 
 export default function Header() {
   const isLogin = !!useMatch("/:memberId/*");
-  console.log(isLogin);
 
   const loginTemplate = () => {
     if (isLogin) {
@@ -40,7 +39,7 @@ export default function Header() {
           </Link>
           <div
             className="offcanvas offcanvas-end"
-            tabindex="-1"
+            tabIndex="-1"
             id="headerNavbar"
             aria-labelledby="headerNavbarLabel"
           >
@@ -51,7 +50,7 @@ export default function Header() {
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               >
-                <span class="material-symbols-outlined d-block">close</span>
+                <span className="material-symbols-outlined d-block">close</span>
               </button>
             </div>
             <div className="offcanvas-body text-center pt-0 d-flex flex-column justify-content-between">

@@ -109,7 +109,8 @@ $colors: (
   "gray-dark": $gray-800,
   "primary": $primary-60,
   // custom
-  "secondary": $natural-50 // custom,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  "secondary": $natural-50
+    // custom,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ) !default;
 // scss-docs-end colors-map
 
@@ -1093,7 +1094,8 @@ $form-color-width: 3rem !default;
 // scss-docs-start form-check-variables
 // $form-check-input-width: 1em !default;
 $form-check-input-width: 1.25rem !default; // custom
-$form-check-min-height: $font-size-base * $line-height-base !default;
+// $form-check-min-height: $font-size-base * $line-height-base !default;
+$form-check-min-height: $h8-font-size * $line-height-base !default; // custom
 // $form-check-padding-start: $form-check-input-width + 0.5em !default;
 $form-check-padding-start: $form-check-input-width + 0.5rem !default; // custom
 $form-check-margin-bottom: 0.125rem !default;
@@ -1101,7 +1103,8 @@ $form-check-label-color: null !default;
 $form-check-label-cursor: null !default;
 $form-check-transition: null !default;
 
-$form-check-input-active-filter: brightness(90%) !default;
+// $form-check-input-active-filter: brightness(90%) !default;
+$form-check-input-active-filter: unset !default; // custom
 
 $form-check-input-bg: $input-bg !default;
 $form-check-input-border: var(--#{$prefix}border-width) solid
@@ -1252,7 +1255,7 @@ $form-feedback-margin-top: $form-text-margin-top !default;
 $form-feedback-font-size: $form-text-font-size !default;
 $form-feedback-font-style: $form-text-font-style !default;
 // $form-feedback-valid-color: $success !default;
-$form-feedback-valid-color: var(--#{$prefix}border-color) !default; // custom
+$form-feedback-valid-color: inherit !default; // custom
 $form-feedback-invalid-color: $danger !default;
 
 $form-feedback-icon-valid-color: $form-feedback-valid-color !default;
@@ -1265,7 +1268,8 @@ $form-feedback-icon-invalid: unset !default; // custom
 
 // scss-docs-start form-validation-colors
 $form-valid-color: $form-feedback-valid-color !default;
-$form-valid-border-color: $form-feedback-valid-color !default;
+// $form-valid-border-color: $form-feedback-valid-color !default;
+$form-valid-border-color: $natural-85 !default; // custom
 $form-invalid-color: $form-feedback-invalid-color !default;
 $form-invalid-border-color: $form-feedback-invalid-color !default;
 // scss-docs-end form-validation-colors
