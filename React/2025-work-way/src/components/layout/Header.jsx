@@ -1,18 +1,19 @@
 import { Link, useMatch } from "react-router-dom";
+import avartUrl from "/avatar.png";
 
 export default function Header() {
-  const isLogin = !!useMatch("/:memberId/*");
+  const isLogin = !!useMatch("member/:memberId/*");
 
   const loginTemplate = () => {
     if (isLogin) {
       return (
         <Link
           className="d-flex align-items-center fw-medium fs-8 lh-sm tracking-normal fs-md-7"
-          to="/member/123"
+          to="member/fakeId/profile"
         >
           <img
             className="rounded-circle me-2"
-            src="/avatar.png"
+            src={avartUrl}
             alt="會員頭像"
             width={44}
           />
@@ -22,7 +23,7 @@ export default function Header() {
     }
     return (
       <Link
-        to="/fakeId/profile"
+        to="member/fakeId/profile"
         className="btn btn-sm btn-outline-primary fs-md-7"
       >
         登入/註冊
@@ -83,7 +84,7 @@ export default function Header() {
               </ul>
               {isLogin || (
                 <Link
-                  to="/fakeId/profile"
+                  to="member/fakeId/profile"
                   className="btn btn-sm btn-secondary fs-5 fw-bold lh-sm d-md-none"
                 >
                   登入/註冊

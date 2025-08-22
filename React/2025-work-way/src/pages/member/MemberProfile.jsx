@@ -1,4 +1,5 @@
 import { useState } from "react";
+import avartUrl from "/avatar.png";
 
 export default function MemberProfile() {
   const [memberInfo, setMemberInfo] = useState({
@@ -27,11 +28,7 @@ export default function MemberProfile() {
           </div>
           <div className="col-md-8 mb-12 mb-md-9">
             <div className="d-flex align-items-end mb-4 mb-md-6">
-              <img
-                className="rounded-circle"
-                src="/avatar.png"
-                alt="會員頭像"
-              />
+              <img className="rounded-circle" src={avartUrl} alt="會員頭像" />
               <button
                 className="btn btn-outline-primary ms-4 d-inline-flex align-items-center fs-8 p-3 fs-md-7 px-md-5"
                 type="button"
