@@ -100,7 +100,7 @@ export default function Header() {
             aria-controls="headerNavbar"
             aria-label="Toggle navigation"
           >
-            <span class="material-symbols-outlined d-block">menu</span>
+            <span className="material-symbols-outlined d-block">menu</span>
           </button>
         </div>
       </nav>

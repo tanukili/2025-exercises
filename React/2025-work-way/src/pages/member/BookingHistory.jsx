@@ -47,10 +47,10 @@ export default function BookingHistory() {
           </ul>
           <button className="btn btn-outline-primary" type="button">
             <span className="d-none d-md-flex">排序</span>
-            <span class="material-symbols-outlined">filter_list</span>
+            <span className="material-symbols-outlined">filter_list</span>
           </button>
         </div>
-        <table class="table table-striped">
+        <table className="table table-striped">
           <thead>
             <tr>
               <th scope="col">諮詢方案</th>
@@ -66,7 +66,7 @@ export default function BookingHistory() {
               <td>2025/11/11</td>
               <td>60分鐘</td>
               <td>
-                <span class="badge rounded-pill text-bg-primary">視訊</span>
+                <span className="badge rounded-pill text-bg-primary">視訊</span>
               </td>
               <td>等待上課</td>
             </tr>
@@ -75,7 +75,7 @@ export default function BookingHistory() {
               <td>2025/10/10</td>
               <td>60分鐘</td>
               <td>
-                <span class="badge rounded-pill text-bg-primary">視訊</span>
+                <span className="badge rounded-pill text-bg-primary">視訊</span>
               </td>
               <td>等待上課</td>
             </tr>
@@ -84,7 +84,7 @@ export default function BookingHistory() {
               <td>2025/09/09</td>
               <td>60分鐘</td>
               <td>
-                <span class="badge rounded-pill text-bg-primary">視訊</span>
+                <span className="badge rounded-pill text-bg-primary">視訊</span>
               </td>
               <td>已完成</td>
             </tr>
@@ -93,7 +93,9 @@ export default function BookingHistory() {
               <td>2025/08/08</td>
               <td>60分鐘</td>
               <td>
-                <span class="badge rounded-pill text-bg-primary">面對面</span>
+                <span className="badge rounded-pill text-bg-primary">
+                  面對面
+                </span>
               </td>
               <td>已完成</td>
             </tr>
@@ -102,7 +104,9 @@ export default function BookingHistory() {
               <td>2025/07/07</td>
               <td>60分鐘</td>
               <td>
-                <span class="badge rounded-pill text-bg-primary">面對面</span>
+                <span className="badge rounded-pill text-bg-primary">
+                  面對面
+                </span>
               </td>
               <td>已完成</td>
             </tr>
@@ -111,7 +115,9 @@ export default function BookingHistory() {
               <td>2025/06/06</td>
               <td>90分鐘</td>
               <td>
-                <span class="badge rounded-pill text-bg-primary">面對面</span>
+                <span className="badge rounded-pill text-bg-primary">
+                  面對面
+                </span>
               </td>
               <td>已完成</td>
             </tr>
