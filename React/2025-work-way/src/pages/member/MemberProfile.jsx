@@ -20,7 +20,7 @@ export default function MemberProfile() {
   };
 
   return (
-    <section className="col-md-10">
+    <main className="col-md-10">
       <div className="p-6 bg-white rounded-4 shadow p-md-9">
         <div className="row gx-1">
           <div className="col-md">
@@ -205,7 +205,7 @@ export default function MemberProfile() {
               </span>
             </button>
             <button
-              type="submit"
+              type="button"
               className="btn btn-outline-primary d-inline-flex justify-content-center align-items-center fs-8 fs-md-7 pe-md-5"
             >
               重新填寫
@@ -278,6 +278,6 @@ export default function MemberProfile() {
           </div>
         </div>
       </div>
-    </section>
+    </main>
   );
 }
