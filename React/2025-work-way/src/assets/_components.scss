@@ -72,6 +72,10 @@
 
 /*  表單元素客製化  */
 .form-floating > .form-control {
+  @include media-breakpoint-up(lg) {
+    height: calc(3.5rem + calc(var(--bs-border-width) * 2)); // 56px + 2px
+  }
+
   ~ label {
     font-size: $h8-font-size;
     @include media-breakpoint-up(lg) {
@@ -174,9 +178,17 @@
   &:has(input[type="checkbox"]) {
     margin-inline: calc(var(--check-space) * -1);
   }
+
+  @include media-breakpoint-up(md) {
+    margin-inline: calc(var(--check-space) * -0.5) !important;
+  }
+
   > .form-check {
     margin-inline: var(--check-space);
     margin-bottom: var(--check-space);
+    @include media-breakpoint-up(md) {
+      margin-inline: calc(var(--check-space) * 1.5);
+    }
   }
 }
 
@@ -202,4 +214,7 @@ textarea.form-control {
 .form-select {
   --bs-form-select-bg-img: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='20px' viewBox='0 -960 960 960' width='20px' fill='%23#{str-slice(#{$natural-10}, 2)}'><path d='M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z'/></svg>");
   background-size: 20px 20px !important;
+  @include media-breakpoint-up(md) {
+    font-size: $h7-font-size;
+  }
 }

@@ -197,7 +197,7 @@ export default function MemberProfile() {
           <div className="d-flex flex-column flex-md-row-reverse justify-content-center gap-4 gap-md-6">
             <button
               type="submit"
-              className="btn btn-primary d-inline-flex justify-content-center align-items-center fs-8 fs-md-7 ps-md-5"
+              className="btn btn-primary d-inline-flex justify-content-center align-items-center fs-8 fs-md-7 pe-md-3"
             >
               儲存更新
               <span className="material-symbols-outlined fs-5 ms-md-1">
@@ -206,7 +206,7 @@ export default function MemberProfile() {
             </button>
             <button
               type="button"
-              className="btn btn-outline-primary d-inline-flex justify-content-center align-items-center fs-8 fs-md-7 pe-md-5"
+              className="btn btn-outline-primary d-inline-flex justify-content-center align-items-center fs-8 fs-md-7 pe-md-3"
             >
               重新填寫
               <span className="material-symbols-outlined fs-5 ms-md-1">

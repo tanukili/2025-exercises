@@ -92,10 +92,10 @@ export default function CareerPlanning() {
 
   const workModeOptions = [
     { value: "on_site_office", label: "固定辦公室工作" },
-    { value: "hybrid_office_remote", label: "混合式工作（辦公室＋遠端）" },
-    { value: "fully_remote_fixed_location", label: "完全遠端工作（固定地點）" },
-    { value: "digital_nomad", label: "數位遊牧（邊工作邊旅行）" },
-    { value: "other", label: "其他（請說明）" },
+    { value: "hybrid_office_remote", label: "混合式工作(辦公室＋遠端）" },
+    { value: "fully_remote_fixed_location", label: "完全遠端工作(固定地點）" },
+    { value: "digital_nomad", label: "數位遊牧(邊工作邊旅行）" },
+    { value: "other", label: "其他(請說明）" },
   ];
 
   const careerChallengeOptions = [
@@ -153,10 +153,7 @@ export default function CareerPlanning() {
   const RadioGroup = (targetOptions, targetKey, isRequired = true) => {
     return targetOptions.map(({ value, label }) => {
       return (
-        <div
-          className="form-check d-flex align-items-center mb-2 mx-2"
-          key={value}
-        >
+        <div className="form-check d-flex align-items-center" key={value}>
           <input
             className="form-check-input"
             type="radio"
@@ -263,16 +260,16 @@ export default function CareerPlanning() {
       <div className="p-6 bg-white rounded-4 shadow p-md-9">
         <form action="#" className="was-validated">
           <section
-            className="row gx-1 border-bottom border-natural-85 pb-6 mb-6 pb-md-6 mb-md-9"
+            className="row gx-0 border-bottom border-natural-85 pb-6 mb-6 pb-md-9 mb-md-9"
             aria-labelledby="career-plan-overview"
           >
-            <div className="col-md d-flex align-items-center">
+            <div className="col-lg d-flex align-items-center d-lg-block">
               <h2 className="fw-medium fs-5 fs-md-4 mb-md-3">職旅計劃概況</h2>
-              <p className="ms-auto text-natural-50 fs-8">
+              <p className="ms-auto text-natural-50 fs-8 fs-md-7 fs-md-7">
                 欄位皆為<span className="badge bg-danger ms-1">必填</span>
               </p>
             </div>
-            <div className="col-md-8">
+            <div className="col-lg-8">
               <fieldset className="mb-4 mb-md-6">
                 <legend className="mb-2 fs-8 fs-md-7">目前職業狀態</legend>
                 <div className="form-check-group">
@@ -330,7 +327,7 @@ export default function CareerPlanning() {
                   </div>
                 </div>
               </div>
-              <div>
+              <div className="mb-4 mb-md-6">
                 <p className="mb-2 fs-8 fs-md-7">附件檔案</p>
                 <button
                   className="btn btn-outline-primary d-inline-flex align-items-center fs-8 p-3 fs-md-7 px-md-5"
@@ -345,16 +342,16 @@ export default function CareerPlanning() {
             </div>
           </section>
           <section
-            className="row gx-1 border-bottom border-natural-85 pb-6 mb-6 pb-md-6 mb-md-9"
+            className="row gx-0 border-bottom border-natural-85 pb-6 mb-6 pb-md-9 mb-md-9"
             aria-labelledby="career-planning"
           >
-            <div className="col-md d-flex align-items-center">
+            <div className="col-lg d-flex align-items-center d-lg-block">
               <h2 className="fw-medium fs-5 fs-md-4 mb-md-3">職涯規劃</h2>
-              <p className="ms-auto text-natural-50 fs-8">
+              <p className="ms-auto text-natural-50 fs-8 fs-md-7">
                 欄位皆為<span className="badge bg-danger ms-1">必填</span>
               </p>
             </div>
-            <div className="col-md-8">
+            <div className="col-lg-8">
               <div className="mb-4 mb-md-6">
                 {TextareaItem({
                   keyName: "careerGoals",
@@ -423,14 +420,16 @@ export default function CareerPlanning() {
             </div>
           </section>
           <section
-            className="row gx-1 border-bottom border-natural-85 pb-6 mb-6 pb-md-6 mb-md-9"
+            className="row gx-0 border-bottom border-natural-85 pb-6 mb-6 pb-md-9 mb-md-9"
             aria-labelledby="professional-skills"
           >
-            <div className="col-md d-flex align-items-center">
+            <div className="col-lg d-flex align-items-center d-lg-block">
               <h2 className="fw-medium fs-5 fs-md-4 mb-md-3">專業技能區塊</h2>
-              <p className="ms-auto text-natural-50 fs-8">欄位皆為選填</p>
+              <p className="ms-auto text-natural-50 fs-8 fs-md-7">
+                欄位皆為選填
+              </p>
             </div>
-            <div className="col-md-8">
+            <div className="col-lg-8">
               <fieldset className="mb-4 mb-md-6">
                 <legend className="mb-2 fs-8 fs-md-7">核心專業領域</legend>
                 <div className="form-check-group">
@@ -472,14 +471,16 @@ export default function CareerPlanning() {
             </div>
           </section>
           <section
-            className="row gx-1 mb-6 mb-md-9"
+            className="row gx-0 mb-6 mb-md-9"
             aria-labelledby="educational-background"
           >
-            <div className="col-md d-flex align-items-center">
+            <div className="col-lg d-flex align-items-center d-lg-block">
               <h2 className="fw-medium fs-5 fs-md-4 mb-md-3">教育背景</h2>
-              <p className="ms-auto text-natural-50 fs-8">欄位皆為選填</p>
+              <p className="ms-auto text-natural-50 fs-8 fs-md-7">
+                欄位皆為選填
+              </p>
             </div>
-            <div className="col-md-8">
+            <div className="col-lg-8">
               <div className="mb-4 mb-md-6">
                 {TextareaItem({
                   keyName: "education",
@@ -503,7 +504,7 @@ export default function CareerPlanning() {
           <div className="d-flex flex-column flex-md-row-reverse justify-content-center gap-4 gap-md-6">
             <button
               type="submit"
-              className="btn btn-primary d-inline-flex justify-content-center align-items-center fs-8 fs-md-7 ps-md-5"
+              className="btn btn-primary d-inline-flex justify-content-center align-items-center fs-8 fs-md-7 pe-md-3"
             >
               儲存更新
               <span className="material-symbols-outlined fs-5 ms-md-1">
@@ -512,7 +513,7 @@ export default function CareerPlanning() {
             </button>
             <button
               type="button"
-              className="btn btn-outline-primary d-inline-flex justify-content-center align-items-center fs-8 fs-md-7 pe-md-5"
+              className="btn btn-outline-primary d-inline-flex justify-content-center align-items-center fs-8 fs-md-7 pe-md-3"
             >
               匯出 PDF
               <span className="material-symbols-outlined fs-5 ms-md-1">
