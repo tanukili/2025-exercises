@@ -182,10 +182,7 @@ export default function CareerPlanning() {
     const noneChecked = planContent[targetKey].length === 0;
     return targetOptions.map(({ value, label }) => {
       return (
-        <div
-          className="form-check d-flex align-items-center mb-2 mx-2"
-          key={value}
-        >
+        <div className="form-check d-flex align-items-center" key={value}>
           <input
             className="form-check-input"
             type="checkbox"
@@ -269,16 +266,16 @@ export default function CareerPlanning() {
             className="row gx-1 border-bottom border-natural-85 pb-6 mb-6 pb-md-6 mb-md-9"
             aria-labelledby="career-plan-overview"
           >
-            <div className="col-md">
-              <h2 className="mb-4 fw-medium fs-5 fs-md-4">職旅計劃概況</h2>
-              <p>
-                欄位皆為<span className="badge bg-danger">必填</span>
+            <div className="col-md d-flex align-items-center">
+              <h2 className="fw-medium fs-5 fs-md-4 mb-md-3">職旅計劃概況</h2>
+              <p className="ms-auto text-natural-50 fs-8">
+                欄位皆為<span className="badge bg-danger ms-1">必填</span>
               </p>
             </div>
             <div className="col-md-8">
               <fieldset className="mb-4 mb-md-6">
                 <legend className="mb-2 fs-8 fs-md-7">目前職業狀態</legend>
-                <div className="d-flex flex-wrap">
+                <div className="form-check-group">
                   {RadioGroup(employmentOptions, "employmentStatus")}
                 </div>
               </fieldset>
@@ -298,7 +295,7 @@ export default function CareerPlanning() {
               </div>
               <fieldset className="mb-4 mb-md-6">
                 <legend className="mb-2 fs-8 fs-md-7">月收入區間</legend>
-                <div className="d-flex flex-wrap">
+                <div className="form-check-group">
                   {RadioGroup(incomeOptions, "monthlyIncomeRange")}
                 </div>
               </fieldset>
@@ -333,7 +330,7 @@ export default function CareerPlanning() {
                   </div>
                 </div>
               </div>
-              <div className="mb-4 mb-md-6">
+              <div>
                 <p className="mb-2 fs-8 fs-md-7">附件檔案</p>
                 <button
                   className="btn btn-outline-primary d-inline-flex align-items-center fs-8 p-3 fs-md-7 px-md-5"
@@ -351,10 +348,10 @@ export default function CareerPlanning() {
             className="row gx-1 border-bottom border-natural-85 pb-6 mb-6 pb-md-6 mb-md-9"
             aria-labelledby="career-planning"
           >
-            <div className="col-md">
-              <h2 className="mb-4 fw-medium fs-5 fs-md-4">職涯規劃</h2>
-              <p>
-                欄位皆為<span className="badge bg-danger">必填</span>
+            <div className="col-md d-flex align-items-center">
+              <h2 className="fw-medium fs-5 fs-md-4 mb-md-3">職涯規劃</h2>
+              <p className="ms-auto text-natural-50 fs-8">
+                欄位皆為<span className="badge bg-danger ms-1">必填</span>
               </p>
             </div>
             <div className="col-md-8">
@@ -374,7 +371,7 @@ export default function CareerPlanning() {
               </div>
               <fieldset className="mb-4 mb-md-6">
                 <legend className="mb-2 fs-8 fs-md-7">理想工作模式</legend>
-                <div className="d-flex flex-wrap">
+                <div className="form-check-group">
                   {RadioGroup(workModeOptions, "IdealWorkingModel")}
                 </div>
               </fieldset>
@@ -405,7 +402,7 @@ export default function CareerPlanning() {
                 <legend className="mb-2 fs-8 fs-md-7">
                   目前面臨的職涯挑戰
                 </legend>
-                <div className="d-flex flex-wrap">
+                <div className="form-check-group">
                   {CheckGroup(careerChallengeOptions, "careerChallenges")}
                 </div>
               </fieldset>
@@ -413,13 +410,13 @@ export default function CareerPlanning() {
                 <legend className="mb-2 fs-8 fs-md-7">
                   期望獲得的協助與資源
                 </legend>
-                <div className="d-flex flex-wrap">
+                <div className="form-check-group">
                   {CheckGroup(supportResourceOptions, "supportResources")}
                 </div>
               </fieldset>
-              <fieldset className="mb-4 mb-md-6">
+              <fieldset>
                 <legend className="mb-2 fs-8 fs-md-7">感興趣的服務方案</legend>
-                <div className="d-flex flex-wrap">
+                <div className="form-check-group">
                   {CheckGroup(serviceInterestOptions, "interestedServices")}
                 </div>
               </fieldset>
@@ -429,14 +426,14 @@ export default function CareerPlanning() {
             className="row gx-1 border-bottom border-natural-85 pb-6 mb-6 pb-md-6 mb-md-9"
             aria-labelledby="professional-skills"
           >
-            <div className="col-md">
-              <h2 className="mb-4 fw-medium fs-5 fs-md-4">專業技能區塊</h2>
-              <p>欄位皆為選填</p>
+            <div className="col-md d-flex align-items-center">
+              <h2 className="fw-medium fs-5 fs-md-4 mb-md-3">專業技能區塊</h2>
+              <p className="ms-auto text-natural-50 fs-8">欄位皆為選填</p>
             </div>
             <div className="col-md-8">
               <fieldset className="mb-4 mb-md-6">
                 <legend className="mb-2 fs-8 fs-md-7">核心專業領域</legend>
-                <div className="d-flex flex-wrap">
+                <div className="form-check-group">
                   {CheckGroup(coreExpertiseOptions, "coreExpertise", false)}
                 </div>
               </fieldset>
@@ -464,7 +461,7 @@ export default function CareerPlanning() {
                   isRequired: false,
                 })}
               </div>
-              <div className="mb-4 mb-md-6">
+              <div>
                 {TextareaItem({
                   keyName: "certificate",
                   lablel: "資格證照（最多300字）",
@@ -478,9 +475,9 @@ export default function CareerPlanning() {
             className="row gx-1 mb-6 mb-md-9"
             aria-labelledby="educational-background"
           >
-            <div className="col-md">
-              <h2 className="mb-4 fw-medium fs-5 fs-md-4">教育背景</h2>
-              <p>欄位皆為選填</p>
+            <div className="col-md d-flex align-items-center">
+              <h2 className="fw-medium fs-5 fs-md-4 mb-md-3">教育背景</h2>
+              <p className="ms-auto text-natural-50 fs-8">欄位皆為選填</p>
             </div>
             <div className="col-md-8">
               <div className="mb-4 mb-md-6">
@@ -492,7 +489,7 @@ export default function CareerPlanning() {
                   isRequired: false,
                 })}
               </div>
-              <div className="">
+              <div>
                 {TextareaItem({
                   keyName: "professionalTrainingWorkshops",
                   lablel: "專業培訓與工作坊（最多500字）",
@@ -503,7 +500,7 @@ export default function CareerPlanning() {
               </div>
             </div>
           </section>
-          <div className="d-flex flex-column flex-md-row-reverse justify-content-center gap-6">
+          <div className="d-flex flex-column flex-md-row-reverse justify-content-center gap-4 gap-md-6">
             <button
               type="submit"
               className="btn btn-primary d-inline-flex justify-content-center align-items-center fs-8 fs-md-7 ps-md-5"

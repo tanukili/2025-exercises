@@ -1181,10 +1181,12 @@ $input-group-addon-border-color: $input-border-color !default;
 // scss-docs-end input-group-variables
 
 // scss-docs-start form-select-variables
-$form-select-padding-y: $input-padding-y !default;
+// $form-select-padding-y: $input-padding-y !default;
+$form-select-padding-y: $spacer !default; // custom
 $form-select-padding-x: $input-padding-x !default;
 $form-select-font-family: $input-font-family !default;
-$form-select-font-size: $input-font-size !default;
+// $form-select-font-size: $input-font-size !default;
+$form-select-font-size: $h8-font-size !default; // custom
 $form-select-indicator-padding: $form-select-padding-x * 3 !default; // Extra padding for background-image
 $form-select-font-weight: $input-font-weight !default;
 $form-select-line-height: $input-line-height !default;
@@ -1260,7 +1262,8 @@ $form-file-button-hover-bg: var(--#{$prefix}secondary-bg) !default;
 // scss-docs-end form-file-variables
 
 // scss-docs-start form-floating-variables
-$form-floating-height: add(3.5rem, $input-height-border) !default;
+// $form-floating-height: add(3.5rem, $input-height-border) !default;
+$form-floating-height: add(3.25rem, $input-height-border) !default; // custom
 $form-floating-line-height: 1.25 !default;
 $form-floating-padding-x: $input-padding-x !default;
 $form-floating-padding-y: 1rem !default;
@@ -1723,11 +1726,15 @@ $toast-header-border-color: $toast-border-color !default;
 // Badges
 
 // scss-docs-start badge-variables
-$badge-font-size: 0.75em !default;
-$badge-font-weight: $font-weight-bold !default;
+// $badge-font-size: 0.75em !default;
+$badge-font-size: $h8-font-size !default; // custom
+// $badge-font-weight: $font-weight-bold !default;
+$badge-font-weight: $font-weight-medium !default; // custom
 $badge-color: $white !default;
-$badge-padding-y: 0.35em !default;
-$badge-padding-x: 0.65em !default;
+// $badge-padding-y: 0.35em !default;
+$badge-padding-y: 0.25rem !default; // custom
+// $badge-padding-x: 0.65em !default;
+$badge-padding-x: 0.5rem !default; // custom
 $badge-border-radius: var(--#{$prefix}border-radius) !default;
 // scss-docs-end badge-variables
 

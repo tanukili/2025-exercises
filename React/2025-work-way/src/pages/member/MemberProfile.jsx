@@ -194,7 +194,7 @@ export default function MemberProfile() {
               </div>
             </form>
           </div>
-          <div className="d-flex flex-column flex-md-row-reverse justify-content-center gap-6">
+          <div className="d-flex flex-column flex-md-row-reverse justify-content-center gap-4 gap-md-6">
             <button
               type="submit"
               className="btn btn-primary d-inline-flex justify-content-center align-items-center fs-8 fs-md-7 ps-md-5"
