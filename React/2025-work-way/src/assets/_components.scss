@@ -12,6 +12,14 @@
 }
 
 .btn {
+  &.btn-primary {
+    --bs-btn-hover-color: #{$primary};
+    --bs-btn-hover-bg: #{$secondary-50};
+    --bs-btn-hover-border-color: #{$secondary-50};
+    --bs-btn-active-color: #{$primary};
+    --bs-btn-active-bg: #{$secondary-50};
+    --bs-btn-active-border-color: #{$secondary-50};
+  }
   &.btn-outline-primary {
     --bs-btn-border-color: #{$natural-85};
     --bs-btn-bg: #{$white};
@@ -58,78 +66,50 @@
 }
 
 // 表單元素客製化
-.form-floating > .form-control:focus:not(:disabled) ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-control:not(:disabled) ~ label,
-.form-floating > .form-control-plaintext ~ label,
-.form-floating > .form-select ~ label {
-  color: $natural-50;
-  font-size: $h8-font-size;
-}
-
-.form-floating > .form-control:disabled,
-.form-floating > .form-control[readonly],
-.form-floating > .form-select:disabled {
-  pointer-events: none;
+.form-floating > .form-control {
   ~ label {
-    transform: none; // disabled 時取消浮動
-  }
-  &:not(:placeholder-shown) {
-    // 隱藏 input value
-    -webkit-text-security: disc;
-    color: $natural-75;
-    ~ label {
-      color: $natural-10;
+    font-size: $h8-font-size;
+    @include media-breakpoint-up(lg) {
       font-size: $h7-font-size;
     }
   }
-}
 
-// check input
-.form-check .form-check-input,
-.form-check .form-check-input:valid {
-  &:checked,
-  d &:hover {
-    background-color: $white;
-    border-color: $primary-60;
-    display: flex;
-    &::after {
-      content: "";
-      width: 12px;
-      height: 12px;
-      margin: auto;
-      background-color: $primary-60;
-      border-radius: 50%;
+  // hover & active
+  &:focus:not(:disabled) {
+    --bs-form-valid-border-color: #{$input-focus-border-color};
+    --bs-form-invalid-border-color: #{$input-focus-border-color};
+    box-shadow: 0 0 0 4px rgba($primary-90, 1);
+
+    ~ label {
+      color: $natural-50;
     }
   }
-}
-.form-check .form-check-input,
-.form-check .form-check-input:checked,
-.form-check .form-check-input:valid:checked {
+  &:focus,
+  &:not(:placeholder-shown) {
+    ~ label {
+      color: $natural-50;
+    }
+  }
+
+  // disabled
   &:disabled {
-    opacity: unset;
-    background-color: $natural-75;
-    border-color: $natural-75;
-    &::after {
-      background-color: $natural-75;
+    --bs-form-invalid-border-color: #{$natural-75};
+    // 隱藏 input value
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-security: disc;
+    pointer-events: none;
+
+    ~ label {
+      transform: none; // 取消浮動
+      color: $natural-50;
+    }
+    &:not(:placeholder-shown) {
+      ~ label {
+        color: $natural-10;
+      }
     }
   }
-}
-
-.form-check-input ~ .form-check-label {
-  font-size: $h8-font-size;
-}
-
-// 加上驗證後的客製化
-.was-validated .form-control:valid:focus:not(:disabled),
-.form-control.is-valid:focus:not(:disabled) {
-  --bs-form-valid-border-color: #{$input-focus-border-color};
-  box-shadow: 0 0 0 4px rgba($primary-90, 1);
-}
-
-.was-validated .form-control:invalid:disabled,
-.form-control.is-invalid:disabled {
-  --bs-form-invalid-border-color: #{$natural-75};
 }
 
 .invalid-feedback {
@@ -138,17 +118,53 @@
   background: $pink;
 }
 
-.was-validated .form-check-input:invalid,
-.was-validated .form-check-input:invalid:checked,
-.form-check-input.is-invalid {
-  background-color: $pink;
-  border-color: $danger;
+// check input
+.form-check .form-check-input {
+  // error
+  &:invalid,
+  &:invalid:checked,
+  &.is-invalid {
+    background-color: $pink;
+    border-color: $danger;
+    & ~ .form-check-label {
+      color: inherit;
+    }
+  }
+
+  // hover & active
+  &:hover {
+    border-color: $primary-60;
+  }
+  &:checked,
+  &:hover:not(:disabled) {
+    &[type="radio"] {
+      --bs-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 12 12'><circle cx='6' cy='6' r='6' fill='%23#{str-slice(#{$primary-60}, 2)}'/></svg>");
+      background-size: 12px 12px;
+    }
+    &[type="checkbox"] {
+      --bs-form-check-bg-image: url("data:image/svg+xml,<svg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.25 3.38869L4.36142 6.5L9.36142 1.5' stroke='%23#{str-slice(#{$white}, 2)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+      background-color: $primary-60;
+      background-size: auto;
+    }
+  }
+  // disable
+  &:disabled {
+    background-image: none;
+    background-color: $natural-75;
+    border-color: $natural-75;
+  }
+
+  & ~ .form-check-label {
+    font-size: $h8-font-size;
+  }
 }
-.was-validated .form-check-input:invalid ~ .form-check-label,
-.form-check-input.is-invalid ~ .form-check-label {
-  color: inherit;
-}
-.was-validated .form-check-input:disabled ~ .form-check-label {
-  color: $natural-10;
-  opacity: unset;
+
+textarea {
+  resize: none;
+  overflow-y: auto;
+  &:disabled:not(:placeholder-shown) {
+    ~ label {
+      color: $natural-10 !important;
+    }
+  }
 }

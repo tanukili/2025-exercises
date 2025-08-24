@@ -177,7 +177,9 @@ export default function CareerPlanning() {
       );
     });
   };
+
   const CheckGroup = (targetOptions, targetKey, isRequired = true) => {
+    const noneChecked = planContent[targetKey].length === 0;
     return targetOptions.map(({ value, label }) => {
       return (
         <div
@@ -191,10 +193,8 @@ export default function CareerPlanning() {
             id={`${targetKey}-${value}`}
             value={value}
             onChange={handleInputChange}
-            checked={planContent[targetKey].some(
-              (clickedOption) => clickedOption === value
-            )}
-            required={isRequired}
+            checked={planContent[targetKey].includes(value)}
+            required={isRequired && noneChecked}
           />
           <label
             className="form-check-label ms-1"
@@ -240,18 +240,22 @@ export default function CareerPlanning() {
     isRequired = true,
   }) => {
     return (
-      <div className="mb-4 mb-md-6">
-        <div className="form-floating">
-          <textarea
-            className="form-control"
-            name={keyName}
-            placeholder={placeholder}
-            id={keyName}
-            style={{ height: "160px" }}
-            maxLength={maxLength}
-            required={isRequired}
-          ></textarea>
-          <label htmlFor={keyName}>{lablel}</label>
+      <div className="form-floating">
+        <textarea
+          className="form-control"
+          name={keyName}
+          placeholder={placeholder}
+          id={keyName}
+          style={{ height: "160px" }}
+          maxLength={maxLength}
+          required={isRequired}
+        ></textarea>
+        <label htmlFor={keyName}>{lablel}</label>
+        <div className="invalid-feedback">
+          <p className="d-flex align-items-center">
+            <span className="material-symbols-outlined me-1 fs-9">error</span>
+            {placeholder}
+          </p>
         </div>
       </div>
     );
@@ -260,7 +264,7 @@ export default function CareerPlanning() {
   return (
     <main className="col-md-10">
       <div className="p-6 bg-white rounded-4 shadow p-md-9">
-        <form action="#">
+        <form action="#" className="was-validated">
           <section
             className="row gx-1 border-bottom border-natural-85 pb-6 mb-6 pb-md-6 mb-md-9"
             aria-labelledby="career-plan-overview"
@@ -309,7 +313,7 @@ export default function CareerPlanning() {
               <div className="mb-4 mb-md-6">
                 <div className="form-floating">
                   <input
-                    type="text"
+                    type="url"
                     name="PortfolioLink"
                     className="form-control"
                     id="portfolio-link"
@@ -319,6 +323,14 @@ export default function CareerPlanning() {
                     required
                   />
                   <label htmlFor="portfolio-link">作品案例展示</label>
+                  <div className="invalid-feedback">
+                    <p className="d-flex align-items-center">
+                      <span className="material-symbols-outlined me-1 fs-9">
+                        error
+                      </span>
+                      請輸入您的作品展示連結
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className="mb-4 mb-md-6">
@@ -379,6 +391,14 @@ export default function CareerPlanning() {
                     onChange={handleInputChange}
                   />
                   <label htmlFor="target-salary">目標薪資/收入</label>
+                  <div className="invalid-feedback">
+                    <p className="d-flex align-items-center">
+                      <span className="material-symbols-outlined me-1 fs-9">
+                        error
+                      </span>
+                      請輸入您的目標薪資/收入
+                    </p>
+                  </div>
                 </div>
               </div>
               <fieldset className="mb-4 mb-md-6">
