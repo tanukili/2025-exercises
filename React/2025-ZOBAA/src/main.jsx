@@ -7,9 +7,11 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import App from "./App.jsx";
 
+const basename = import.meta.env.BASE_URL;
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </StrictMode>,

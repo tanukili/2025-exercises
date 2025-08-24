@@ -4,6 +4,10 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base:
+    process.env.NODE_ENV === "production"
+      ? "/2025-exercises-deploy/2025-zobaa/"
+      : "/",
   plugins: [react()],
   resolve: {
     alias: {
