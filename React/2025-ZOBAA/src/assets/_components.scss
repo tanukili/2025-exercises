@@ -1,8 +1,52 @@
 .logo {
   width: 180px;
   height: 30px;
+  display: block;
   background: center / cover no-repeat url("/logo.svg");
-  text-indent: 100%;
+  text-indent: 101%;
   overflow: hidden;
   white-space: nowrap;
+
+  &-light {
+    width: 192px;
+    height: 32px;
+    background: center / cover no-repeat url("/logo-light.svg");
+    @include media-breakpoint-up(md) {
+      width: 270px;
+      height: 45px;
+    }
+  }
+}
+
+// icons
+.icon {
+  --icon-url: unset;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: var(--icon-url);
+
+  &-lg {
+    width: 40px;
+    height: 40px;
+  }
+
+  &-order {
+    --icon-url: url("/icon/ic_order.svg");
+  }
+  &-setting {
+    --icon-url: url("/icon/ic_setting.svg");
+  }
+  &-logout {
+    --icon-url: url("/icon/ic_logout.svg");
+  }
+  &-line {
+    --icon-url: url("/icon/btn_line.svg");
+  }
+  &-yt {
+    --icon-url: url("/icon/btn_yt.svg");
+  }
+  &-fb {
+    --icon-url: url("/icon/btn_fb.svg");
+  }
 }

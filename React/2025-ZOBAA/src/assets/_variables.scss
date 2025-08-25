@@ -29,6 +29,7 @@ $neutral-0: $white; // custom
 $neutral-10: #f9f9f9; // custom
 $neutral-15: #f4f4f4; // custom
 $neutral-40: #ececec; // custom
+$neutral-45: #d4d4d4; // custom
 $neutral-60: #909090; // custom
 $neutral-80: #4b4b4b; // custom
 $neutral-100: $black; // custom
@@ -355,6 +356,7 @@ $theme-colors: (
   "tint": $tint,
   "primary-40": $primary-40,
   // custom
+  "neutral-d4": $neutral-45,
   "neutral-60": $neutral-60,
   // custom
   "neutral-80": $neutral-80, // custom
@@ -480,7 +482,9 @@ $spacers: (
   // custom
   16: $spacer * 4,
   // custom
-  20: $spacer * 5, // custom
+  20: $spacer * 5,
+  // custom
+  25: $spacer * 6.25, // custom
 ) !default;
 // scss-docs-end spacer-variables-maps
 
