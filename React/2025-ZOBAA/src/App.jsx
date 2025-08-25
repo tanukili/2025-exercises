@@ -4,6 +4,7 @@ import Footer from "@/components/layouts/Footer";
 import Index from "@/pages";
 import Destinations from "@/pages/Destinations";
 import TourDetail from "@/pages/TourDetail";
+import Cart from "@/pages/Cart";
 import AuthIndex from "@/pages/auth/AuthIndex";
 import Login from "@/pages/auth/Login";
 import SignUp from "@/pages/auth/SignUp";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/tour-detail" element={<TourDetail />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/auth" element={<AuthIndex />}>
           <Route path="login" element={<Login />} />
           <Route path="sign-up" element={<SignUp />} />
