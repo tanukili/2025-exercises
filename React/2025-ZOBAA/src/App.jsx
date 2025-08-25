@@ -26,7 +26,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="sign-up" element={<SignUp />} />
         </Route>
-        <Route path="/:memberId" element={<MemberIndex />}>
+        <Route path="/member/:memberId" element={<MemberIndex />}>
           <Route path="account" element={<Account />} />
           <Route path="orders" element={<Orders />} />
           <Route path="favorites" element={<Favorites />} />

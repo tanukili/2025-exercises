@@ -1,3 +1,44 @@
 .symbols-fill {
   font-variation-settings: "FILL" 1;
 }
+
+.blur-2 {
+  backdrop-filter: blur(8px);
+}
+
+.icon {
+  --icon-url: unset;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: var(--icon-url);
+
+  &-order {
+    --icon-url: url("/icon/ic_order.svg");
+  }
+  &-setting {
+    --icon-url: url("/icon/ic_setting.svg");
+  }
+  &-logout {
+    --icon-url: url("/icon/ic_logout.svg");
+  }
+}
+
+.badge-circle {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  width: 1rem;
+  text-align: center;
+  border-radius: 50rem;
+}
+
+// API
+$utilities: (
+  "font-size": (
+    rfs: false,
+    property: font-size,
+    class: fs,
+    values: $font-sizes,
+    responsive: true,
+  ),
+);

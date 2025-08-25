@@ -7,7 +7,7 @@ export default function Login() {
       <ul className="nav nav-pills justify-content-center mb-4">
         <li className="nav-item">
           <NavLink
-            to="login"
+            to="/member/fakeId"
             className="btn btn-sm btn-outline-primary p-3 d-flex align-items-center"
             aria-current="page"
           >
