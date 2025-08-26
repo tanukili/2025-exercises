@@ -51,7 +51,7 @@ export default function Header() {
 
   return (
     <header className="w-100 bg-white">
-      <nav className="navbar navbar-expand-lg py-lg-4 text-neutral-80">
+      <nav className="container navbar navbar-expand-lg py-lg-4 text-neutral-80">
         <div className="container-fluid">
           <div className="w-50 d-flex align-items-center">
             <Link className="logo me-auto me-lg-6" to="/">
@@ -82,7 +82,7 @@ export default function Header() {
                 shopping_cart
               </span>
               {isLogin && (
-                <span class="badge-circle position-absolute top-1 end-2 bg-danger text-white ">
+                <span class="badge-circle position-absolute top-1 end-2 bg-danger text-white">
                   2
                 </span>
               )}

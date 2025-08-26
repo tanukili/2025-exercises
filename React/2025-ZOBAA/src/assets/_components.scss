@@ -18,6 +18,12 @@
   }
 }
 
+// btn
+.btn-white {
+  --bs-btn-color: var(--bs-body-color);
+  --bs-btn-bg: #{$white};
+}
+
 // icons
 .icon {
   --icon-url: unset;
@@ -48,5 +54,32 @@
   }
   &-fb {
     --icon-url: url("/icon/btn_fb.svg");
+  }
+}
+
+.destination-album > * {
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  @include media-breakpoint-up(lg) {
+    &:first-child {
+      margin-right: -76px;
+      img {
+        border-radius: $border-radius-3xl 0 0 $border-radius-3xl !important;
+      }
+    }
+    &:last-child .row {
+      margin-left: 76px;
+      img {
+        height: 256px;
+      }
+      :nth-child(2) img {
+        border-top-right-radius: $border-radius-3xl;
+      }
+      :nth-child(4) img {
+        border-bottom-right-radius: $border-radius-3xl;
+      }
+    }
   }
 }

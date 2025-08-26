@@ -85,11 +85,27 @@ export default function Destinations() {
     return categoryList.map(({ title, coverUrl, num }) => {
       return (
         <div className="col-6 col-lg-3" key={title}>
-          <div className="card">
-            <img src={coverUrl} className="card-img-top" alt={title} />
-            <div className="card-body">
-              <h5 className="card-title">{title}</h5>
-              <p className="card-text">{num}+ 種選擇</p>
+          <div className="card rounded-lg-6">
+            <div className="card-img-top bg-tint py-5 text-center  rounded-top-lg-6">
+              <picture>
+                <source
+                  srcset={coverUrl}
+                  width={150}
+                  media="(min-width: 992px)"
+                />
+                <img
+                  class="d-inline-block"
+                  width={64}
+                  src={coverUrl}
+                  alt={title}
+                />
+              </picture>
+            </div>
+            <div className="card-body p-lg-6">
+              <h3 className="card-title fs-7 lh-base fs-lg-6 lh-lg-sm">
+                {title}
+              </h3>
+              <p className="card-text fs-8 fs-lg-7">{num}+ 種選擇</p>
             </div>
           </div>
         </div>
@@ -147,32 +163,51 @@ export default function Destinations() {
             </div>
           </div>
         );
-      },
+      }
     );
   };
 
   const GuideCards = () => {
     const TagBadges = (tags) => {
       return tags.map((tag) => {
-        return <span className="badge bg-primary">#{tag}</span>;
+        return (
+          <span className="badge bg-tint text-primary lh-base py-2 px-4 me-2 fs-lg-7">
+            #{tag}
+          </span>
+        );
       });
     };
 
-    return guideList.map(({ title, coverUrl, tags, description }) => {
+    return guideList.map(({ title, coverUrl, tags, description }, index) => {
       return (
-        <div className="card">
-          <div className="row">
+        <div
+          className={`card border-0 rounded-lg-8 ${index !== guideList.length - 1 ? "mb-6" : ""}`}
+          key={title}
+        >
+          <div className="row gx-3">
             <div className="col-md-5">
-              <img className="rounded-4" src={coverUrl} alt={title} />
+              <div className="px-4 pt-4 p-lg-8 pe-lg-5">
+                <img
+                  className="rounded-4 object-cover"
+                  src={coverUrl}
+                  alt={title}
+                  height={232}
+                />
+              </div>
             </div>
             <div className="col-md-7">
-              <div className="card-body">
-                <div>{TagBadges(tags)}</div>
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <Link to="/tour-detail">
+              <div className="card-body p-lg-8 ps-lg-0">
+                <div className="mb-6">{TagBadges(tags)}</div>
+                <h3 className="card-title fs-4 fs-lg-2">{title}</h3>
+                <p className="mb-10 fs-8 fs-lg-7">{description}</p>
+                <Link
+                  to="/tour-detail"
+                  className="fw-bold d-flex justify-content-lg-end"
+                >
                   查看文章
-                  <span class="material-symbols-outlined">arrow_right_alt</span>
+                  <span class="material-symbols-outlined ms-2">
+                    arrow_right_alt
+                  </span>
                 </Link>
               </div>
             </div>
@@ -183,9 +218,9 @@ export default function Destinations() {
   };
 
   return (
-    <main>
-      <nav className="container" aria-label="breadcrumb">
-        <ol className="breadcrumb">
+    <main className="mt-10 mt-lg-20">
+      <nav className="container pt-3" aria-label="breadcrumb">
+        <ol className="breadcrumb d-none d-lg-flex">
           <li className="breadcrumb-item">
             <Link to="/">首頁</Link>
           </li>
@@ -200,18 +235,22 @@ export default function Destinations() {
           </li>
         </ol>
       </nav>
-      <section className="container">
-        <h2>大阪</h2>
-        <p>
+      <section className="container mb-20 mb-lg-40">
+        <h2 className="text-black fs-3 mb-2 fs-lg-1">大阪</h2>
+        <p className="fs-8 mb-6 fs-lg-7">
           大阪，一座融合傳統與現代的城市，擁有豐富的歷史文化、熱鬧的購物街區與世界知名的美食天堂。從氣派的大阪城到霓虹閃爍的道頓堀，每一處都充滿驚喜。無論是第一次造訪，還是再次回味，大阪總能用它的熱情與魅力，讓你留下難忘回憶。
         </p>
-        <div>
-          <figure className="row">
+        <div className=" position-relative">
+          <div className="destination-album row gx-2">
             <div className="col">
-              <img src="location/osaka-1.png" alt="大阪景點01" />
+              <img
+                className="h-100  rounded-4 rounded-start-lg-6 rounded-end-lg-0"
+                src="location/osaka-1.png"
+                alt="大阪景點01"
+              />
             </div>
-            <div className="col d-none d-md-block">
-              <div className="row">
+            <div className="col-6 d-none d-md-block">
+              <div className="row g-2">
                 <div className="col-6">
                   <img src="location/osaka-2.png" alt="大阪景點02" />
                 </div>
@@ -226,15 +265,22 @@ export default function Destinations() {
                 </div>
               </div>
             </div>
-          </figure>
-          <button className="btn btn-white" type="button">
+          </div>
+          <button
+            className="position-absolute bottom-3 end-3 btn btn-lg btn-white"
+            type="button"
+          >
             查看更多
           </button>
         </div>
       </section>
-      <section className="container">
-        <h2>想怎麼玩大阪？熱門分類快速選！</h2>
-        <div className="row">
+      <section className="container mb-20 mb-lg-40">
+        <h2 className="fs-3 mb-5 fs-lg-1 mb-lg-10">
+          想怎麼玩大阪？
+          <br className="d-lg-none" />
+          熱門分類快速選！
+        </h2>
+        <div className="row g-4 gx-lg-6">
           <CategoryCards />
         </div>
       </section>
@@ -244,7 +290,7 @@ export default function Destinations() {
           <PickupCards />
         </div>
       </section>
-      <section className="container">
+      <section className="container mb-10">
         <h2>來自 ZOBAA 的大阪推薦</h2>
         <ul className="nav nav-underline">
           <li className="nav-item">
@@ -277,14 +323,19 @@ export default function Destinations() {
           <PickupCards />
         </div>
       </section>
-      <section className="bg-secondary">
-        <div className="container">
-          <div className="d-flex">
-            <h2>
-              <span>旅人攻略</span>
+      <section className="bg-tint">
+        <div className="container py-10 py-lg-30">
+          <div className="d-lg-flex mb-5 mb-lg-20 align-items-center">
+            <h2 className="fs-3 d-flex flex-column mb-2 fs-lg-1 mb-lg-0">
+              <span className="mb-2">旅人攻略</span>
               <span>看看大家怎麼玩！</span>
             </h2>
-            <p>跟著他們的腳步走，找到屬於你的旅行意義。</p>
+            <div className="fw-bold text-primary ms-lg-auto fs-lg-6 lh-lg-sm">
+              <p className="mb-2">
+                這裡不只是遊記，更是來自旅人親身經歷的風格指南與靈感筆記。
+              </p>
+              <p>跟著他們的腳步走，找到屬於你的旅行意義。</p>
+            </div>
           </div>
           <GuideCards />
         </div>

@@ -484,7 +484,11 @@ $spacers: (
   // custom
   20: $spacer * 5,
   // custom
-  25: $spacer * 6.25, // custom
+  25: $spacer * 6.25,
+  // custom
+  30: $spacer * 7.5,
+  // custom
+  40: $spacer * 10, // custom
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -500,6 +504,8 @@ $position-values: (
   1: 0.25rem,
   // custom
   2: 0.5rem,
+  // custom
+  3: 0.75rem,
   // custom
   6: 1.5rem, // custom
 ) !default;
@@ -627,6 +633,8 @@ $border-radius-lg: 0.75rem !default; // custom (12)
 $border-radius-xl: 1rem !default;
 // $border-radius-xxl: 2rem !default;
 $border-radius-xxl: 1.25rem !default; // custom (20)
+$border-radius-3xl: 1.5rem !default; // custom (24)
+$border-radius-4xl: 2rem !default; // custom (32)
 $border-radius-pill: 50rem !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
@@ -941,8 +949,10 @@ $input-btn-padding-y-sm: 0.25rem !default;
 $input-btn-padding-x-sm: 0.5rem !default;
 $input-btn-font-size-sm: $font-size-sm !default;
 
-$input-btn-padding-y-lg: 0.5rem !default;
-$input-btn-padding-x-lg: 1rem !default;
+$input-btn-padding-y-lg: 1rem !default; // custom
+// $input-btn-padding-y-lg: 0.5rem !default;
+$input-btn-padding-x-lg: 2rem !default; // custom
+// $input-btn-padding-x-lg: 1rem !default;
 $input-btn-font-size-lg: $font-size-lg !default;
 
 $input-btn-border-width: var(--#{$prefix}border-width) !default;
@@ -958,6 +968,7 @@ $btn-padding-y: $input-btn-padding-y !default;
 $btn-padding-x: $input-btn-padding-x !default;
 $btn-font-family: $input-btn-font-family !default;
 $btn-font-size: $input-btn-font-size !default;
+$btn-font-size: $input-btn-font-size !default;
 $btn-line-height: $line-height-base !default; // custom
 // $btn-line-height: $input-btn-line-height !default;
 $btn-white-space: null !default; // Set to `nowrap` to prevent text wrapping
@@ -968,7 +979,8 @@ $btn-font-size-sm: $input-btn-font-size-sm !default;
 
 $btn-padding-y-lg: $input-btn-padding-y-lg !default;
 $btn-padding-x-lg: $input-btn-padding-x-lg !default;
-$btn-font-size-lg: $input-btn-font-size-lg !default;
+$btn-font-size-lg: $input-btn-font-size !default; // custom
+// $btn-font-size-lg: $input-btn-font-size-lg !default;
 
 $btn-border-width: $input-btn-border-width !default;
 
@@ -1554,11 +1566,14 @@ $placeholder-opacity-min: 0.2 !default;
 $card-spacer-y: $spacer !default;
 $card-spacer-x: $spacer !default;
 $card-title-spacer-y: $spacer * 0.5 !default;
-$card-title-color: null !default;
+$card-title-color: $black !default; // custom
+// $card-title-color: null !default;
 $card-subtitle-color: null !default;
 $card-border-width: var(--#{$prefix}border-width) !default;
-$card-border-color: var(--#{$prefix}border-color-translucent) !default;
-$card-border-radius: var(--#{$prefix}border-radius) !default;
+$card-border-color: $neutral-40 !default; // custom
+// $card-border-color: var(--#{$prefix}border-color-translucent) !default;
+$card-border-radius: $border-radius-xl !default;
+// $card-border-radius: var(--#{$prefix}border-radius) !default;
 $card-box-shadow: null !default;
 $card-inner-border-radius: subtract(
   $card-border-radius,
@@ -1708,7 +1723,8 @@ $toast-header-border-color: $toast-border-color !default;
 // Badges
 
 // scss-docs-start badge-variables
-$badge-font-size: 0.75em !default;
+$badge-font-size: 0.875rem !default; // custom
+// $badge-font-size: 0.75em !default;
 $badge-font-weight: $font-weight-bold !default;
 $badge-color: $white !default;
 $badge-padding-y: 0.35em !default;
@@ -1853,11 +1869,15 @@ $figure-caption-color: var(--#{$prefix}secondary-color) !default;
 $breadcrumb-font-size: null !default;
 $breadcrumb-padding-y: 0 !default;
 $breadcrumb-padding-x: 0 !default;
-$breadcrumb-item-padding-x: 0.5rem !default;
-$breadcrumb-margin-bottom: 1rem !default;
+$breadcrumb-item-padding-x: 0.75rem !default; // custom
+// $breadcrumb-item-padding-x: 0.5rem !default;
+$breadcrumb-margin-bottom: 2.5rem !default; // custom
+// $breadcrumb-margin-bottom: 1rem !default;
 $breadcrumb-bg: null !default;
-$breadcrumb-divider-color: var(--#{$prefix}secondary-color) !default;
-$breadcrumb-active-color: var(--#{$prefix}secondary-color) !default;
+$breadcrumb-divider-color: $neutral-60 !default; // custom
+// $breadcrumb-divider-color: var(--#{$prefix}secondary-color) !default;
+$breadcrumb-active-color: $neutral-60 !default; // custom
+// $breadcrumb-active-color: var(--#{$prefix}secondary-color) !default;
 $breadcrumb-divider: quote("/") !default;
 $breadcrumb-divider-flipped: $breadcrumb-divider !default;
 $breadcrumb-border-radius: null !default;

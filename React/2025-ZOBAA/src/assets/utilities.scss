@@ -14,13 +14,55 @@
   border-radius: 50rem;
 }
 
+.object-cover {
+  object-fit: cover;
+}
+
 // API
 $utilities: (
   "font-size": (
+    responsive: true,
     rfs: false,
     property: font-size,
     class: fs,
     values: $font-sizes,
+  ),
+  "line-height": (
     responsive: true,
+    property: line-height,
+    class: lh,
+    values: (
+      1: 1,
+      sm: $line-height-sm,
+      base: $line-height-base,
+      lg: $line-height-lg,
+    ),
+  ),
+  "rounded": (
+    responsive: true,
+    property: border-radius,
+    class: rounded,
+    values: (
+      null: var(--#{$prefix}border-radius),
+      0: 0,
+      1: var(--#{$prefix}border-radius-sm),
+      2: var(--#{$prefix}border-radius),
+      3: var(--#{$prefix}border-radius-lg),
+      4: var(--#{$prefix}border-radius-xl),
+      5: var(--#{$prefix}border-radius-2xl),
+      6: $border-radius-3xl,
+      8: $border-radius-4xl,
+      circle: 50%,
+      pill: var(--#{$prefix}border-radius-pill),
+    ),
+  ),
+  "rounded-top": (
+    responsive: true,
+    property: border-top-left-radius border-top-right-radius,
+    class: rounded-top,
+    values: (
+      null: var(--#{$prefix}border-radius),
+      6: $border-radius-3xl,
+    ),
   ),
 );
