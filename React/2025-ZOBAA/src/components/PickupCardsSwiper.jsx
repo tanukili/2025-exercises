@@ -102,7 +102,7 @@ export default function PickupCardsSwiper() {
       ) => {
         return (
           <SwiperSlide style={{ width: 306 }} key={`${title}${index}`}>
-            <div className="card border-0">
+            <div className="card bg-transparent border-0">
               <figure className="position-relative">
                 <img src={coverUrl} className="rounded-5" alt={title} />
                 <span className="badge-favorite material-symbols-outlined p-4 text-white bg-black">
@@ -123,7 +123,7 @@ export default function PickupCardsSwiper() {
                   <p className="card-text">{bookingNum}+ 個已訂購</p>
                 </div>
               </div>
-              <div className="card-footer p-0 pt-4">
+              <div className="card-footer bg-transparent p-0 pt-4">
                 <p className="fs-6 lh-sm fw-bold text-primary">NT$ {price}</p>
                 <p className="text-decoration-line-through text-neutral-70 fs-8">
                   NT$ {originPrice}
@@ -140,15 +140,19 @@ export default function PickupCardsSwiper() {
     <div className="position-relative">
       <button
         ref={prevRef}
-        className="swiper-btn-prev position-absolute translate-middle top-50 z-2 btn btn-white d-none d-lg-flex p-4 shadow-sm"
+        className="swiper-btn-prev position-absolute translate-middle top-50 z-2 btn btn-white d-none d-lg-flex p-3 p-xxl-4 shadow-sm"
       >
-        <span className="material-symbols-outlined">arrow_back</span>
+        <span className="material-symbols-outlined fs-6 fs-xxl-5">
+          arrow_back
+        </span>
       </button>
       <button
         ref={nextRef}
-        className="swiper-btn-next position-absolute translate-middle top-50 z-2 btn btn-white d-none d-lg-flex p-4 shadow-sm"
+        className="swiper-btn-next position-absolute translate-middle top-50 z-2 btn btn-white d-none d-lg-flex p-3 p-xxl-4 shadow-sm"
       >
-        <span className="material-symbols-outlined">arrow_forward</span>
+        <span className="material-symbols-outlined fs-6 fs-xxl-5">
+          arrow_forward
+        </span>
       </button>
       <Swiper
         spaceBetween={24}

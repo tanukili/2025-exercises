@@ -357,7 +357,10 @@ $theme-colors: (
   "tint": $tint,
   "primary-40": $primary-40,
   // custom
+  "primary-60": $primary-60,
+  // custom
   "neutral-d4": $neutral-45,
+  "neutral-15": $neutral-15,
   "neutral-60": $neutral-60,
   // custom
   "neutral-70": $neutral-70,
@@ -1125,9 +1128,10 @@ $form-color-width: 3rem !default;
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
+$form-check-input-width: 1.5rem !default;
 $form-check-input-width: 1em !default;
 $form-check-min-height: $font-size-base * $line-height-base !default;
-$form-check-padding-start: $form-check-input-width + 0.5em !default;
+$form-check-padding-start: $form-check-input-width + 0.5rem !default;
 $form-check-margin-bottom: 0.125rem !default;
 $form-check-label-color: null !default;
 $form-check-label-cursor: null !default;
@@ -1138,6 +1142,7 @@ $form-check-input-active-filter: brightness(90%) !default;
 $form-check-input-bg: $input-bg !default;
 $form-check-input-border: var(--#{$prefix}border-width) solid
   var(--#{$prefix}border-color) !default;
+$form-check-input-border-radius: 0.25rem !default;
 $form-check-input-border-radius: 0.25em !default;
 $form-check-radio-border-radius: 50% !default;
 $form-check-input-focus-border: $input-focus-border-color !default;
@@ -1146,7 +1151,8 @@ $form-check-input-focus-box-shadow: $focus-ring-box-shadow !default;
 $form-check-input-checked-color: $component-active-color !default;
 $form-check-input-checked-bg-color: $component-active-bg !default;
 $form-check-input-checked-border-color: $form-check-input-checked-bg-color !default;
-$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 4.90476L5.20298 9L14 1' stroke='#{$form-check-input-checked-color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>") !default; // custom
+// $form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
 $form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
 $form-check-input-indeterminate-color: $component-active-color !default;
@@ -1945,12 +1951,14 @@ $spinner-border-width-sm: 0.2em !default;
 // Close
 
 // scss-docs-start close-variables
+$btn-close-width: 0.875rem !default;
 $btn-close-width: 1em !default;
 $btn-close-height: $btn-close-width !default;
 $btn-close-padding-x: 0.25em !default;
 $btn-close-padding-y: $btn-close-padding-x !default;
 $btn-close-color: $black !default;
-$btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/></svg>") !default;
+$btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$black}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/></svg>") !default; // custom
+// $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/></svg>") !default;
 $btn-close-focus-shadow: $focus-ring-box-shadow !default;
 $btn-close-opacity: 0.5 !default;
 $btn-close-hover-opacity: 0.75 !default;
@@ -1969,7 +1977,8 @@ $offcanvas-padding-x: 1.5rem !default; // custom
 $offcanvas-padding-x: $modal-inner-padding !default;
 $offcanvas-horizontal-width: 327px !default; // custom
 // $offcanvas-horizontal-width: 400px !default;
-$offcanvas-vertical-height: 30vh !default;
+$offcanvas-vertical-height: 215px !default; // custom
+// $offcanvas-vertical-height: 30vh !default;
 $offcanvas-transition-duration: 0.3s !default;
 $offcanvas-border-color: $modal-content-border-color !default;
 $offcanvas-border-width: $modal-content-border-width !default;

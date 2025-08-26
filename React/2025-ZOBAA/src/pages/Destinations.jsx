@@ -191,7 +191,9 @@ export default function Destinations() {
       </section>
       <section className="container mb-20 mb-lg-40">
         <h2 className="fs-3 mb-5 fs-lg-1 mb-lg-10">大阪 TOP 10!</h2>
-        <PickupCardsSwiper />
+        <div className="swiper-btn-spatial">
+          <PickupCardsSwiper />
+        </div>
       </section>
       <section className="container mb-10 mb-lg-20">
         <h2 className="fs-3 mb-5 fs-lg-1 mb-lg-10">來自 ZOBAA 的大阪推薦</h2>
@@ -222,7 +224,9 @@ export default function Destinations() {
             </a>
           </li>
         </ul>
-        <PickupCardsSwiper />
+        <div className="swiper-btn-spatial">
+          <PickupCardsSwiper />
+        </div>
       </section>
       <section className="bg-tint">
         <div className="container py-10 py-lg-30">
