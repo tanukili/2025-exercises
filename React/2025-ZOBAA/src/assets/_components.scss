@@ -22,6 +22,9 @@
 .btn-white {
   --bs-btn-color: var(--bs-body-color);
   --bs-btn-bg: #{$white};
+  --bs-btn-hover-bg: #{$primary};
+  --bs-btn-hover-color: #{$white};
+  --bs-btn-disabled-bg: #{$neutral-40};
 }
 
 // icons
@@ -57,6 +60,23 @@
   }
 }
 
+// badges
+.badge-circle {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  width: 1rem;
+  text-align: center;
+  border-radius: 50rem;
+}
+.badge-favorite {
+  --bs-bg-opacity: 0.4;
+  border-radius: 0 $border-radius-2xl 0 $border-radius-2xl;
+  backdrop-filter: blur(12px);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .destination-album > * {
   img {
     width: 100%;
@@ -70,7 +90,6 @@
       }
     }
     &:last-child .row {
-      margin-left: 76px;
       img {
         height: 256px;
       }
@@ -80,6 +99,24 @@
       :nth-child(4) img {
         border-bottom-right-radius: $border-radius-3xl;
       }
+    }
+  }
+}
+
+// swiper-buttoms
+.swiper-btn {
+  &-prev {
+    left: 0;
+  }
+  &-next {
+    left: 100%;
+  }
+  @include media-breakpoint-up(xxl) {
+    &-prev {
+      left: -48px;
+    }
+    &-next {
+      left: calc(100% + 48px);
     }
   }
 }

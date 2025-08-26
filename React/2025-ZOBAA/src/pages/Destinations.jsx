@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PickupCardsSwiper from "@/components/PickupCardsSwiper";
 
 export default function Destinations() {
   const categoryList = [
@@ -6,48 +7,6 @@ export default function Destinations() {
     { title: "一日遊", coverUrl: "location/category-2.svg", num: 50 },
     { title: "景點門票", coverUrl: "location/category-3.svg", num: 70 },
     { title: "美食餐廳", coverUrl: "location/category-4.svg", num: 80 },
-  ];
-  const locationList = [
-    {
-      title: "環球影城超值一日遊｜哈利波特園區＋快速通關體驗",
-      coverUrl: "location/top-1.png",
-      tags: ["即買即用", "5 天前可免費取消"],
-      price: 5480,
-      originPrice: 6200,
-      rating: 4.8,
-      ratingNum: 1029,
-      bookingNum: 1000,
-    },
-    {
-      title: "奈良梅花鹿餵食體驗＋和服散策｜日式風情輕旅行",
-      coverUrl: "location/top-2.png",
-      tags: ["中文導覽", "5 天前可免費取消"],
-      price: 2250,
-      originPrice: 2800,
-      rating: 4.7,
-      ratingNum: 880,
-      bookingNum: 900,
-    },
-    {
-      title: "黑門市場美食巡禮｜在地職人帶路吃遍大阪經典小吃",
-      coverUrl: "location/top-3.png",
-      tags: ["專業導覽", "5 天前可免費取消"],
-      price: 1580,
-      originPrice: 2500,
-      rating: 4.6,
-      ratingNum: 540,
-      bookingNum: 700,
-    },
-    {
-      title: "大阪夜景直升機體驗｜空中俯瞰梅田摩天輪＋海遊館",
-      coverUrl: "location/top-4.png",
-      tags: ["即買即用", "7 天前可免費取消"],
-      price: 6890,
-      originPrice: 8890,
-      rating: 4.7,
-      ratingNum: 319,
-      bookingNum: 600,
-    },
   ];
 
   const guideList = [
@@ -89,12 +48,12 @@ export default function Destinations() {
             <div className="card-img-top bg-tint py-5 text-center  rounded-top-lg-6">
               <picture>
                 <source
-                  srcset={coverUrl}
+                  srcSet={coverUrl}
                   width={150}
                   media="(min-width: 992px)"
                 />
                 <img
-                  class="d-inline-block"
+                  className="d-inline-block"
                   width={64}
                   src={coverUrl}
                   alt={title}
@@ -111,60 +70,6 @@ export default function Destinations() {
         </div>
       );
     });
-  };
-
-  const PickupCards = () => {
-    const TagBadges = (tags) => {
-      return tags.map((tag) => {
-        return <span className="badge bg-primary">{tag}</span>;
-      });
-    };
-
-    return locationList.map(
-      ({
-        title,
-        coverUrl,
-        tags,
-        originPrice,
-        price,
-        rating,
-        ratingNum,
-        bookingNum,
-      }) => {
-        return (
-          <div className="col-3" key={title}>
-            <div className="card">
-              <figure className="position-relative">
-                <img src={coverUrl} className="card-img-top" alt={title} />
-                <span class="material-symbols-outlined position-absolute top-0 end-0">
-                  favorite
-                </span>
-              </figure>
-              <div className="card-body">
-                <h5 className="card-title">{title}</h5>
-                <div>{TagBadges(tags)}</div>
-                <div className="d-flex">
-                  <p>
-                    <span class="material-symbols-outlined symbols-fill">
-                      star
-                    </span>
-                    <span>{rating}</span>
-                    <span>({ratingNum})</span>
-                  </p>
-                  <p className="card-text">{bookingNum}+ 個已訂購</p>
-                </div>
-              </div>
-              <div className="card-footer">
-                <p>NT$ {price}</p>
-                <p className="text-decoration-line-through">
-                  NT$ {originPrice}
-                </p>
-              </div>
-            </div>
-          </div>
-        );
-      }
-    );
   };
 
   const GuideCards = () => {
@@ -205,7 +110,7 @@ export default function Destinations() {
                   className="fw-bold d-flex justify-content-lg-end"
                 >
                   查看文章
-                  <span class="material-symbols-outlined ms-2">
+                  <span className="material-symbols-outlined ms-2">
                     arrow_right_alt
                   </span>
                 </Link>
@@ -284,14 +189,12 @@ export default function Destinations() {
           <CategoryCards />
         </div>
       </section>
-      <section className="container">
-        <h2>大阪 TOP 10!</h2>
-        <div className="row">
-          <PickupCards />
-        </div>
+      <section className="container mb-20 mb-lg-40">
+        <h2 className="fs-3 mb-5 fs-lg-1 mb-lg-10">大阪 TOP 10!</h2>
+        <PickupCardsSwiper />
       </section>
-      <section className="container mb-10">
-        <h2>來自 ZOBAA 的大阪推薦</h2>
+      <section className="container mb-10 mb-lg-20">
+        <h2 className="fs-3 mb-5 fs-lg-1 mb-lg-10">來自 ZOBAA 的大阪推薦</h2>
         <ul className="nav nav-underline">
           <li className="nav-item">
             <a className="nav-link" aria-current="page" href="#">
@@ -319,9 +222,7 @@ export default function Destinations() {
             </a>
           </li>
         </ul>
-        <div className="row">
-          <PickupCards />
-        </div>
+        <PickupCardsSwiper />
       </section>
       <section className="bg-tint">
         <div className="container py-10 py-lg-30">

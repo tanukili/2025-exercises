@@ -31,6 +31,7 @@ $neutral-15: #f4f4f4; // custom
 $neutral-40: #ececec; // custom
 $neutral-45: #d4d4d4; // custom
 $neutral-60: #909090; // custom
+$neutral-70: #808080; // custom
 $neutral-80: #4b4b4b; // custom
 $neutral-100: $black; // custom
 // scss-docs-end gray-color-variables
@@ -359,6 +360,8 @@ $theme-colors: (
   "neutral-d4": $neutral-45,
   "neutral-60": $neutral-60,
   // custom
+  "neutral-70": $neutral-70,
+  // custom
   "neutral-80": $neutral-80, // custom
 ) !default;
 // scss-docs-end theme-colors-map
@@ -644,7 +647,9 @@ $border-radius-2xl: $border-radius-xxl !default; // Deprecated in v5.3.0
 // scss-docs-start box-shadow-variables
 // $box-shadow: 0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow: 0px 25px 50px -12px rgba($black, 0.12) !default; // custom
-$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
+$box-shadow-sm: 0px 4px 12px 0px rgba($black, 0.15) !default; // custom
+// $box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
+
 $box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
 $box-shadow-xl: 0px 4px 40px 0px rgba($black, 0.1); // custom
 
@@ -1581,7 +1586,8 @@ $card-inner-border-radius: subtract(
 ) !default;
 $card-cap-padding-y: $card-spacer-y * 0.5 !default;
 $card-cap-padding-x: $card-spacer-x !default;
-$card-cap-bg: rgba(var(--#{$prefix}body-color-rgb), 0.03) !default;
+$card-cap-bg: $white !default; // custom
+// $card-cap-bg: rgba(var(--#{$prefix}body-color-rgb), 0.03) !default;
 $card-cap-color: null !default;
 $card-height: null !default;
 $card-color: null !default;

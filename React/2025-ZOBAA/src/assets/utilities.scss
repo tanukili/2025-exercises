@@ -6,14 +6,6 @@
   backdrop-filter: blur(8px);
 }
 
-.badge-circle {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  width: 1rem;
-  text-align: center;
-  border-radius: 50rem;
-}
-
 .object-cover {
   object-fit: cover;
 }
@@ -36,6 +28,18 @@ $utilities: (
       sm: $line-height-sm,
       base: $line-height-base,
       lg: $line-height-lg,
+    ),
+  ),
+  "bg-opacity": (
+    css-var: true,
+    class: bg-opacity,
+    values: (
+      10: 0.1,
+      25: 0.25,
+      40: 0.4,
+      50: 0.5,
+      75: 0.75,
+      100: 1,
     ),
   ),
   "rounded": (
