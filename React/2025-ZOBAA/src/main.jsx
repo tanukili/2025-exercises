@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import "@/assets/main.scss";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "aos/dist/aos.css";
 
 import App from "./App.jsx";
 
@@ -14,5 +15,5 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 );

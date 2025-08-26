@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
@@ -13,7 +14,18 @@ import Account from "@/pages/member/Account";
 import Orders from "@/pages/member/Orders";
 import Favorites from "@/pages/member/Orders";
 
+import AOS from "aos";
+
 function App() {
+  // 註冊 AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      once: true,
+      anchorPlacement: "center-bottom",
+    });
+  });
+
   return (
     <>
       <Header />

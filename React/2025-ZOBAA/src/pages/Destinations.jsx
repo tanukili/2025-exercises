@@ -41,10 +41,14 @@ export default function Destinations() {
   ];
 
   const CategoryCards = () => {
-    return categoryList.map(({ title, coverUrl, num }) => {
+    return categoryList.map(({ title, coverUrl, num }, index) => {
       return (
         <div className="col-6 col-lg-3" key={title}>
-          <div className="card rounded-lg-6">
+          <div
+            className="card rounded-lg-6"
+            data-aos="zoom-in"
+            data-aos-duration={600 + index * 300}
+          >
             <div className="card-img-top bg-tint py-5 text-center  rounded-top-lg-6">
               <picture>
                 <source
@@ -88,6 +92,8 @@ export default function Destinations() {
         <div
           className={`card border-0 rounded-lg-8 ${index !== guideList.length - 1 ? "mb-6" : ""}`}
           key={title}
+          data-aos="zoom-in-up"
+          data-aos-anchor-placement="top-center"
         >
           <div className="row gx-3">
             <div className="col-md-5">
@@ -147,14 +153,14 @@ export default function Destinations() {
         </p>
         <div className=" position-relative">
           <div className="destination-album row gx-2">
-            <div className="col">
+            <div className="col" data-aos="zoom-in-right">
               <img
                 className="h-100  rounded-4 rounded-start-lg-6 rounded-end-lg-0"
                 src="location/osaka-1.png"
                 alt="大阪景點01"
               />
             </div>
-            <div className="col-6 d-none d-md-block">
+            <div className="col-6 d-none d-md-block" data-aos="zoom-in-left">
               <div className="row g-2">
                 <div className="col-6">
                   <img src="location/osaka-2.png" alt="大阪景點02" />
@@ -190,13 +196,17 @@ export default function Destinations() {
         </div>
       </section>
       <section className="container mb-20 mb-lg-40">
-        <h2 className="fs-3 mb-5 fs-lg-1 mb-lg-10">大阪 TOP 10!</h2>
+        <h2 className="fs-3 mb-5 fs-lg-1 mb-lg-10" data-aos="zoom-in-left">
+          大阪 TOP 10!
+        </h2>
         <div className="swiper-btn-spatial">
           <PickupCardsSwiper />
         </div>
       </section>
       <section className="container mb-10 mb-lg-20">
-        <h2 className="fs-3 mb-5 fs-lg-1 mb-lg-10">來自 ZOBAA 的大阪推薦</h2>
+        <h2 className="fs-3 mb-5 fs-lg-1 mb-lg-10" data-aos="zoom-in-left">
+          來自 ZOBAA 的大阪推薦
+        </h2>
         <ul className="nav nav-underline">
           <li className="nav-item">
             <a className="nav-link" aria-current="page" href="#">
@@ -231,11 +241,19 @@ export default function Destinations() {
       <section className="bg-tint">
         <div className="container py-10 py-lg-30">
           <div className="d-lg-flex mb-5 mb-lg-20 align-items-center">
-            <h2 className="fs-3 d-flex flex-column mb-2 fs-lg-1 mb-lg-0">
+            <h2
+              className="fs-3 d-flex flex-column mb-2 fs-lg-1 mb-lg-0"
+              data-aos="zoom-in-right"
+              data-aos-anchor-placement="top-center"
+            >
               <span className="mb-2">旅人攻略</span>
               <span>看看大家怎麼玩！</span>
             </h2>
-            <div className="fw-bold text-primary ms-lg-auto fs-lg-6 lh-lg-sm">
+            <div
+              className="fw-bold text-primary ms-lg-auto fs-lg-6 lh-lg-sm"
+              data-aos="zoom-in-left"
+              data-aos-anchor-placement="top-center"
+            >
               <p className="mb-2">
                 這裡不只是遊記，更是來自旅人親身經歷的風格指南與靈感筆記。
               </p>
