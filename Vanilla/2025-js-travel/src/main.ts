@@ -1,7 +1,7 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import { renderTours } from "./renderTours.ts";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <body>
@@ -117,95 +117,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <p id="searchResult-text">本次搜尋共 3 筆資料</p>
     </div>
     <!-- 套票卡片區 -->
+    <ul class="ticketCard-area" id="TicketList">
     <ul class="ticketCard-area">
-      <li class="ticketCard">
-        <div class="ticketCard-img">
-          <a href="#">
-            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true" alt="">
-          </a>
-          <div class="ticketCard-region">高雄</div>
-          <div class="ticketCard-rank">10</div>
-        </div>
-        <div class="ticketCard-content">
-          <div>
-            <h3>
-              <a href="#" class="ticketCard-name">綠島自由行套裝行程</a>
-            </h3>
-            <p class="ticketCard-description">
-              嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合。
-            </p>
-          </div>
-          <div class="ticketCard-info">
-            <p class="ticketCard-num">
-              <span><i class="fas fa-exclamation-circle"></i></span>
-              剩下最後 <span id="ticketCard-num"> 87 </span> 組
-            </p>
-            <p class="ticketCard-price">
-              TWD <span id="ticketCard-price">$1400</span>
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="ticketCard">
-        <div class="ticketCard-img">
-          <a href="#">
-            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_4.png?raw=true" alt="">
-          </a>
-          <div class="ticketCard-region">台北</div>
-          <div class="ticketCard-rank">2</div>
-        </div>
-        <div class="ticketCard-content">
-          <div>
-            <h3>
-              <a href="#" class="ticketCard-name">清境高空觀景步道</a>
-            </h3>
-            <p class="ticketCard-description">
-              清境農場青青草原數十公頃碧草，這些景觀豐沛了清境觀景步道的風格，也涵養它無可取代的特色。
-            </p>
-          </div>
-          <div class="ticketCard-info">
-            <div class="ticketCard-num">
-              <p>
-                <span><i class="fas fa-exclamation-circle"></i></span>
-                剩下最後 <span id="ticketCard-num"> 99 </span> 組
-              </p>
-            </div>
-            <p class="ticketCard-price">
-              TWD <span id="ticketCard-price">$240</span>
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="ticketCard">
-        <div class="ticketCard-img">
-          <a href="#">
-            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_3.png?raw=true" alt="">
-          </a>
-          <div class="ticketCard-region">台中</div>
-          <div class="ticketCard-rank">7</div>
-        </div>
-        <div class="ticketCard-content">
-          <div>
-            <h3>
-              <a href="#" class="ticketCard-name">山林悠遊套票</a>
-            </h3>
-            <p class="ticketCard-description">
-              山林悠遊套票，結合南投清境高空步道、雙龍瀑布七彩吊橋、瑞龍瀑布園區之熱門景點。
-            </p>
-          </div>
-          <div class="ticketCard-info">
-            <div class="ticketCard-num">
-              <p>
-                <span><i class="fas fa-exclamation-circle"></i></span>
-                剩下最後 <span id="ticketCard-num"> 20 </span> 組
-              </p>
-            </div>
-            <p class="ticketCard-price">
-              TWD <span id="ticketCard-price">$1765</span>
-            </p>
-          </div>
-        </div>
-      </li>
+      
     </ul>
     <!-- 查無關鍵字區 -->
     <div class="cantFind-area">
@@ -215,5 +129,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </section>
 </body>
 `
-
-// setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+renderTours(document.querySelector<HTMLDListElement>("#TicketList")!)
