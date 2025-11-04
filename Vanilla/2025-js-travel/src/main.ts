@@ -1,7 +1,8 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
-import { renderTours } from "./renderTours.ts";
+import { renderTours, getRemoteData } from './renderTours.ts'
+import { dountChart } from './donutChart.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <body>
@@ -106,21 +107,21 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </section>
   <section class="main-content">
     <!-- 搜尋區 -->
-    <div class="search-area">
-      <select name="" class="regionSearch">
-        <option value="地區搜尋" disabled selected hidden>地區搜尋</option>
-        <option value="">全部地區</option>
-        <option value="台北">台北</option>
-        <option value="台中">台中</option>
-        <option value="高雄">高雄</option>
-      </select>
-      <p id="searchResult-text">本次搜尋共 3 筆資料</p>
+    <div class="d-flex">
+      <div class="search-area">
+        <select name="" class="regionSearch">
+          <option value="地區搜尋" disabled selected hidden>地區搜尋</option>
+          <option value="">全部地區</option>
+          <option value="台北">台北</option>
+          <option value="台中">台中</option>
+          <option value="高雄">高雄</option>
+        </select>
+        <p id="searchResult-text">本次搜尋共 3 筆資料</p>
+      </div>
+      <div id="tourDountChart"></div>
     </div>
     <!-- 套票卡片區 -->
     <ul class="ticketCard-area" id="TicketList">
-    <ul class="ticketCard-area">
-      
-    </ul>
     <!-- 查無關鍵字區 -->
     <div class="cantFind-area">
       <h3>查無此關鍵字資料</h3>
@@ -129,4 +130,30 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </section>
 </body>
 `
-renderTours(document.querySelector<HTMLDListElement>("#TicketList")!)
+async function onMounted() {
+  const toursData = await getRemoteData()
+
+  // 旅遊列表
+  renderTours(document.querySelector('#TicketList')!, toursData)
+
+  // 甜甜圈
+  const dountChartObj = {}
+  toursData.forEach(({ area }) => {
+    if (dountChartObj[area]) {
+      dountChartObj[area] += 1
+    } else {
+      dountChartObj[area] = 1
+    }
+  })
+
+  const areaMap = ['台北', '台中', '高雄']; // select input + 固定顯示順序用
+  const formatChartData = (ChartObj) => {
+    const columns = areaMap.map((area) => [area, ChartObj[area] || 0])
+    // 只顯示有對應資料的 label
+    return columns.filter((col) => col[1] !== 0)
+  }
+
+  dountChart('#tourDountChart', formatChartData(dountChartObj))
+}
+
+onMounted()

@@ -1,22 +1,20 @@
-import axios from 'axios';
+import axios from 'axios'
 
-export async function renderTours(element: HTMLButtonElement) {
-  // 取得遠端資料
-  const getRemoteData = async () => {
-    try {
-      const { data } = await axios.get('https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json')
-      console.log(data.data);
-
-      return data.data
-    } catch (error) {
-      console.error(error.message);
-    }
+// 取得遠端資料
+export async function getRemoteData() {
+  try {
+    const { data } = await axios.get(
+      'https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json'
+    )
+    return data.data
+  } catch (error) {
+    console.warn(error.message)
+    return []
   }
+}
 
-  let data = [];
-  data = await getRemoteData();
-
-  // 資料渲染
+// 資料渲染
+export function renderTours(element: HTMLButtonElement, renderData) {
   const tourCardTemplate = (tour) => {
     return `<li class="ticketCard">
         <div class="ticketCard-img">
@@ -48,7 +46,7 @@ export async function renderTours(element: HTMLButtonElement) {
       </li>`
   }
 
-  const toursContentText = data.map((tour) => tourCardTemplate(tour)).join('')
+  const toursContentText = renderData.map((tour) => tourCardTemplate(tour)).join('')
 
-  element.innerHTML = toursContentText;
+  element.innerHTML = toursContentText
 }

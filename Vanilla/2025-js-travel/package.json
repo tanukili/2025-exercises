@@ -16,6 +16,7 @@
     "vite": "npm:rolldown-vite@7.1.14"
   },
   "dependencies": {
-    "axios": "^1.13.1"
+    "axios": "^1.13.1",
+    "c3": "^0.7.20"
   }
 }
